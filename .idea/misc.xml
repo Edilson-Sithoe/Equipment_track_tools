@@ -45,7 +45,7 @@
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_identi_inter_v.xml" value="0.2348684210526316" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_identi_inter_view.xml" value="0.2348684210526316" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_interview_id.xml" value="0.2348684210526316" />
-        <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_inventory_view.xml" value="0.1" />
+        <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_inventory_view.xml" value="0.18" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_liquid_ox.xml" value="0.2348684210526316" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_liquid_ox_twoo.xml" value="0.11538461538461539" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_login.xml" value="0.33" />
@@ -69,13 +69,14 @@
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_ups_twoo.xml" value="0.2348684210526316" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_upsone.xml" value="0.2348684210526316" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_form_vaccum_system.xml" value="0.2348684210526316" />
+        <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_inventory_equipment.xml" value="0.2348684210526316" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_tela_principal.xml" value="0.18" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/activity_update_equipm_inventory.xml" value="0.27309782608695654" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/all_data.xml" value="0.22" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/data_inventory.xml" value="0.370018115942029" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/equipm_invent_view.xml" value="0.35144927536231885" />
-        <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/inventory.xml" value="0.370018115942029" />
+        <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/layout/inventory.xml" value="0.2" />
         <entry key="..\:/A Office/Edilson/Jhpiego/Programming/app/src/main/res/menu/my_menu.xml" value="0.371875" />
       </map>
     </option>

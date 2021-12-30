@@ -44,7 +44,7 @@ public class FormEquipInventory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_equip_inventory);
-        //  getSupportActionBar().hide();
+//        getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         InitComponents();
 
@@ -120,6 +120,7 @@ public class FormEquipInventory extends AppCompatActivity {
                 txtDataMaint.setText(simpleDateFormat.format(calendar.getTime()));
             }
         };
+
         txtDataMaint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,26 +128,6 @@ public class FormEquipInventory extends AppCompatActivity {
             }
         });
     }
-
-  /*  public void edit_inventory(){
-        if (getIntent().getBundleExtra("userdata")!= null) {
-            Bundle bundle=getIntent().getBundleExtra("userdata");
-            id = bundle.getInt("id");
-            txtDept.setText(bundle.getString("txtDept"));
-            txtTypeEquip.setText(bundle.getString("txtTypeEquip"));
-            txtInvent_number.setText(bundle.getString("txtInvent_number"));
-            txtMake.setText(bundle.getString("txtMake"));
-            txtModel.setText(bundle.getString("txtModel"));
-            txtSerialNumber.setText(bundle.getString("txtSerialNumber"));
-            txtEquipCondition.setText(bundle.getString("txtEquipCondition"));
-            txtYearInstall.setText(bundle.getString("txtYearInstall"));
-            txtDataMaint.setText(bundle.getString("txtDataMaint"));
-            txtComment.setText(bundle.getString("txtComment"));
-
-//            btn_edit.setVisibility(View.VISIBLE);
-            btn_save.setVisibility(View.GONE);
-        }
-    }*/
 
     public void onRadioButtonClicked(View view) {
 

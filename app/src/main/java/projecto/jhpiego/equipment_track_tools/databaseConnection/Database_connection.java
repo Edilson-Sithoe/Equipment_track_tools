@@ -668,9 +668,9 @@ public class Database_connection extends SQLiteOpenHelper {
     }
 
 
-    public void updateData(String row_id, String department, String type_equipment, String inventory_number,
-                           String make, String model, String serial_number, String equip_condition,
-                           String year_install, String main_contract, String data_last_main, String comment) {
+    public boolean updateData(int row_id, String department, String type_equipment, String inventory_number,
+                              String make, String model, String serial_number, String equip_condition,
+                              String year_install, String main_contract, String data_last_main, String comment) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("department", department);
@@ -685,21 +685,34 @@ public class Database_connection extends SQLiteOpenHelper {
         cv.put("data_last_main", data_last_main);
         cv.put("comment", comment);
 
-        long result = db.update(TABLE_INVENTORY, cv, "_id=?", new String[]{row_id});
+        long result = db.update(TABLE_INVENTORY, cv, "id=?", new String[]{String.valueOf(row_id)});
         if (result == -1) {
-            Toast.makeText(context, "Falha ao atualizar os dados", Toast.LENGTH_SHORT).show();
+            //   Toast.makeText(context, "Falha ao atualizar os dados", Toast.LENGTH_SHORT).show();
+            return false;
         } else {
-            Toast.makeText(context, "Atualizado com sucesso", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(context, "Atualizado com sucesso", Toast.LENGTH_SHORT).show();
+            return true;
         }
     }
 
-    public void deleteOneRow(String row_id) {
+    //    public void deleteOneRow(int row_id) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        long result = db.delete(TABLE_INVENTORY, "id=?", new String[]{String.valueOf(row_id)});
+//        if (result == -1) {
+//            Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
+//        } else {
+//            Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
+//        }
+//    }
+    public boolean deleteOneRow(int row_id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.delete(TABLE_INVENTORY, "_id=?", new String[]{row_id});
+        long result = db.delete(TABLE_INVENTORY, "id=?", new String[]{String.valueOf(row_id)});
         if (result == -1) {
-            Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
+          //  Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
+            return false;
         } else {
-            Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
+            return true;
         }
     }
 

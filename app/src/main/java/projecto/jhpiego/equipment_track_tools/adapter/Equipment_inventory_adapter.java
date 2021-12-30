@@ -27,6 +27,7 @@ public class Equipment_inventory_adapter extends RecyclerView.Adapter<Equipment_
     private Activity activity;
     private ArrayList id, txtDept, txtTypeEquip, txtInvent_number, txtMake, txtModel, txtSerialNumber;
     private ArrayList txtEquipCondition, txtYearInstall, txtContract_man, txtData_last_man, txtComment;
+    Equipment_inventory equipment_inventory;
 
     Animation translate_anim;
 
@@ -58,7 +59,9 @@ public class Equipment_inventory_adapter extends RecyclerView.Adapter<Equipment_
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+     //   holder.id.setText(equipment_inventory.get(position).getId);
 
         holder.id.setText(String.valueOf(id.get(position)));
         holder.txtDept.setText(String.valueOf(txtDept.get(position)));

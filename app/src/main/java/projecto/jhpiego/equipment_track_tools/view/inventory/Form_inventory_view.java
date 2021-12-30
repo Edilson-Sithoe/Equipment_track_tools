@@ -155,8 +155,8 @@ public class Form_inventory_view extends AppCompatActivity {
     }
 
     private void Init_components() {
-        recyclerView = findViewById(R.id.recycle_view_invent);
-        add_button = findViewById(R.id.add_button);
+     //   recyclerView = findViewById(R.id.recycle_view_invent);
+     //   add_button = findViewById(R.id.add_button);
         imageView = findViewById(R.id.id_image);
         textView = findViewById(R.id.id_no_data);
     }
