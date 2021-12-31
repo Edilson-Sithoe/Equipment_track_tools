@@ -41,21 +41,21 @@
 
     </ListView>
 
-  <!--  <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_button"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_buttonn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="355dp"
-        android:layout_marginBottom="814dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
         android:clickable="true"
         android:contentDescription="@string/todo"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_add"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" /> -->
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/id_image"

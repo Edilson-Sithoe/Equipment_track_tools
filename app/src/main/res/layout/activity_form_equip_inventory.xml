@@ -276,12 +276,13 @@
                 android:id="@+id/txtSerialNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -322,7 +323,8 @@
                 android:inputType="text"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -364,7 +366,8 @@
                 android:maxLength="4"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
