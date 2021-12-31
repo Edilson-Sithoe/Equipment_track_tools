@@ -1,41 +1,34 @@
 package projecto.jhpiego.equipment_track_tools.view.inventory;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import projecto.jhpiego.equipment_track_tools.R;
-
-import projecto.jhpiego.equipment_track_tools.adapter.Equipment_inventory_custom_adapter;
-import projecto.jhpiego.equipment_track_tools.databaseConnection.Database_connection;
-import projecto.jhpiego.equipment_track_tools.model.Equipment_inventory;
-import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class Form_inventory_view extends AppCompatActivity {
+import projecto.jhpiego.equipment_track_tools.adapter.Equipment_inventory_custom_adapter;
+import projecto.jhpiego.equipment_track_tools.databaseConnection.Database_connection;
+import projecto.jhpiego.equipment_track_tools.model.Equipment_inventory;
+import projecto.jhpiego.equipment_track_tools.R;
+import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
+public class InventoryEquipment extends AppCompatActivity {
 
     ListView listView;
     FloatingActionButton add_button;
@@ -58,13 +51,13 @@ public class Form_inventory_view extends AppCompatActivity {
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Form_inventory_view.this, FormEquipInventory.class);
+                Intent intent = new Intent(InventoryEquipment.this, FormEquipInventory.class);
                 startActivity(intent);
             }
         });
 
         equipment_inventoryArrayList = new ArrayList<>();
-        database_connection = new Database_connection(Form_inventory_view.this);
+        database_connection = new Database_connection(InventoryEquipment.this);
 
         Display_inventory();
 
@@ -77,12 +70,10 @@ public class Form_inventory_view extends AppCompatActivity {
 
                 Equipment_inventory dataModel = equipment_inventoryArrayList.get(position);
                 Variaveis.equipment_inventory = equipment_inventoryArrayList.get(position);
-                Intent i = new Intent(Form_inventory_view.this, Update_equipm_inventory.class);
+                Intent i = new Intent(InventoryEquipment.this, Update_equipm_inventory.class);
                 startActivity(i);
 
-                Snackbar.make(view, dataModel.getId() + dataModel.getDepartment() + dataModel.getTypeEquipment() + dataModel.getInventory_number()
-                        + dataModel.getMake() + dataModel.getModel() + dataModel.getSerial_number() + dataModel.getYear_install()
-                        + dataModel.getData_last_main() + dataModel.getEquipment_condition(), Snackbar.LENGTH_LONG)
+                Snackbar.make(view, dataModel.getId() + "\n" + dataModel.getDepartment() + " API: " + dataModel.getTypeEquipment(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
 
             }
@@ -147,9 +138,9 @@ public class Form_inventory_view extends AppCompatActivity {
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Database_connection database_connection = new Database_connection(Form_inventory_view.this);
+                Database_connection database_connection = new Database_connection(InventoryEquipment.this);
                 database_connection.deleteAllData();
-                Intent intent = new Intent(Form_inventory_view.this, Form_inventory_view.class);
+                Intent intent = new Intent(InventoryEquipment.this, Form_inventory_view.class);
                 startActivity(intent);
                 finish();
             }

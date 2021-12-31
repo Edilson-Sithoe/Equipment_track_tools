@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Equipment_track_tools">
         <activity
-            android:name=".TelaPrincipal"
+            android:name=".view.inventory.InventoryEquipment"
             android:exported="false" />
         <activity
             android:name=".generalForm.Form_all_data_view"
@@ -142,7 +142,7 @@
             android:name=".login.FormLogin"
             android:exported="false" />
         <activity
-            android:name=".view.inventory.InventoryEquipment"
+            android:name=".TelaPrincipal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

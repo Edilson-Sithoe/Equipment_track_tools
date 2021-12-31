@@ -10,6 +10,7 @@ import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -27,12 +30,13 @@ public class Update_equipm_inventory extends AppCompatActivity {
 
     private Button btn_update, btn_back, btn_delete;
     private EditText txtDept, txtTypeEquip, txtInvent_number, txtMake, txtModel, txtSerialNumber;
-    private EditText txtEquipCondition, txtYearInstall, txtDataMaint, txtMain_contract, txtComment;
+    private EditText txtEquipCondition, txtYearInstall, txtDataMaint, txtComment;
     private String cboMain_contract_edit;
 
     int id;
     String dept, typeEquip, invent_number, make, model, serialNumber;
     String equipCondition, yearInstall, dataMaint, main_contract, comment;
+    String[] mensagens = {"Preencha todos os campos", "Actualizado com sucesso", "Falha ao atualizar, tenta novamente"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +57,16 @@ public class Update_equipm_inventory extends AppCompatActivity {
                 settingData();
                 Database_connection database_connection = new Database_connection(Update_equipm_inventory.this);
                 if (database_connection.updateData(id, dept, typeEquip, invent_number, make, model, serialNumber, equipCondition, yearInstall, main_contract, dataMaint, comment)) {
-                    Toast.makeText(Update_equipm_inventory.this, "Atualizado", Toast.LENGTH_LONG).show();
-                } else
-                    Toast.makeText(Update_equipm_inventory.this, "Falha ao atualizar os dados", Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
+                    snackbar.setTextColor(Color.WHITE);
+                    snackbar.show();
+                } else {
+                    Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.rgb(216, 191, 216));
+                    snackbar.setTextColor(Color.WHITE);
+                    snackbar.show();
+                }
             }
         });
 
@@ -105,7 +116,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
         equipCondition = txtEquipCondition.getText().toString().trim();
         yearInstall = txtYearInstall.getText().toString().trim();
         main_contract = cboMain_contract_edit;
-//        dataMaint = txtMain_contract.getText().toString();
+        dataMaint = txtDataMaint.getText().toString();
         comment = txtComment.getText().toString().trim();
     }
 
@@ -125,8 +136,8 @@ public class Update_equipm_inventory extends AppCompatActivity {
             txtSerialNumber.setText(Variaveis.equipment_inventory.getSerial_number());
             txtEquipCondition.setText(Variaveis.equipment_inventory.getEquipment_condition());
             txtYearInstall.setText(Variaveis.equipment_inventory.getYear_install());
+          //  cboMain_contract_edit
             txtDataMaint.setText(Variaveis.equipment_inventory.getData_last_main());
-//          txtMain_contract.setText(Variaveis.equipment_inventory.getMain_contract());
             txtComment.setText(Variaveis.equipment_inventory.getComments());
         }
 
@@ -220,5 +231,4 @@ public class Update_equipm_inventory extends AppCompatActivity {
         txtDataMaint = findViewById(R.id.txtDataMaintenance_edit);
         txtComment = findViewById(R.id.txtComment_edit);
     }
-
 }

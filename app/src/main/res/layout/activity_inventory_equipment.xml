@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.inventory.Form_inventory_view">
+    tools:context=".view.inventory.InventoryEquipment">
 
     <!--  <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_view_invent"
@@ -41,21 +41,21 @@
 
     </ListView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_buttonn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
-        android:clickable="true"
-        android:contentDescription="@string/todo"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/add_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginEnd="25dp"
+          android:layout_marginBottom="25dp"
+          android:clickable="true"
+          android:contentDescription="@string/todo"
+          android:focusable="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:srcCompat="@drawable/ic_add"
+          tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/id_image"
