@@ -42,7 +42,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_equipm_inventory);
-        InitComponents();
+        InitComponents_update();
 
         getAndSetIntentData();
 
@@ -102,7 +102,6 @@ public class Update_equipm_inventory extends AppCompatActivity {
                 new DatePickerDialog(Update_equipm_inventory.this, date, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
-
     }
 
     private void settingData() {
@@ -136,45 +135,10 @@ public class Update_equipm_inventory extends AppCompatActivity {
             txtSerialNumber.setText(Variaveis.equipment_inventory.getSerial_number());
             txtEquipCondition.setText(Variaveis.equipment_inventory.getEquipment_condition());
             txtYearInstall.setText(Variaveis.equipment_inventory.getYear_install());
-          //  cboMain_contract_edit
+         //   main_contract
             txtDataMaint.setText(Variaveis.equipment_inventory.getData_last_main());
             txtComment.setText(Variaveis.equipment_inventory.getComments());
         }
-
-//        if (getIntent().hasExtra("id") && getIntent().hasExtra("department") && getIntent().hasExtra("type_equipment") &&
-//        getIntent().hasExtra("invent_number") && getIntent().hasExtra("make") && getIntent().hasExtra("model") &&
-//                getIntent().hasExtra("serial_number") && getIntent().hasExtra("equipment_condition") && getIntent().hasExtra("year_install") &&
-//        getIntent().hasExtra("data_maintenance") && getIntent().hasExtra("comment")) {
-//
-//            // Getting Data from Intent
-//            id = getIntent().getStringExtra("id");
-//            dept = getIntent().getStringExtra("dept");
-//            typeEquip = getIntent().getStringExtra("typeEquip");
-//            invent_number = getIntent().getStringExtra("invent_number");
-//            make = getIntent().getStringExtra("make");
-//            model = getIntent().getStringExtra("model");
-//            serialNumber = getIntent().getStringExtra("serialNumber");
-//            equipCondition = getIntent().getStringExtra("equipCondition");
-//            yearInstall = getIntent().getStringExtra("yearInstall");
-//            main_contract = getIntent().getStringExtra("main_contract");
-//            dataMaint = getIntent().getStringExtra("dataMaint");
-//            comment = getIntent().getStringExtra("comment");
-//
-//            // Setting Intent Data
-//            txtDept.setText(dept);
-//            txtTypeEquip.setText(typeEquip);
-//            txtInvent_number.setText(invent_number);
-//            txtMake.setText(make);
-//            txtModel.setText(model);
-//            txtSerialNumber.setText(serialNumber);
-//            txtEquipCondition.setText(equipCondition);
-//            txtYearInstall.setText(yearInstall);
-//            txtMain_contract.setText(main_contract);
-//            txtDataMaint.setText(dataMaint);
-//            txtComment.setText(comment);*/
-//        } else {
-//            Toast.makeText(this, "Sem dados para mostrar", Toast.LENGTH_SHORT).show();
-//        }
     }
 
     void confirmDialog() {
@@ -215,7 +179,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
         }
     }
 
-    public void InitComponents() {
+    public void InitComponents_update() {
         btn_back = findViewById(R.id.btn_backInvent);
         btn_update = findViewById(R.id.btn_update);
         btn_delete = findViewById(R.id.btn_delete);

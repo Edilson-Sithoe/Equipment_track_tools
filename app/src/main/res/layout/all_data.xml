@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout_data"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,7 +12,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:padding="12dp"
             app:layout_constraintEnd_toEndOf="@+id/txt_model"
             app:layout_constraintStart_toEndOf="@+id/txt_model">
@@ -22,7 +21,6 @@
                 android:id="@+id/facil_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
                 android:textColor="@color/color_txt"
                 android:textSize="45sp"
                 android:textStyle="bold"
@@ -41,83 +39,85 @@
                 app:layout_constraintStart_toEndOf="@+id/facil_id"
                 app:layout_constraintTop_toTopOf="@+id/facil_id" />
 
-            <TextView
-                android:id="@+id/province"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Type Equipment"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/facil_name"
-                app:layout_constraintTop_toBottomOf="@+id/facil_name" />
-
             <!--   <TextView
-                   android:id="@+id/txt_inv_number"
+                   android:id="@+id/province"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_marginStart="12dp"
-                   android:text="Inventory number"
-                   android:textSize="12sp"
-                   app:layout_constraintStart_toEndOf="@+id/invent_id"
-                   app:layout_constraintTop_toBottomOf="@+id/txt_type" />
+                   android:text="Type Equipment"
+                   android:textSize="18sp"
+                   android:textStyle="bold"
+                   app:layout_constraintStart_toStartOf="@+id/facil_name"
+                   app:layout_constraintTop_toBottomOf="@+id/facil_name" />
 
-               <TextView
-                   android:id="@+id/txt_make"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="4dp"
-                   android:text="Make"
-                   android:textSize="12sp"
-                   app:layout_constraintHorizontal_bias="0.422"
-                   app:layout_constraintLeft_toLeftOf="parent"
+                  <TextView
+                      android:id="@+id/txt_inv_number"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="12dp"
+                      android:text="Inventory number"
+                      android:textSize="12sp"
+                      app:layout_constraintStart_toEndOf="@+id/invent_id"
+                      app:layout_constraintTop_toBottomOf="@+id/txt_type" />
 
-                   app:layout_constraintRight_toRightOf="parent"
-                   app:layout_constraintTop_toTopOf="parent" />
+                  <TextView
+                      android:id="@+id/txt_make"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="4dp"
+                      android:text="Make"
+                      android:textSize="12sp"
+                      app:layout_constraintHorizontal_bias="0.422"
+                      app:layout_constraintLeft_toLeftOf="parent"
 
-               <TextView
-                   android:id="@+id/txt_model"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Model"
-                   android:textSize="12sp"
-                   app:layout_constraintStart_toStartOf="@+id/txt_make"
-                   app:layout_constraintTop_toBottomOf="@+id/txt_make" />
+                      app:layout_constraintRight_toRightOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
 
-               <TextView
-                   android:id="@+id/txt_serial"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Serial number"
-                   android:textSize="12sp"
-                   app:layout_constraintStart_toStartOf="@+id/txt_model"
-                   app:layout_constraintTop_toBottomOf="@+id/txt_model" />
+                  <TextView
+                      android:id="@+id/txt_model"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Model"
+                      android:textSize="12sp"
+                      app:layout_constraintStart_toStartOf="@+id/txt_make"
+                      app:layout_constraintTop_toBottomOf="@+id/txt_make" />
 
-               <TextView
-                   android:id="@+id/txt_eq_cond"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginEnd="32dp"
-                   android:text="Equipment condition"
-                   android:textSize="12sp"
-                   app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintTop_toTopOf="@+id/txt_make" />
+                  <TextView
+                      android:id="@+id/txt_serial"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Serial number"
+                      android:textSize="12sp"
+                      app:layout_constraintStart_toStartOf="@+id/txt_model"
+                      app:layout_constraintTop_toBottomOf="@+id/txt_model" />
 
-               <TextView
-                   android:id="@+id/txt_install"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Year install"
-                   android:textSize="12sp"
-                   app:layout_constraintStart_toStartOf="@+id/txt_eq_cond"
-                   app:layout_constraintTop_toBottomOf="@+id/txt_eq_cond" />
+                  <TextView
+                      android:id="@+id/txt_eq_cond"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="32dp"
+                      android:text="Equipment condition"
+                      android:textSize="12sp"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintTop_toTopOf="@+id/txt_make" />
 
-               <TextView
-                   android:id="@+id/txt_data"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Data"
-                   android:textSize="12sp"
-                   app:layout_constraintStart_toStartOf="@+id/txt_install"
-                   app:layout_constraintTop_toBottomOf="@+id/txt_install" /> -->
+                  <TextView
+                      android:id="@+id/txt_install"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Year install"
+                      android:textSize="12sp"
+                      app:layout_constraintStart_toStartOf="@+id/txt_eq_cond"
+                      app:layout_constraintTop_toBottomOf="@+id/txt_eq_cond" />
+
+                  <TextView
+                      android:id="@+id/txt_data"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Data"
+                      android:textSize="12sp"
+                      app:layout_constraintStart_toStartOf="@+id/txt_install"
+                      app:layout_constraintTop_toBottomOf="@+id/txt_install" /> -->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

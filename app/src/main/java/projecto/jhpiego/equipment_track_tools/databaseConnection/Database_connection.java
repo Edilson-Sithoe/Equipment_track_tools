@@ -1259,7 +1259,7 @@ public class Database_connection extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public ArrayList<Assessment_model> getAllData() {
+  /*  public ArrayList<Assessment_model> getAllData() {
         ArrayList<Assessment_model> arrayList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_ASSESSMENT + "", null);
@@ -1274,7 +1274,7 @@ public class Database_connection extends SQLiteOpenHelper {
             arrayList.add(assessment_model);
         }
         return arrayList;
-    }
+    }*/
 
     public void deleteOneRow_form(String row_id) {
         SQLiteDatabase db = this.getWritableDatabase();

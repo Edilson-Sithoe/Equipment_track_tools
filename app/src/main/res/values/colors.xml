@@ -6,6 +6,7 @@
     <color name="blue">#6495ED</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
     <color name="background">#E5CCFF</color>
     <color name="cinzento">#A9A9A9</color>
     <color name="color_txt" tools:overrise="true">#4F4F4F</color>

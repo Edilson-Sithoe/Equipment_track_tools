@@ -8,33 +8,46 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 import projecto.jhpiego.equipment_track_tools.R;
+import projecto.jhpiego.equipment_track_tools.model.Assessment_model;
 
-public class All_data_adapter extends RecyclerView.Adapter<All_data_adapter.MyViewHolder> {
+public class All_data_adapter extends ArrayAdapter<Assessment_model> {
 
-    private Context context;
-    private Activity activity;
-    private ArrayList facil_id, facil_name, province;
-
+    private ArrayList<Assessment_model> all_data_set_assessment;
+    Context assessm_context;
     Animation translate_anim;
 
-    public All_data_adapter(Context context, Activity activity, ArrayList facil_id, ArrayList facil_name, ArrayList province) {
-        this.context = context;
-        this.activity = activity;
-        this.facil_id = facil_id;
-        this.facil_name = facil_name;
-        this.province = province;
+    public All_data_adapter(ArrayList<Assessment_model> data, Context context) {
+        super(context, R.layout.all_data, data);
+        this.all_data_set_assessment = data;
+        this.assessm_context = context;
+
     }
 
-    @NonNull
+    private int last_positions = -1;
+
+    @Override
+    public View getView(int position, View row, ViewGroup parent) {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        row = inflater.inflate(R.layout.all_data, parent, false);
+
+        TextView facility_name = row.findViewById(R.id.facil_name);
+        facility_name.setText(all_data_set_assessment.get(position).getTxtName());
+
+        return row;
+    }
+
+    /*  @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -53,7 +66,7 @@ public class All_data_adapter extends RecyclerView.Adapter<All_data_adapter.MyVi
             public void onClick(View v) {
                 Intent intent = new Intent(context, )
             }
-        });*/
+        });
 
     }
 
@@ -62,7 +75,7 @@ public class All_data_adapter extends RecyclerView.Adapter<All_data_adapter.MyVi
         return 0;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+  /*  public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView facil_id, facil_name, province;
         LinearLayout mainLayout_data;
@@ -78,5 +91,5 @@ public class All_data_adapter extends RecyclerView.Adapter<All_data_adapter.MyVi
             mainLayout_data.setAnimation(translate_anim);
 
         }
-    }
+    }*/
 }

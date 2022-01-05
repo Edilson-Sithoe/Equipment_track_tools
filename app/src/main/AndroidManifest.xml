@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Equipment_track_tools">
         <activity
+            android:name=".generalForm.Update_interview_id"
+            android:exported="false" />
+        <activity
             android:name=".view.inventory.InventoryEquipment"
             android:exported="false" />
         <activity

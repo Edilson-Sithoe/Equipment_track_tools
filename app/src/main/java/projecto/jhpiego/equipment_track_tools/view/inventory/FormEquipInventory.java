@@ -67,7 +67,7 @@ public class FormEquipInventory extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(department) || TextUtils.isEmpty(type_equipment) || TextUtils.isEmpty(inventory_number) ||
                         TextUtils.isEmpty(make) || TextUtils.isEmpty(model) ||
-                        TextUtils.isEmpty(serial_number) || TextUtils.isEmpty(equip_condition) || TextUtils.isEmpty(year_install) || TextUtils.isEmpty(data_last_main)) {
+                        TextUtils.isEmpty(serial_number) || TextUtils.isEmpty(equip_condition) || TextUtils.isEmpty(year_install) || TextUtils.isEmpty(data_last_main) || TextUtils.isEmpty(main_contra)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
                     snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
                     snackbar.setTextColor(Color.WHITE);

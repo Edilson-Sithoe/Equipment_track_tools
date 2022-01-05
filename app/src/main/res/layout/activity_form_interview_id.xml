@@ -14,7 +14,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@drawable/blue_bg">
 
             <TextView
@@ -25,7 +25,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="INTERVIEW ID FORM"
+                android:text="ID da Entrevista"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -93,7 +93,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Date of Interview"
+            android:hint="Selecione a Data da entrevista"
             style="@style/Edit_Text"
             android:padding="15dp"
             android:textColorHint="@color/color_txt"
@@ -104,12 +104,16 @@
                 android:id="@+id/id_date_inter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
-                android:inputType="date"
-                android:textColorHint="@color/color_txt"
-                android:textSize="14sp"
-                app:hintTextColor="@color/black"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +160,7 @@
                     android:fontFamily="@font/poppins_regular"
                     android:onClick="onRadioButtonClicked_interview"
                     android:text="On Set"
-                    android:textColor="@color/color_txt"
+                    android:textColor="#757575"
                     app:hintTextColor="@color/black"
                     tools:ignore="TouchTargetSizeCheck" />
 

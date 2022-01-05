@@ -1,6 +1,5 @@
 package projecto.jhpiego.equipment_track_tools.adapter;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,8 +24,7 @@ public class Equipment_inventory_custom_adapter extends ArrayAdapter<Equipment_i
 
     // View lookup cache
     private static class ViewHolder {
-        TextView id, txtDept, txtTypeEquip, txtInvent_number, txtMake, txtModel, txtSerialNumber;
-        TextView txtEquipCondition, txtYearInstall, txtContract_man, txtData_last_man, txtComment;
+
     }
 
     public Equipment_inventory_custom_adapter(ArrayList<Equipment_inventory> data, Context context) {
@@ -97,11 +95,15 @@ public class Equipment_inventory_custom_adapter extends ArrayAdapter<Equipment_i
    //   row = getLayoutInflater().inflate(R.layout.inventory, null);
       LayoutInflater inflater = LayoutInflater.from(getContext());
       row = inflater.inflate(R.layout.inventory, parent, false);
+
+   /*   TextView dept_id = row.findViewById(R.id.invent_id);
+      dept_id.setText(dataSet.get(position).getId());*/
+
       TextView department = row.findViewById(R.id.txt_dept);
       department.setText(dataSet.get(position).getDepartment());
 
-      TextView type = row.findViewById(R.id.txt_type);
-      type.setText(dataSet.get(position).getTypeEquipment());
+   /*   TextView type = row.findViewById(R.id.txt_type);
+      type.setText(dataSet.get(position).getTypeEquipment());*/
       return row;
   }
 }

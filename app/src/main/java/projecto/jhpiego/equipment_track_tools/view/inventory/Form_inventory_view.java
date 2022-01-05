@@ -80,10 +80,10 @@ public class Form_inventory_view extends AppCompatActivity {
                 Intent i = new Intent(Form_inventory_view.this, Update_equipm_inventory.class);
                 startActivity(i);
 
-                Snackbar.make(view, dataModel.getId() + dataModel.getDepartment() + dataModel.getTypeEquipment() + dataModel.getInventory_number()
+              /*  Snackbar.make(view, dataModel.getId() + dataModel.getDepartment() + dataModel.getTypeEquipment() + dataModel.getInventory_number()
                         + dataModel.getMake() + dataModel.getModel() + dataModel.getSerial_number() + dataModel.getYear_install()
                         + dataModel.getData_last_main() + dataModel.getEquipment_condition(), Snackbar.LENGTH_LONG)
-                        .setAction("No action", null).show();
+                        .setAction("No action", null).show();*/
 
             }
         });

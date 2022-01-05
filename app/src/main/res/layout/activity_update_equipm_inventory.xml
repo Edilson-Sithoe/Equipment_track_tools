@@ -527,9 +527,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/blue_fill__rounded_color"
+                android:background="@drawable/red_fill__rounded_color"
                 android:fontFamily="@font/poppins_regular"
                 android:text="Remover"
+                android:enabled="false"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textStyle="bold" />

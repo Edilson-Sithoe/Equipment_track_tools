@@ -89,4 +89,5 @@
     <string name="enter_your_password">Senha</string>
     <string name="login">Entrar</string>
     <string name="if_so_what_type_of_fire_extinguisher_are_they">If so, what type of fire extinguisher are they?</string>
+    <string name="department">Department</string>
 </resources>
