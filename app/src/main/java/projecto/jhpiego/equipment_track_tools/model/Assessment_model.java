@@ -86,6 +86,7 @@ public class Assessment_model {
     private String chkLogBookTwoo;
     private String chkLogBoobUpdTwoo;
     private String txtComentTwoo;
+    /* terminei aqui la no all_dta_view*/
     /*  ****************************************/
 
     private String chkGeneThree;

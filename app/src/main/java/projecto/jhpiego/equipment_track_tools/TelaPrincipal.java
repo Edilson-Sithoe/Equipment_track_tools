@@ -5,14 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import projecto.jhpiego.equipment_track_tools.generalForm.FormInterviewID;
 import projecto.jhpiego.equipment_track_tools.generalForm.Form_all_data_view;
 import projecto.jhpiego.equipment_track_tools.login.FormLogin;
 import projecto.jhpiego.equipment_track_tools.view.inventory.Form_inventory_view;
-
 
 public class TelaPrincipal extends AppCompatActivity {
 
@@ -92,12 +89,22 @@ public class TelaPrincipal extends AppCompatActivity {
                 startActivity(equipIvent);
             }
         });
+
+      /*  btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iclose = new Intent(TelaPrincipal.this, FormLogin.class);
+                startActivity(iclose);
+                finish();
+            }
+        });*/
     }
 
     private void InitializerComponents(){
     //    btnLogout = findViewById(R.id.idBtn_logout);
         idBtnEquip_inv = findViewById(R.id.idBtnEquip_inv);
         btn_fomr = findViewById(R.id.idBtnForm);
+        btnLogout = findViewById(R.id.id_close);
         /*   btn_interview = findViewById(R.id.idBtnInterview);
         idBtnMedGasSystem = findViewById(R.id.idBtnMedGasSystem);
         idBtnLogistic = findViewById(R.id.idBtnLogistic);

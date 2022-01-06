@@ -41,13 +41,12 @@
         android:layout_width="115dp"
         android:layout_height="92dp"
         android:layout_marginTop="255dp"
+        android:alpha="0.3"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/list_view_all_data"
-        app:srcCompat="@drawable/ic_clear"
-        android:visibility="gone"
-        android:alpha="0.3"
-        />
+        app:srcCompat="@drawable/ic_clear" />
 
     <TextView
         android:id="@+id/id_no_data"
@@ -55,8 +54,8 @@
         android:layout_height="wrap_content"
         android:alpha="0.5"
         android:text="Sem dados"
-        android:visibility="gone"
         android:textSize="20sp"
+
         app:layout_constraintEnd_toEndOf="@+id/list_view_all_data"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"

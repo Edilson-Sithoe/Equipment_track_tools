@@ -1278,7 +1278,7 @@ public class Database_connection extends SQLiteOpenHelper {
 
     public void deleteOneRow_form(String row_id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        long result = db.delete(TABLE_ASSESSMENT, "_id=?", new String[]{row_id});
+        long result = db.delete(TABLE_ASSESSMENT, "id=?", new String[]{row_id});
         if (result == -1) {
             Toast.makeText(context, "Something went wrong, please try again", Toast.LENGTH_SHORT).show();
         } else {

@@ -13,7 +13,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@drawable/blue_bg">
 
             <TextView
@@ -24,7 +24,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="IDENTIFICATION OF THE HEALTH FACILITY"
+                android:text="Identificação da facilidadae de Saúde"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -40,11 +40,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Health facility ID:"
             android:padding="10dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idHealtFacID"
@@ -67,11 +67,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Name od the health"
             android:padding="10dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idNameHealt"
@@ -94,21 +94,21 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Location"
             android:padding="10dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/cinzento"
                 android:textColorHint="@color/color_txt"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -121,11 +121,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="District"
             android:padding="10dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idDistrict"
@@ -148,21 +148,21 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Province"
             android:padding="10dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idProvince"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/cinzento"
                 android:textColorHint="@color/color_txt"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -175,11 +175,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Region"
             android:padding="10dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idRegion"
@@ -202,11 +202,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="GPS coordinates"
             android:padding="10dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idGPS"
@@ -229,11 +229,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Date of Interview"
             android:padding="0dp"
             android:textColor="@color/cinzento"
-            android:textColorHint="@color/color_txt"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/color_txt">
 
             <TextView
                 android:id="@+id/idTVLeHeaFac"
@@ -242,13 +242,12 @@
                 android:layout_below="@+id/btn_register"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Level of the Health facility"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -260,24 +259,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked_fihf"
                     android:text="First level"
                     android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"/>
+                    android:textColorHint="@color/cinzento" />
 
                 <RadioButton
                     android:id="@+id/radio_sl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked_fihf"
                     android:text="Second level"
                     android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"/>
+                    android:textColorHint="@color/cinzento" />
 
                 <RadioButton
                     android:id="@+id/radio_tl"
@@ -314,11 +313,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Date of Interview"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVTypOfHFac"
@@ -327,12 +326,12 @@
                 android:layout_below="@+id/btn_register"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Type of Health Facility (HF):"
                 android:textAllCaps="false"
-                android:textSize="20sp"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular" />
+                android:textSize="20sp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -344,12 +343,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Rural Health Center"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -357,12 +356,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Urbano Health Center"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -370,12 +369,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Health Post (HF)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -383,12 +382,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Central Hospital (HF)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -396,12 +395,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Specialized Hospital "
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -409,12 +408,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Military Hospital (HF)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -422,12 +421,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="District Hospital (HF)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -435,12 +434,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="General Hospital (HF)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -448,12 +447,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Rural Hospital (HF)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -461,12 +460,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_two_fihf"
                     android:text="Provincial Hospital (HF)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
             </RadioGroup>
 
@@ -480,11 +479,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Date of Interview"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVLJOHeaFac"
@@ -493,13 +492,12 @@
                 android:layout_below="@+id/btn_register"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Just outpatient health facility?"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -511,12 +509,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_three_fihf"
                     android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -524,12 +522,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_three_fihf"
                     android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
             </RadioGroup>
 
@@ -542,11 +540,11 @@
             android:layout_below="@+id/btn_register"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="Number of beds of hospitalized patients (#)"
             android:textAllCaps="false"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -558,21 +556,21 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Total"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idTotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -584,21 +582,21 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Maternity"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idMaternity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -610,21 +608,21 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="CICOV"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idCICOV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -636,21 +634,21 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="ICU"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idICU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -662,11 +660,11 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Date of Interview"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVTDAIHFac"
@@ -676,13 +674,12 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Departments available in the health facility"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -694,12 +691,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Outpatient Consultations"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -707,12 +704,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Casualty Ward"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -720,12 +717,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Maternity Ward"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -733,12 +730,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Nursery Ward"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -746,12 +743,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Paediatric Ward"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -759,12 +756,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="General Ward"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -772,12 +769,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Surgical ward"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -785,11 +782,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:text="Operating Theatre"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -797,12 +794,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Intensive Care (ICU)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -810,12 +807,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Radiology"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -823,12 +820,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Ophthalmology"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -836,12 +833,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="CICOV"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -849,12 +846,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Laundry"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -862,12 +859,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Kitchen"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -875,12 +872,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Waste treatment"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -888,12 +885,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Morgue"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
 
                 <RadioButton
@@ -901,12 +898,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_four_fihf"
                     android:text="Pharmacy"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
                     android:textSize="14sp"></RadioButton>
             </RadioGroup>
 
@@ -920,21 +917,21 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Other"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idOther"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -956,8 +953,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/blue_fill__rounded_color"
                 android:text="Voltar"
-                android:textColor="@color/white"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_nextE"
@@ -967,8 +964,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/blue_fill__rounded_color"
                 android:text="Proximo"
-                android:textColor="@color/white"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </LinearLayout>
 
     </LinearLayout>

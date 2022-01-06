@@ -11,7 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Equipment_track_tools">
         <activity
-            android:name=".generalForm.Update_interview_id"
+            android:name=".generalUpdateForm.Update_generator_one"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_electricity"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_identi_health_facil"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_identi_inter_view"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_interview_id"
             android:exported="false" />
         <activity
             android:name=".view.inventory.InventoryEquipment"

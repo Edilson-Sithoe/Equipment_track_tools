@@ -13,7 +13,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@drawable/blue_bg">
 
             <TextView
@@ -24,7 +24,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="IDENTIFICATION OF THE INTERVIEWEE"
+                android:text="Identificação do entrevistado"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -33,16 +33,16 @@
         </FrameLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILName"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILName"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Name"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Name"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -50,26 +50,26 @@
                 android:id="@+id/idName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:textSize="14sp"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILEmail"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILEmail"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="E-mail"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="E-mail"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -77,26 +77,26 @@
                 android:id="@+id/idEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
-                android:textSize="14sp"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILPhone"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILPhone"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Telephone"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Telephone"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -104,26 +104,27 @@
                 android:id="@+id/idPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="phone"
-                android:textSize="14sp"
-                android:fontFamily="@font/poppins_regular"
+                android:maxLength="9"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILPos"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILPos"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Posotion"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Posotion"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -145,30 +146,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="30dp"
-            android:text="SECONDARY INTERVIEW"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Entrevistado secundário"
             android:textAllCaps="false"
             android:textColorHint="@color/color_txt"
-            app:hintTextColor="@color/cinzento"
-            android:fontFamily="@font/poppins_regular"
             android:textSize="20sp"
-            />
+            app:hintTextColor="@color/cinzento" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILIntervOther"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILIntervOther"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Name, Email, Phone number and position"
-            style="@style/Edit_Text"
             android:padding="15dp"
             android:textColorHint="@color/color_txt"
-            app:hintTextColor="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            app:hintTextColor="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idOther"
@@ -184,16 +184,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILIntervOtherThree"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILIntervOtherThree"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Name, Email, Phone number and position"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Name, Email, Phone number and position"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -201,9 +201,9 @@
                 android:id="@+id/idOtherTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
                 android:textSize="14sp"
@@ -214,8 +214,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -239,9 +239,9 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/blue_fill__rounded_color"
-                android:textColor="@color/white"
                 android:text="Proximo"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </LinearLayout>
 
     </LinearLayout>
