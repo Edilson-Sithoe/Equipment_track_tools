@@ -14,7 +14,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@drawable/blue_bg">
 
             <TextView
@@ -25,7 +25,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="STABILIZER"
+                android:text="Estabilizador"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
@@ -34,773 +34,750 @@
         </FrameLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILStab"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILStab"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Does the health facility have a general voltage stabilizer?"
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColorHint="@color/cinzento"
-            app:hintTextColor="@color/black"
-            android:fontFamily="@font/poppins_regular">
+            app:hintTextColor="@color/black">
 
             <TextView
                 android:id="@+id/idTVStab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Does the health facility have a general voltage stabilizer?"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/idChkYesSTAB"
-                    android:inputType="text"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:onClick="onRadioButtonClicked_stab"
-                    android:text="Yes">
-                </RadioButton>
-                <RadioButton
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkNoSTAB"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_stab"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:onClick="onRadioButtonClicked_stab"
-                    android:textSize="14sp"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/idChkNoSTAB"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
-        </RadioGroup>
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_stab"
+                    android:text="No"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILStabL"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILStabL"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Date of Interview"
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVStabL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="How old is the system?"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkLessSis"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:onClick="onRadioButtonClicked_two_stab"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:text="Less than 3 years">
-            </RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkB3_10Sis"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:onClick="onRadioButtonClicked_two_stab"
-                android:text="Between 3-10 years">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkLessSis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_stab"
+                    android:text="Less than 3 years"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkB11_20Sis"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:onClick="onRadioButtonClicked_two_stab"
-                android:text="Between 11-20 years">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkB3_10Sis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_stab"
+                    android:text="Between 3-10 years"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkMore20Sis"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:onClick="onRadioButtonClicked_two_stab"
-                android:text="More than 20 years ">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkB11_20Sis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_stab"
+                    android:text="Between 11-20 years"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/idChkMore20Sis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_stab"
+                    android:text="More than 20 years "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TIL"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Is the stabilizer working?"
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVGHF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Is the stabilizer working?"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="18sp"
-                />
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:textSize="18sp" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/idChkSTABY"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkSTABY"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_stab"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:onClick="onRadioButtonClicked_three_stab"
-                    android:text="Yes">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
 
                 <RadioButton
+                    android:id="@+id/idChkSTABN"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkSTABN"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_stab"
+                    android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:onClick="onRadioButtonClicked_three_stab"
-                    android:text="No">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
 
                 <RadioButton
+                    android:id="@+id/idChkSTABPartly"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkSTABPartly"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_stab"
+                    android:text=" Partly"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="14sp"
-                    android:onClick="onRadioButtonClicked_three_stab"
-                    android:layout_marginStart="10dp"
-                    android:text=" Partly">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
 
                 <RadioButton
+                    android:id="@+id/idChkSTABDontN"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkSTABDontN"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_stab"
+                    android:text="Don’t know"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:onClick="onRadioButtonClicked_three_stab"
-                    android:text="Don’t know">
-                </RadioButton>
-        </RadioGroup>
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILCEqui"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILCEqui"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="What is the condition of the equipment?"
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVCEqui"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="What is the condition of the equipment?"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkGIUSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:onClick="onRadioButtonClicked_four_stab"
-                android:text="Good and in use">
-            </RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkGBNUSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:text="Good, but not in use">
-                android:onClick="onRadioButtonClicked_four_stab"
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkGIUSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="Good and in use"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkIU_BNRSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:onClick="onRadioButtonClicked_four_stab"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:text="In use, but needs repair">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkGBNUSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="Good, but not in use"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp">
+                    android:onClick="onRadioButtonClicked_four_stab"</RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkIUNNTRSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:onClick="onRadioButtonClicked_four_stab"
-                android:layout_marginStart="10dp"
-                android:text="In use, but needs to be replaced">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkIU_BNRSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="In use, but needs repair"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idchkOOSBRSTAB"
-                android:inputType="text"
-                android:onClick="onRadioButtonClicked_four_stab"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:text="Out of service, but repairable">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkIUNNTRSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="In use, but needs to be replaced"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkOOSAndNRSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:onClick="onRadioButtonClicked_four_stab"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:text="Out of service and needs to be replaced">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idchkOOSBRSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="Out of service, but repairable"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkStilInstPhaSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:onClick="onRadioButtonClicked_four_stab"
-                android:layout_marginStart="10dp"
-                android:text="Still in the installation phase">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkOOSAndNRSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="Out of service and needs to be replaced"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkDontNSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:onClick="onRadioButtonClicked_four_stab"
-                android:text="Don’t know ">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkStilInstPhaSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="Still in the installation phase"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/idChkDontNSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_stab"
+                    android:text="Don’t know "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILCapGen"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILCapGen"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="What is the capacity (kVA) of the stabilizer?"
-            style="@style/Edit_Text"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idTxtCapGen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILPrevMain"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILPrevMain"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Is there an active Preventive Maintenance (PM) program?"
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVPrevMain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Is there an active Preventive Maintenance (PM) program?"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/idChkPMYSTAB"
-                    android:inputType="text"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:onClick="onRadioButtonClicked_five_stab"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
-                <RadioButton
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkPMNSTAB"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_five_stab"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:onClick="onRadioButtonClicked_five_stab"
-                    android:textSize="14sp"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/idChkPMNSTAB"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
-        </RadioGroup>
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_five_stab"
+                    android:text="No"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILPMCarr"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILPMCarr"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="PM activities are carried out by:"
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVPMCarr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="PM activities are carried out by:"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkPMITPHFSTAB"
-                android:onClick="onRadioButtonClicked_six_stab"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:text="Internal Technical Personnel of the Health Facility">
-            </RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkPMPDISTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:onClick="onRadioButtonClicked_six_stab"
-                android:textSize="14sp"
-                android:layout_marginStart="10dp"
-                android:text="Personnel from the Department of Infrastructure">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkPMITPHFSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_six_stab"
+                    android:text="Internal Technical Personnel of the Health Facility"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/idChkSubcontractedSTAB"
-                android:inputType="text"
-                android:textColor="@color/color_txt"
-                android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"
-                android:onClick="onRadioButtonClicked_six_stab"
-                android:layout_marginStart="10dp"
-                android:text="Subcontracted">
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/idChkPMPDISTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_six_stab"
+                    android:text="Personnel from the Department of Infrastructure"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/idChkSubcontractedSTAB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_six_stab"
+                    android:text="Subcontracted"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILFreqSTAB"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILFreqSTAB"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="What is the frequency of PM (every # months)?"
-            style="@style/Edit_Text"
             android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular"
             app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idTxtFreqSTAB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILSubSTAB"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILSubSTAB"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="In case of subcontracting: what is the name of the maintenance company?"
-            style="@style/Edit_Text"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idTxtNameOfMantSTAB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILPMCMSTAB"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILPMCMSTAB"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Does the health facility have a logbook for the maintenance of the generator (PM and CM)? "
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVPMCM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Does the health facility have a logbook for the maintenance of the generator (PM and CM)? "
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/idChkPMCMYSTAB"
-                    android:inputType="text"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:onClick="onRadioButtonClicked_seven_stab"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
-                <RadioButton
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkPMCMNSTAB"
-                    android:onClick="onRadioButtonClicked_seven_stab"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_seven_stab"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textSize="14sp"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/idChkPMCMNSTAB"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
-        </RadioGroup>
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_seven_stab"
+                    android:text="No"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILLogBook"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILLogBook"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Is the logbook up to date?"
-            style="@style/Edit_Text"
             android:padding="0dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <TextView
                 android:id="@+id/idTVLogBook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Is the logbook up to date?"
                 android:textAllCaps="false"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/idChkLoBYSTAB"
-                    android:inputType="text"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:onClick="onRadioButtonClicked_eight_stab"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
-                <RadioButton
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/idChkLoBNSTAB"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked_eight_stab"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:fontFamily="@font/poppins_regular"
-                    android:onClick="onRadioButtonClicked_eight_stab"
-                    android:textSize="14sp"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/idChkLoBNSTAB"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
-        </RadioGroup>
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_eight_stab"
+                    android:text="No"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILComGen"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILComGen"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Comments on the Generator"
-            style="@style/Edit_Text"
             android:padding="15dp"
             android:textColor="@color/color_txt"
-            android:textColorHint="@color/cinzento"
-            android:fontFamily="@font/poppins_regular">
+            android:textColorHint="@color/cinzento">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/idTxtComentSTAB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -808,8 +785,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -822,8 +799,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/blue_fill__rounded_color"
                 android:text="Voltar"
-                android:textColor="@color/white"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_next"
@@ -833,8 +810,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/blue_fill__rounded_color"
                 android:text="Proximo"
-                android:textColor="@color/white"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

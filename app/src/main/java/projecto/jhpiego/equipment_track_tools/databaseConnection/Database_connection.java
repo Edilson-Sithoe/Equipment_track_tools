@@ -733,7 +733,6 @@ public class Database_connection extends SQLiteOpenHelper {
             Log.e("tentando criar tabela", e.getMessage());
         }
 
-
         cv.put(Assessment.DadosTabela.COLUMN_NAME_FN, Assessment.assessment_model.getTxtFullName());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_ORG, Assessment.assessment_model.getTxtOrganization());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_DT, Assessment.assessment_model.getDataDates());
@@ -1089,7 +1088,7 @@ public class Database_connection extends SQLiteOpenHelper {
         cv.put(Assessment.DadosTabela.COLUMN_NAME_NMCOTT, Assessment.assessment_model.getName_maintenance_company_ox_tank_twoo());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_ACOTT, Assessment.assessment_model.getAverage_cost_ox_tank_twoo());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_BLTT, Assessment.assessment_model.getBudget_lox_tank_twoo());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_LMOXT, Assessment.assessment_model.getLogbbook_maintenance_twoo_mani());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_LMOXT, Assessment.assessment_model.getLogbook_maintenance_tank_two());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_LUOTT, Assessment.assessment_model.getLogbook_update_ox_tank_twoo());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_NSOTT, Assessment.assessment_model.getName_supply_ox_tank_twoo());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_HRLT, Assessment.assessment_model.getHealth_receive_lox_twoo());
@@ -1249,7 +1248,7 @@ public class Database_connection extends SQLiteOpenHelper {
     }
 
     public Cursor readAllData_form() {
-        String query = "SELECT * FROM " + TABLE_ASSESSMENT + " ORDER BY id DESC";
+        String query = "SELECT * FROM " + TABLE_ASSESSMENT + " ORDER BY id";
         SQLiteDatabase db = this.getWritableDatabase();
 
         Cursor cursor = null;

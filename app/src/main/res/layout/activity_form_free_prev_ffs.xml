@@ -1177,6 +1177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:fontFamily="@font/poppins_regular"
+                    android:onClick="onRadioButtonClicked14_fpf"
                     android:inputType="text"
                     android:text="Yes"
                     android:textColor="@color/color_txt"

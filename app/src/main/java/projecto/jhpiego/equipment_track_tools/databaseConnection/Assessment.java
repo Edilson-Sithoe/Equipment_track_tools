@@ -1,7 +1,6 @@
 package projecto.jhpiego.equipment_track_tools.databaseConnection;
 
 import android.provider.BaseColumns;
-
 import projecto.jhpiego.equipment_track_tools.model.Assessment_model;
 
 public class Assessment {
@@ -26,7 +25,7 @@ public class Assessment {
         public static final String COLUMN_NAME_T = "telephone";
         public static final String COLUMN_NAME_P = "position  ";
         public static final String COLUMN_NAME_SEI = "secondary_interview  ";
-        public static final String COLUMN_NAME_SEIO = "secondary_interview  ";
+        public static final String COLUMN_NAME_SEIO = "secondary_interviewOther";
 
         public static final String COLUMN_NAME_HFID = "health_facility_id  ";
         public static final String COLUMN_NAME_HFN = "health_facility_name  ";

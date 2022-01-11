@@ -22,7 +22,7 @@ public class FormMainPiping extends AppCompatActivity {
     private String cbo_piping_network, cbo_old_sysem_pp,cbo_system_working_pp, cbo_valvues_for_each_area, cbo_staff_know_where_shut_off;
     private String cbo_staff_know_wher_close, cbo_higt_low_pressure_alarm, cbo_centralized_alarm, cbo_condiction_system_pp, cbo_type_plug_outlet;
     private String cbo_active_pm_program_pp, cbo_pm_actives_carried_pp;
-    private TextView txt_system_capacity_mas,txt_frequency_system_pp, txt_name_maintanance_pp, txt_average_cost_piping, txt_budget_program_pp, txt_comments_pp;
+    private TextView txt_system_capacity_mas,txt_frequency_system_pp, txt_type_plug_outlet,  txt_name_maintanance_pp, txt_average_cost_piping, txt_budget_program_pp, txt_comments_pp;
     String[] mensagens = {"Preencha todos os campos", "Registado com sucesso", "Ocorreu algum erro inesperado, tenta novamente"};
 
     @Override
@@ -46,6 +46,7 @@ public class FormMainPiping extends AppCompatActivity {
                 String centralized_alarm = cbo_centralized_alarm;
                 String condiction_system_pp = cbo_condiction_system_pp;
                 String type_plug_outlet = cbo_type_plug_outlet;
+                String other_type_plug_outlet = txt_type_plug_outlet.getText().toString();
                 String active_pm_program_pp = cbo_active_pm_program_pp;
                 String frequency_system_pp = txt_frequency_system_pp.getText().toString();
                 String pm_actives_carried_pp = cbo_pm_actives_carried_pp;
@@ -70,8 +71,9 @@ public class FormMainPiping extends AppCompatActivity {
                     Assessment.assessment_model.setHigh_low_pressure_alarm(higt_low_pressure_alarm);
                     Assessment.assessment_model.setCentralized_alarm(centralized_alarm);
                     Assessment.assessment_model.setCondition_system_pp(condiction_system_pp);
-                    Assessment.assessment_model.setType_plug_outlet(cbo_type_plug_outlet);
-                    Assessment.assessment_model.setActive_pm_program_pp(cbo_active_pm_program_pp);
+                    Assessment.assessment_model.setType_plug_outlet(type_plug_outlet);
+                    Assessment.assessment_model.setOther_type_plug_outlet(other_type_plug_outlet);
+                    Assessment.assessment_model.setActive_pm_program_pp(active_pm_program_pp);
                     Assessment.assessment_model.setFrequency_system_pp(txt_frequency_system_pp.getText().toString());
                     Assessment.assessment_model.setPm_actives_carried_pp(pm_actives_carried_pp);
                     Assessment.assessment_model.setName_maintanance_pp(txt_name_maintanance_pp.getText().toString());
@@ -80,6 +82,7 @@ public class FormMainPiping extends AppCompatActivity {
                     Assessment.assessment_model.setComments_pp(txt_comments_pp.getText().toString());
 
                     Intent i = new Intent(FormMainPiping.this, FormLogistic.class);
+                 //   Intent i = new Intent(FormMainPiping.this, FormMedGasOutlets.class);
                     startActivity(i);
                 }
             }
@@ -351,7 +354,7 @@ public class FormMainPiping extends AppCompatActivity {
         btnNExt = findViewById(R.id.btn_nextPP);
 
         txt_system_capacity_mas = findViewById(R.id.btn_backMPP);
-
+        txt_type_plug_outlet = findViewById(R.id.txtOtherMPP);
         txt_frequency_system_pp = findViewById(R.id.txtFPMMPP);
 
         txt_name_maintanance_pp = findViewById(R.id.txtSubMPP);

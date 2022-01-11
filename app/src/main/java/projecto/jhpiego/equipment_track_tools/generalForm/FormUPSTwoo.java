@@ -8,19 +8,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.snackbar.Snackbar;
+
 import projecto.jhpiego.equipment_track_tools.R;
 import projecto.jhpiego.equipment_track_tools.databaseConnection.Assessment;
+import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
 public class FormUPSTwoo extends AppCompatActivity {
 
     private Button btnBack, btnNExt;
-    private EditText txtOtherUPS, txtCapacityUPS,txtFreqPMUPS, txtNameOfMantUPS, txtComentUPS;
+    private EditText txtOtherUPS, txtCapacityUPS, txtFreqPMUPS, txtNameOfMantUPS, txtComentUPS;
     String[] mensagens = {"Preencha todos os campos", "Registado com sucesso", "Ocorreu algum erro inesperado, tenta novamente"};
-    private String cboMain_gen_hf, cboMain_gen_atsW,cboMain_gen_pmcm,cboMain_gen_lb, cboMain_gene_pm;
-    private String cboMain_supp,cboMain_gen_fuel;
-    private String cboMain_old,cboMain_gen_pm;
+    private String cboMain_gen_hf, cboMain_gen_atsW, cboMain_gen_pmcm, cboMain_gen_lb, cboMain_gene_pm;
+    private String cboMain_supp, cboMain_gen_fuel;
+    private String cboMain_old, cboMain_gen_pm;
     private String cboMain_gen_work, cboMain_gen_cond, cboMain_gen_ats;
 
     @Override
@@ -28,8 +33,9 @@ public class FormUPSTwoo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_ups_twoo);
 
-     //   getSupportActionBar().hide();
         IniciarComponentes();
+
+        getAndSetIntentData();
 
         btnNExt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +46,7 @@ public class FormUPSTwoo extends AppCompatActivity {
                 String oldSys_ups_twoo = cboMain_old;
                 String working_ups_twoo = cboMain_gen_work;
                 String condEquip_ups_twoo = cboMain_gen_cond;
-                String capacity_ups_twoo =  txtCapacityUPS.getText().toString();
+                String capacity_ups_twoo = txtCapacityUPS.getText().toString();
                 String pmp_ups_twoo = cboMain_gene_pm;
                 String carrie_by_ups_twoo = cboMain_gen_pm;
                 String frequency_ups_twoo = txtFreqPMUPS.getText().toString();
@@ -49,7 +55,7 @@ public class FormUPSTwoo extends AppCompatActivity {
                 String logbook_ups_twoo = cboMain_gen_lb;
                 String comments_ups_twoo = txtComentUPS.getText().toString();
 
-                if (TextUtils.isEmpty(capacity_ups_twoo) || TextUtils.isEmpty(nameOfMain_ups_twoo) ||TextUtils.isEmpty(frequency_ups_twoo)) {
+                if (TextUtils.isEmpty(capacity_ups_twoo) || TextUtils.isEmpty(nameOfMain_ups_twoo) || TextUtils.isEmpty(frequency_ups_twoo)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
                     snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
                     snackbar.setTextColor(Color.WHITE);
@@ -71,6 +77,7 @@ public class FormUPSTwoo extends AppCompatActivity {
                     Assessment.assessment_model.setTxtComentUPSTwhoo(comments_ups_twoo);
 
                     Intent i = new Intent(FormUPSTwoo.this, FormSolarEnergy.class);
+                 //   Intent i = new Intent(FormUPSTwoo.this, FormMedGasOutlets.class);
                     startActivity(i);
                 }
             }
@@ -87,15 +94,26 @@ public class FormUPSTwoo extends AppCompatActivity {
 
     }
 
+    private void getAndSetIntentData() {
+        if (getIntent().hasExtra("txtNameOfMant")) {
+            Toast.makeText(this, "Sem dados para mostrar", Toast.LENGTH_SHORT).show();
+        } else {
+            txtCapacityUPS.setText(Variaveis.assessment_model.getTxtCapacityUPS());
+            txtFreqPMUPS.setText(Variaveis.assessment_model.getTxtFreqPMUPS());
+            txtNameOfMantUPS.setText(Variaveis.assessment_model.getTxtNameOfMantUPS());
+            txtComentUPS.setText(Variaveis.assessment_model.getTxtComentUPS());
+        }
+    }
+
     public void onRadioButtonClicked_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkYesUPS:
+        switch (view.getId()) {
+            case R.id.idChkYesUPSTwoo:
                 if (checked)
                     cboMain_gen_hf = "Yes";
                 break;
-            case R.id.idChkNoUPS:
+            case R.id.idChkNoUPSTwoo:
                 if (checked)
                     cboMain_gen_hf = "No";
                 break;
@@ -105,20 +123,20 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_two_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkWhoHospUPS:
+        switch (view.getId()) {
+            case R.id.idChkWhoHospUPSTwoo:
                 if (checked)
                     cboMain_supp = "The whole hospital";
                 break;
-            case R.id.idChkOpTheatreUPS:
+            case R.id.idChkOpTheatreUPSTwoo:
                 if (checked)
                     cboMain_supp = "Operating theatre";
                 break;
-            case R.id.idChkEmergRoomUPS:
+            case R.id.idChkEmergRoomUPSTwoo:
                 if (checked)
                     cboMain_supp = "Emergency Room";
                 break;
-            case R.id.idChkLabUPS:
+            case R.id.idChkLabUPSTwoo:
                 if (checked)
                     cboMain_supp = "Laboratory";
                 break;
@@ -128,20 +146,20 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_three_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkLessUPS:
+        switch (view.getId()) {
+            case R.id.idChkLessUPSTwoo:
                 if (checked)
                     cboMain_old = "Less than 3 years";
                 break;
-            case R.id.idChkB3_10UPS:
+            case R.id.idChkB3_10UPSTwoo:
                 if (checked)
                     cboMain_old = "Between 3-10 years";
                 break;
-            case R.id.idChkB11_20UPS:
+            case R.id.idChkB11_20UPSTwoo:
                 if (checked)
                     cboMain_old = "Between 11-20 years";
                 break;
-            case R.id.idChkMore20UPS:
+            case R.id.idChkMore20UPSTwoo:
                 if (checked)
                     cboMain_old = "More than 20 years";
                 break;
@@ -151,20 +169,20 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_four_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkUPSY:
+        switch (view.getId()) {
+            case R.id.idChkUPSYTwoo:
                 if (checked)
                     cboMain_gen_work = "Yes";
                 break;
-            case R.id.idChkUPSN:
+            case R.id.idChkUPSNTwoo:
                 if (checked)
                     cboMain_gen_work = "No";
                 break;
-            case R.id.idChkUPSPartly:
+            case R.id.idChkUPSPartlyTwoo:
                 if (checked)
                     cboMain_gen_work = "Partly";
                 break;
-            case R.id.idChkUPSDontN:
+            case R.id.idChkUPSDontNTwoo:
                 if (checked)
                     cboMain_gen_work = "Don't know";
                 break;
@@ -174,32 +192,32 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_five_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkGIUUPS:
+        switch (view.getId()) {
+            case R.id.idChkGIUUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "Good and in use";
                 break;
-            case R.id.idChkGBNUUPS:
+            case R.id.idChkGBNUUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "Good, but not in use";
                 break;
-            case R.id.idChkIU_BNRUPS:
+            case R.id.idChkIU_BNRUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "In use, but needs repair";
                 break;
-            case R.id.idChkIUNNTRUPS:
+            case R.id.idChkIUNNTRUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "In use, but needs to be replaced";
-            case R.id.idchkOOSBRUPS:
+            case R.id.idchkOOSBRUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "Out of service, but repairable";
-            case R.id.idChkOOSAndNRUPS:
+            case R.id.idChkOOSAndNRUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "Out of service and needs to be replaced";
-            case R.id.idChkStilInstPhaUPS:
+            case R.id.idChkStilInstPhaUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "Still in the installation phase";
-            case R.id.idChkDontNUPS:
+            case R.id.idChkDontNUPSTwoo:
                 if (checked)
                     cboMain_gen_cond = "Don't know";
                 break;
@@ -209,12 +227,12 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_six_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkPMYUPS:
+        switch (view.getId()) {
+            case R.id.idChkPMYUPSTwoo:
                 if (checked)
                     cboMain_gene_pm = "Yes";
                 break;
-            case R.id.idChkPMNUPS:
+            case R.id.idChkPMNUPSTwoo:
                 if (checked)
                     cboMain_gene_pm = "No";
                 break;
@@ -224,16 +242,16 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_seven_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkPMITPHFUPS:
+        switch (view.getId()) {
+            case R.id.idChkPMITPHFUPSTwoo:
                 if (checked)
                     cboMain_gen_pm = "Internal Technical Personnel of the Health Facility";
                 break;
-            case R.id.idChkPMPDIUPS:
+            case R.id.idChkPMPDIUPSTwoo:
                 if (checked)
                     cboMain_gen_pm = "Personnel from the Department of Infrastructure";
                 break;
-            case R.id.idChkSubcontractedUPS:
+            case R.id.idChkSubcontractedUPSTwoo:
                 if (checked)
                     cboMain_gen_pm = "Subcontracted";
                 break;
@@ -243,12 +261,12 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_eight_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkPMCMYUPS:
+        switch (view.getId()) {
+            case R.id.idChkPMCMYUPSTwoo:
                 if (checked)
                     cboMain_gen_pmcm = "Yes";
                 break;
-            case R.id.idChkPMCMNUPS:
+            case R.id.idChkPMCMNUPSTwoo:
                 if (checked)
                     cboMain_gen_pmcm = "No";
                 break;
@@ -258,30 +276,29 @@ public class FormUPSTwoo extends AppCompatActivity {
     public void onRadioButtonClicked_nine_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
-            case R.id.idChkLoBYUPS:
+        switch (view.getId()) {
+            case R.id.idChkLoBYUPSTwoo:
                 if (checked)
                     cboMain_gen_lb = "Yes";
                 break;
-            case R.id.idChkLoBNUPS:
+            case R.id.idChkLoBNUPSTwoo:
                 if (checked)
                     cboMain_gen_lb = "No";
                 break;
         }
     }
 
-    public void IniciarComponentes(){
+    public void IniciarComponentes() {
         btnBack = findViewById(R.id.btn_back);
         btnNExt = findViewById(R.id.btn_next);
 
+        txtOtherUPS = findViewById(R.id.idTxtOtherUPSTwoo);
+        txtCapacityUPS = findViewById(R.id.idTxtCapUPSTwoo);
 
-        txtOtherUPS = findViewById(R.id.idTxtOtherUPS);
-        txtCapacityUPS = findViewById(R.id.idTxtCapUPS);
+        txtFreqPMUPS = findViewById(R.id.idTxtFreqUPSTwoo);
+        txtNameOfMantUPS = findViewById(R.id.idTxtNameOfMantUPSTwoo);
 
-        txtFreqPMUPS = findViewById(R.id.idTxtFreqUPS);
-        txtNameOfMantUPS = findViewById(R.id.idTxtNameOfMantUPS);
-
-        txtComentUPS = findViewById(R.id.idTxtComentUPS);
+        txtComentUPS = findViewById(R.id.idTxtComentUPSTwoo);
     }
 
     public void LimparCampos() {

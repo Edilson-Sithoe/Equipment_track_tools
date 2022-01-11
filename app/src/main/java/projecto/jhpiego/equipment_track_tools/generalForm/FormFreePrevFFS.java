@@ -50,12 +50,11 @@ public class FormFreePrevFFS extends AppCompatActivity {
                 String emergency_water_tank_full = cbo_if_sys_work;
                 String comments_sprinkler = txtCommnts.getText().toString();
 
-
                 Assessment.assessment_model.setSign_presence_gas(sign_presence_gas);
                 Assessment.assessment_model.setSign_emergency_contact(sign_emerg_contact);
                 Assessment.assessment_model.setFire_extinguishers(fire_extinguishers);
                 Assessment.assessment_model.setType_extinguishers(type_extinguishers);
-                Assessment.assessment_model.setType_extinguishers_other(txtOther.getText().toString());
+                Assessment.assessment_model.setType_extinguishers_other(type_extinguishers_other);
                 Assessment.assessment_model.setLast_maintenance_fone(last_maintenance_fone);
                 Assessment.assessment_model.setSensor_fire_alarme_system(sensor_fire_alarme_system);
                 Assessment.assessment_model.setSystem_working_sensor(system_working_sensor);
@@ -67,7 +66,7 @@ public class FormFreePrevFFS extends AppCompatActivity {
                 Assessment.assessment_model.setSystem_working_sprinkler(system_working_sprinkler);
                 Assessment.assessment_model.setLast_maintebance_done_sprinlker(last_maintebance_done_sprinlker);
                 Assessment.assessment_model.setEmergency_water_tank_full(emergency_water_tank_full);
-                Assessment.assessment_model.setComments_sprinkler(txtCommnts.getText().toString());
+                Assessment.assessment_model.setComments_sprinkler(comments_sprinkler);
 
                     Intent i = new Intent(FormFreePrevFFS.this, FormCylinders.class);
                     startActivity(i);
@@ -383,62 +382,7 @@ public class FormFreePrevFFS extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_backFPA);
         btnNExt = findViewById(R.id.btn_next);
 
-      /*  chkYesPO = findViewById(R.id.idChkYesFFSPO);
-        chkNoPO = findViewById(R.id.idChkNoFFSPO);
-
-        chkYesEC = findViewById(R.id.idChkYesFFSEC);
-        chkNoEC = findViewById(R.id.idChkNoFFSEC);
-
-        chkYesFE = findViewById(R.id.idChkYesFFSFE);
-        chkNoFE = findViewById(R.id.idChkNoFFSFE);
-
-        chkLGE = findViewById(R.id.idChkLGE);
-        chkBC = findViewById(R.id.idChkBC);
-        chkABC = findViewById(R.id.idChkABC);
-        chkCO = findViewById(R.id.idChkCO);
-        chkD = findViewById(R.id.idChkD);
-        chkK = findViewById(R.id.idChkK);
-        chkDontNo = findViewById(R.id.idChkDontNFE);*/
         txtOther = findViewById(R.id.idTxtOther);
-
-      /*  chkLessMD = findViewById(R.id.idChkLessMD);
-        chkMoreThaOnYMD = findViewById(R.id.idChkMorThanMD);
-        chkMoreThnTwoYMD = findViewById(R.id.idChkMorThanTMD);
-        chkDontNoMD = findViewById(R.id.idChkDontNMD);
-        chkYesAS = findViewById(R.id.idChkYesAS);
-        chkNoAS = findViewById(R.id.idChkNoAS);
-        chkYesSW = findViewById(R.id.idChYesSW);
-        chkNoSW = findViewById(R.id.idChkNoSW);
-        chkDontNoSW = findViewById(R.id.idChkDontNoSW);
-
-        chkLessLMD = findViewById(R.id.idChkLessLMD);
-        chkMoreThaOnYLMD = findViewById(R.id.idChkMorThanLMD);
-
-        chkMoreThnTwoYLMD = findViewById(R.id.idChkMorThanTLMD);
-        chkDontNoLMD = findViewById(R.id.idChkDontNLMD);
-        chkYesHS = findViewById(R.id.idChkYesFFSHS);
-
-        chkNoHS = findViewById(R.id.idChkNoFFSHS);
-        chkYesSWT = findViewById(R.id.idChYesSWT);
-        chkNoSWT = findViewById(R.id.idChkNoSWT);
-        chkDontNoSWT = findViewById(R.id.idChkDontNoSWT);
-        chkLessLMDT = findViewById(R.id.idChkLessLMDT);
-        chkMoreThaOnYLMDT = findViewById(R.id.idChkMorThanLMDT);
-        chkMoreThnTwoYLMDT = findViewById(R.id.idChkMorThanTLMDT);
-        chkDontNoLMDT = findViewById(R.id.idChkDontNLMDT);
-        chkYesCS = findViewById(R.id.idChkYesFFSCS);
-        chkNoCS = findViewById(R.id.idChkNoFFSCS);
-        chkYesSWTH = findViewById(R.id.idChYesSWTH);
-        chkNoSWTH = findViewById(R.id.idChkNoSWTH);
-        chkDontNoSWTH = findViewById(R.id.idChkDontNoSWTH);
-        chkLessLMDTH = findViewById(R.id.idChkLessLMDTH);
-        chkMoreThaOnYLMDTH = findViewById(R.id.idChkMorThanLMDTH);
-        chkMoreThnTwoYLMDTH = findViewById(R.id.idChkMorThanTLMDTH);
-        chkDontNoLMDTH = findViewById(R.id.idChkDontNLMDTH);
-        chkYesWTF = findViewById(R.id.idChYesWTF);
-        chkNoWTF = findViewById(R.id.idChkNoWTF);
-        chkDontNoWTF = findViewById(R.id.idChkDontNoWTF);*/
-
         txtCommnts = findViewById(R.id.idTxtComentUPS);
     }
 

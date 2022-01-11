@@ -32,7 +32,7 @@ public class FormLiquidOx extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_liquid_ox);
 
-     //   getSupportActionBar().hide();
+        //   getSupportActionBar().hide();
         InitComponents();
 
         btnNExt.setOnClickListener(new View.OnClickListener() {
@@ -74,29 +74,29 @@ public class FormLiquidOx extends AppCompatActivity {
                     snackbar.show();
                 } else {
                     Assessment.assessment_model.setLiquid_oxygen(liquid_oxygen);
-                    Assessment.assessment_model.setAverage_consuming_oxygen(txt_average_consuming_oxygen.getText().toString());
-                    Assessment.assessment_model.setLast_month_consuminh(txt_last_month_consuminh.getText().toString());
+                    Assessment.assessment_model.setAverage_consuming_oxygen(average_consuming_oxygen);
+                    Assessment.assessment_model.setLast_month_consuminh(last_month_consuminh);
                     Assessment.assessment_model.setTank_owner(tank_owner);
-                    Assessment.assessment_model.setTank_owner_other(txt_tank_owner_other.getText().toString());
+                    Assessment.assessment_model.setTank_owner_other(tank_owner_other);
                     Assessment.assessment_model.setOld_system_oxygen(old_system_oxygen);
-                    Assessment.assessment_model.setCapacity_lox_tank_m3(txt_capacity_lox_tank_m3.getText().toString());
-                    Assessment.assessment_model.setCapacity_lox_tank_ton(txt_capacity_lox_tank_ton.getText().toString());
+                    Assessment.assessment_model.setCapacity_lox_tank_m3(capacity_lox_tank_m3);
+                    Assessment.assessment_model.setCapacity_lox_tank_ton(capacity_lox_tank_ton);
                     Assessment.assessment_model.setSystem_working_ox_tank(system_working_ox_tank);
                     Assessment.assessment_model.setCondition_system_ox_tank(condition_system_ox_tank);
                     Assessment.assessment_model.setActive_pm_program(active_pm_program);
                     Assessment.assessment_model.setActivie_carrie_by_ox_tank(activie_carrie_by_ox_tank);
-                    Assessment.assessment_model.setFrequency_ox_tank(txt_frequency_ox_tank.getText().toString());
-                    Assessment.assessment_model.setName_maintenance_company_ox_tank(txt_name_maintenance_company_ox_tank.getText().toString());
-                    Assessment.assessment_model.setAverage_cost_ox_tank(txt_average_cost_ox_tank.getText().toString());
-                    Assessment.assessment_model.setBudget_lox_tank(txt_budget_lox_tank.getText().toString());
+                    Assessment.assessment_model.setFrequency_ox_tank(frequency_ox_tank);
+                    Assessment.assessment_model.setName_maintenance_company_ox_tank(name_maintenance_company_ox_tank);
+                    Assessment.assessment_model.setAverage_cost_ox_tank(average_cost_ox_tank);
+                    Assessment.assessment_model.setBudget_lox_tank(budget_lox_tank);
                     Assessment.assessment_model.setLogbook_mainte_tank(logbook_mainte_tank);
                     Assessment.assessment_model.setLogbook_update_ox_tank(logbook_update_ox_tank);
-                    Assessment.assessment_model.setName_supply_ox_tank(txt_name_supply_ox_tank.getText().toString());
+                    Assessment.assessment_model.setName_supply_ox_tank(name_supply_ox_tank);
                     Assessment.assessment_model.setHealth_receive_lox(health_receive_lox);
                     Assessment.assessment_model.setShortages_lox(shortages_lox);
                     Assessment.assessment_model.setSpecialized_internal(specialized_internal);
-                    Assessment.assessment_model.setHow_many_tecn_available(txt_how_many_tecn_available.getText().toString());
-                    Assessment.assessment_model.setComment_ox_tank(txt_comment_ox_tank.getText().toString());
+                    Assessment.assessment_model.setHow_many_tecn_available(how_many_tecn_available);
+                    Assessment.assessment_model.setComment_ox_tank(comment_ox_tank);
 
                     Intent i = new Intent(FormLiquidOx.this, FormLiquidOxTwoo.class);
                     startActivity(i);
@@ -156,7 +156,7 @@ public class FormLiquidOx extends AppCompatActivity {
                 if (checked)
                     cbo_old_system_oxygen = "Between 3-10 years";
                 break;
-            case R.id.chkMore20LOX:
+            case R.id.chkB11_20LOX:
                 if (checked)
                     cbo_old_system_oxygen = "Between 11-20 years";
                 break;
@@ -349,61 +349,16 @@ public class FormLiquidOx extends AppCompatActivity {
     public void InitComponents() {
         btnNExt = findViewById(R.id.btn_next);
         btnBack = findViewById(R.id.btn_backLOX);
-    /*    chkYesLOX = findViewById(R.id.chkYesLOX);
-                chkNoMFLOX = findViewById(R.id.chkNoMFLOX);*/
+
         txt_average_consuming_oxygen = findViewById(R.id.txtAVGLOX);
         txt_last_month_consuminh = findViewById(R.id.txtMCLOX);
-            /*    chkMISAULOX = findViewById(R.id.chkMISAULOX);
-                chkSupLOX = findViewById(R.id.chkSupLOX);
-                txtOtherLOX = findViewById(R.id.txtOtherLOX);
-
-                chkLessLOX = findViewById(R.id.chkLessLOX);
-                chkB3_10LOX = findViewById(R.id.chkB3_10LOX);
-                chkB11_20LOX = findViewById(R.id.chkB11_20LOX);
-                chkMore20LOX = findViewById(R.id.chkMore20LOX);*/
         txt_tank_owner_other = findViewById(R.id.txtOtherLOX);
         txt_capacity_lox_tank_m3 = findViewById(R.id.txtCapaTLOX);
-            /*    chkYLOX = findViewById(R.id.chkYLOX);
-                chkNLOX = findViewById(R.id.chkNLOX);
-                chkPartlyLOX = findViewById(R.id.chkPartlyLOX);
-                chkDontNLOX = findViewById(R.id.chkDontNLOX);
-
-                chkGIULOX = findViewById(R.id.chkGIULOX);
-                chkGBNULOX = findViewById(R.id.chkGBNULOX);
-                chkIU_BNRLOX = findViewById(R.id.chkIU_BNRLOX);
-                chkIUNNTRLOX = findViewById(R.id.chkIUNNTRLOX);
-                chkOOSBRLOX = findViewById(R.id.chkOOSBRLOX);
-                chkOOSAndNRLOX = findViewById(R.id.chkOOSAndNRLOX);
-                chkStilInstPhaLOX = findViewById(R.id.chkStilInstPhaLOX);
-                chkDontKnowLOX = findViewById(R.id.chkDontKnowLOX);
-
-                chkYESPMLOX = findViewById(R.id.chkYESPMLOX);
-                chkNOPMLOX = findViewById(R.id.chkNOPMLOX);
-
-                chkPHFLOX = findViewById(R.id.chkPHFLOX);
-                chkPDILOX = findViewById(R.id.chkPDILOX);
-                chkSubLOX = findViewById(R.id.chkSubLOX);*/
         txt_capacity_lox_tank_ton = findViewById(R.id.txtCapTonsLOX);
         txt_frequency_ox_tank = findViewById(R.id.txtFPMMLOX);
         txt_name_maintenance_company_ox_tank = findViewById(R.id.txtNMCLOX);
         txt_average_cost_ox_tank = findViewById(R.id.txtAVGCPMLOX);
-            /*    chkYesPMCMLOX = findViewById(R.id.chkYesPMCMLOX);
-                chkNoPMCMLOX = findViewById(R.id.chkNoPMCMLOX);
-
-                chkYesLBLOX = findViewById(R.id.chkYesLBLOX);
-                chkNoLBLOX = findViewById(R.id.chkNoLBLOX);*/
         txt_budget_lox_tank = findViewById(R.id.txtBudgetLOX);
-              /*  chkDailyLOX = findViewById(R.id.chkDailyLOX);
-                chkWeeklyLOX = findViewById(R.id.chkWeeklyLOX);
-                chkFortnightlyLOX = findViewById(R.id.chkFortnightlyLOX);
-                chkMonthlyLOX = findViewById(R.id.chkMonthlyLOX);
-                chkOnrequestLOX = findViewById(R.id.chkOnrequestLOX);
-
-                chkYEShorLOX = findViewById(R.id.chkYEShorLOX);
-                chkNoShorLOX = findViewById(R.id.chkNoShorLOX);
-
-                chkYesSITLOX = findViewById(R.id.chkYesSITLOX);
-                chkNoSITLOX = findViewById(R.id.chkNoSITLOX);*/
         txt_name_supply_ox_tank = findViewById(R.id.txtNSLOX);
         txt_how_many_tecn_available = findViewById(R.id.txtTechAvLOX);
         txt_comment_ox_tank = findViewById(R.id.txtCommentLOX);

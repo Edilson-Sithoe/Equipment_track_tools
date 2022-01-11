@@ -11,6 +11,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Equipment_track_tools">
         <activity
+            android:name=".generalUpdateForm.Update_solar_energy"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_form_ups_twoo"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_form_ups"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_stabilizer"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_generator_four"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_generator_three"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_generator_twoo"
+            android:exported="false" />
+        <activity
             android:name=".generalUpdateForm.Update_generator_one"
             android:exported="false" />
         <activity

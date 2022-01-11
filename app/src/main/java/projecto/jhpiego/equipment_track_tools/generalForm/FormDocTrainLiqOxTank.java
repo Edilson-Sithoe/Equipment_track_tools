@@ -45,10 +45,10 @@ public class FormDocTrainLiqOxTank extends AppCompatActivity {
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
-                    Assessment.assessment_model.setTecni_traine_related_manifolf(tecni_train_lox);
-                    Assessment.assessment_model.setFrequency_trainig_manifold(frequency_trainnOT);
-                    Assessment.assessment_model.setHow_many_techn_trained_man_out(how_many_tech_trained_lox);
-                    Assessment.assessment_model.setComments_train_man_out(comments_train_lox);
+                    Assessment.assessment_model.setTecni_train_lox(tecni_train_lox);
+                    Assessment.assessment_model.setFrequency_trainnOT(frequency_trainnOT);
+                    Assessment.assessment_model.setHow_many_tech_trained_lox(how_many_tech_trained_lox);
+                    Assessment.assessment_model.setComments_train_lox(comments_train_lox);
 
                     Intent i = new Intent(FormDocTrainLiqOxTank.this, FormOxFactory.class);
                     startActivity(i);

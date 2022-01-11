@@ -29,7 +29,6 @@ public class FormIdentiInterView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_identi_inter_view);
-      //  getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         IniciarComponentes();
@@ -68,6 +67,7 @@ public class FormIdentiInterView extends AppCompatActivity {
                      Assessment.assessment_model.setOtherTwo(other_two);
 
                      Intent inext = new Intent(FormIdentiInterView.this, FormIdentiHeaFacil.class);
+                   //  Intent inext = new Intent(FormIdentiInterView.this, FormUPSTwoo.class);
                      startActivity(inext);
                  }
 
@@ -88,12 +88,12 @@ public class FormIdentiInterView extends AppCompatActivity {
         txtOther = findViewById(R.id.idOther);
         txtOtherTwo = findViewById(R.id.idOtherTwo);
 
-        txtName.setText(Assessment.assessment_model.getNome()!= null?Assessment.assessment_model.getTxtName():"");
-        txtEmail.setText(Assessment.assessment_model.getEmail()!= null?Assessment.assessment_model.getTxtName():"");
+    //    txtName.setText(Assessment.assessment_model.getTxtName()!= null?Assessment.assessment_model.getTxtName():"");
+    /*    txtEmail.setText(Assessment.assessment_model.getEmail()!= null?Assessment.assessment_model.getTxtName():"");
         txtTelephone.setText(Assessment.assessment_model.getTelephone()!= null?Assessment.assessment_model.getTxtName():"");
         txtPosition.setText(Assessment.assessment_model.getPosition()!= null?Assessment.assessment_model.getTxtName():"");
         txtOther.setText(Assessment.assessment_model.getOther()!= null?Assessment.assessment_model.getTxtName():"");
-        txtOtherTwo.setText(Assessment.assessment_model.getOtherTwo()!= null?Assessment.assessment_model.getTxtName():"");
+        txtOtherTwo.setText(Assessment.assessment_model.getOtherTwo()!= null?Assessment.assessment_model.getTxtName():"");*/
     }
 
     public void LimparCampos() {

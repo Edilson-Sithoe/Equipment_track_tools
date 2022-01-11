@@ -30,8 +30,8 @@ public class FormSupervisory extends AppCompatActivity {
                 String last_time_rec_super = cbo_last_time_rec_super;
                 String last_time_rec_sup_training = cbo_last_time_rec_sup_training;
 
-                Assessment.assessment_model.setInventory_med_equip(last_time_rec_super);
-                Assessment.assessment_model.setFormat_med_equip(last_time_rec_sup_training);
+                Assessment.assessment_model.setLast_time_rec_super(last_time_rec_super);
+                Assessment.assessment_model.setLast_time_rec_sup_training(last_time_rec_sup_training);
 
                 Intent i = new Intent(FormSupervisory.this, FormTeam.class);
                 startActivity(i);

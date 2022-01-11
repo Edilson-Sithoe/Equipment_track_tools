@@ -38,7 +38,6 @@ public class FormInterviewID extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_interview_id);
 
-//        getSupportActionBar().hide();
         IniciarComponentes();
 
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +46,6 @@ public class FormInterviewID extends AppCompatActivity {
                 String name = fullName.getText().toString();
                 String org = organization.getText().toString();
                 String date = data.getText().toString();
-             //   String type_interview = interview_type;
                 String other = others.getText().toString();
                 String second = secInterV.getText().toString();
                 String secondTwoo = secInterVTwoo.getText().toString();
@@ -62,7 +60,6 @@ public class FormInterviewID extends AppCompatActivity {
                     Assessment.assessment_model.setTxtFullName(name);
                     Assessment.assessment_model.setTxtOrganization(org);
                     Assessment.assessment_model.setDataDates(date);
-                  //  Assessment.assessment_model.setCboOupatient(type_interview);
                     Assessment.assessment_model.setTxtOther(other);
                     Assessment.assessment_model.setTxtSecInterV(second);
                     Assessment.assessment_model.setTxtSecInterVTwoo(secondTwoo);
@@ -117,7 +114,7 @@ public class FormInterviewID extends AppCompatActivity {
                 if (checked)
                   //  interview_type = "On set";
                     Assessment.assessment_model.setChk_interview_type("On set");
-              //  Toast.makeText(FormInterviewID.this, "Clicado aqui", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.radio_phone:
                 if (checked)
@@ -131,7 +128,6 @@ public class FormInterviewID extends AppCompatActivity {
                 break;
         }
     }
-
 
     public void IniciarComponentes(){
         fullName = findViewById(R.id.idFisrtUsar);

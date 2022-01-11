@@ -72,11 +72,11 @@ public class FormElectricity extends AppCompatActivity {
                 } else {
                     Assessment.assessment_model.setChk_main_src_power_electricity(natioEDM);
                     Assessment.assessment_model.setChk_often_power_outage(powerOut);
-                    Assessment.assessment_model.setChk_last_power_outage(durationOut);
-                    Assessment.assessment_model.setChk_duration_typical_power_outage(shedule);
-                    Assessment.assessment_model.setChk_schedule_power_outage(secondSour);
-                    Assessment.assessment_model.setChk_secondary_src_electricty(powerSrcProv);
-                    Assessment.assessment_model.setChk_secondary_power_src_provide_Pow_entire(lat_po_out);
+                    Assessment.assessment_model.setChk_last_power_outage(lat_po_out);
+                    Assessment.assessment_model.setChk_duration_typical_power_outage(durationOut);
+                    Assessment.assessment_model.setChk_schedule_power_outage(shedule);
+                    Assessment.assessment_model.setChk_secondary_src_electricty(secondSour);
+                    Assessment.assessment_model.setChk_secondary_power_src_provide_Pow_entire(powerSrcProv);
                     Assessment.assessment_model.setChk_areas_receive_power(recPowSrc);
                     Assessment.assessment_model.setTxt_other_area_receive_power(txtOther.getText().toString());
                     Assessment.assessment_model.setTxt_comment_power_src(txtCommSecPowrSrc.getText().toString());

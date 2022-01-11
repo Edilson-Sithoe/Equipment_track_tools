@@ -25,7 +25,7 @@ public class FormSolarEnergy extends AppCompatActivity {
     private String cboMain_gen_hf, cboMain_gen_atsW,cboMain_gen_pmcm,cboMain_gen_lb, cboMain_gene_pm, cboMain_bate_install;
     private String cboMain_supp,cboMain_gen_fuel;
     private String cboMain_old,cboMain_gen_pm;
-    private String cboMain_gen_work, cboMain_gen_cond, cboMain_gen_ats;
+    private String cboMain_gen_work, cboMain_gen_cond, cboMain_carrie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +42,12 @@ public class FormSolarEnergy extends AppCompatActivity {
                 String area_provider = cboMain_supp;
                 String area_provider_other = txtOtherSE.getText().toString();
                 String old_sys_solar = cboMain_old;
-                String solar_psy_working = cboMain_old;
-                String condition_equipm = cboMain_gen_work;
+                String solar_psy_working = cboMain_gen_work;
+                String condition_equipm = cboMain_gen_cond;
                 String capacity_solar_power = txtCapacitySE.getText().toString();
                 String batteries_installed =  cboMain_bate_install;
-                String active_pm_solar = cboMain_gene_pm;
-                String carries_solar = cboMain_gen_pm;
+                String active_pm_solar = cboMain_gen_pm;
+                String carries_solar = cboMain_carrie;
                 String frequency_pm = txtFreqPMSE.getText().toString();
                 String name_main_solar = txtNameOfMantSE.getText().toString();
                 String logbook_pm_solar = cboMain_gen_pmcm;
@@ -60,23 +60,24 @@ public class FormSolarEnergy extends AppCompatActivity {
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
-                    Assessment.assessment_model.setChkSupUPSSTwhoo(solar_power);
-                    Assessment.assessment_model.setChkProvUPTwhooS(area_provider);
-                    Assessment.assessment_model.setTxtOtherUPSTwhoo(txtOtherSE.getText().toString());
-                    Assessment.assessment_model.setChkOldSystemUPSTwhoo(old_sys_solar);
-                    Assessment.assessment_model.setChkWorkingUPSTwhoo(solar_psy_working);
-                    Assessment.assessment_model.setChkCondEquipmUPSTwhoo(condition_equipm);
-                    Assessment.assessment_model.setTxtCapacityUPSv(capacity_solar_power);
-                    Assessment.assessment_model.setChkPMPUPSTwhoo(batteries_installed);
+                    Assessment.assessment_model.setTxtSolarP(solar_power);
+                    Assessment.assessment_model.setTxtAreaProv(area_provider);
+                    Assessment.assessment_model.setTxtAreaProvOther(area_provider_other);
+                    Assessment.assessment_model.setTxtOldSysSolar(old_sys_solar);
+                    Assessment.assessment_model.setTxtSolarPSysWorking(solar_psy_working);
+                    Assessment.assessment_model.setTxtConditionEquipmSolar(condition_equipm);
+                    Assessment.assessment_model.setTxtCapacitySolarPower(capacity_solar_power);
+                    Assessment.assessment_model.setTxtbatterieInstalled(batteries_installed);
                     Assessment.assessment_model.setTxtActivePM_solar(active_pm_solar);
-                    Assessment.assessment_model.setChkCarrByUPSTwhoo(carries_solar);
-                    Assessment.assessment_model.setTxtFreqPMUPSTwhoo(txtFreqPMSE.getText().toString());
-                    Assessment.assessment_model.setTxtNameOfMantUPSv(txtNameOfMantSE.getText().toString());
-                    Assessment.assessment_model.setChkPMCMUPSTwhoo(logbook_pm_solar);
-                    Assessment.assessment_model.setChklogbBookUPSTwhoo(logbook_upd_solar);
-                    Assessment.assessment_model.setTxtComentUPSTwhoo(txtComentSE.getText().toString());
+                    Assessment.assessment_model.setTxtCarriesSolarBy(carries_solar);
+                    Assessment.assessment_model.setTxtFrequencyPM(frequency_pm);
+                    Assessment.assessment_model.setTxtNameMainSolar(name_main_solar);
+                    Assessment.assessment_model.setTxtLogbbook_pmSolar(logbook_pm_solar);
+                    Assessment.assessment_model.setTxtLogbbook_updateSolar(logbook_upd_solar);
+                    Assessment.assessment_model.setTxtCommentsSolar(comments_solar);
 
                     Intent i = new Intent(FormSolarEnergy.this, FormOxigenSystem.class);
+                  //  Intent i = new Intent(FormSolarEnergy.this, FormMedGasOutlets.class);
                     startActivity(i);
                 }
             }
@@ -97,15 +98,15 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkYesUPS:
+            case R.id.idChkYesSE:
                 if (checked)
                     cboMain_gen_hf = "Yes";
                 break;
-            case R.id.idChkNoUPS:
+            case R.id.idChkNoSE:
                 if (checked)
                     cboMain_gen_hf = "No";
                 break;
-            case R.id.idChkD:
+            case R.id.IdChkDontKnowSE:
                 if (checked)
                     cboMain_gen_hf = "Don't know";
                 break;
@@ -116,21 +117,26 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkWhoHospUPS:
+            case R.id.idChkWhoHospSE:
                 if (checked)
                     cboMain_supp = "The whole hospital";
                 break;
-            case R.id.idChkOpTheatreUPS:
+            case R.id.idChkOpTheatreSE:
                 if (checked)
                     cboMain_supp = "Operating theatre";
                 break;
-            case R.id.idChkEmergRoomUPS:
+            case R.id.idChkEmergRoomSE:
                 if (checked)
                     cboMain_supp = "Emergency Room";
                 break;
-            case R.id.idChkLabUPS:
+            case R.id.idChkLabSE:
                 if (checked)
                     cboMain_supp = "Laboratory";
+                break;
+
+            case R.id.idChkMaternSE:
+            if (checked)
+                cboMain_supp = "Maternity";
                 break;
         }
     }
@@ -139,19 +145,19 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkLessUPS:
+            case R.id.idChkLessSE:
                 if (checked)
                     cboMain_old = "Less than 3 years";
                 break;
-            case R.id.idChkB3_10UPS:
+            case R.id.idChkB3_10SE:
                 if (checked)
                     cboMain_old = "Between 3-10 years";
                 break;
-            case R.id.idChkB11_20UPS:
+            case R.id.idChkB11_20SE:
                 if (checked)
                     cboMain_old = "Between 11-20 years";
                 break;
-            case R.id.idChkMore20UPS:
+            case R.id.idChkMore20SE:
                 if (checked)
                     cboMain_old = "More than 20 years";
                 break;
@@ -162,19 +168,19 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkUPSY:
+            case R.id.idChkSEY:
                 if (checked)
                     cboMain_gen_work = "Yes";
                 break;
-            case R.id.idChkUPSN:
+            case R.id.idChkSEN:
                 if (checked)
                     cboMain_gen_work = "No";
                 break;
-            case R.id.idChkUPSPartly:
+            case R.id.idChkSEPartly:
                 if (checked)
                     cboMain_gen_work = "Partly";
                 break;
-            case R.id.idChkUPSDontN:
+            case R.id.idChkSEDontN:
                 if (checked)
                     cboMain_gen_work = "Don't know";
                 break;
@@ -185,31 +191,31 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkGIUUPS:
+            case R.id.idChkGIUSE:
                 if (checked)
                     cboMain_gen_cond = "Good and in use";
                 break;
-            case R.id.idChkGBNUUPS:
+            case R.id.idChkGBNUSE:
                 if (checked)
                     cboMain_gen_cond = "Good, but not in use";
                 break;
-            case R.id.idChkIU_BNRUPS:
+            case R.id.idChkIU_BNRSE:
                 if (checked)
                     cboMain_gen_cond = "In use, but needs repair";
                 break;
-            case R.id.idChkIUNNTRUPS:
+            case R.id.idChkIUNNTRSE:
                 if (checked)
                     cboMain_gen_cond = "In use, but needs to be replaced";
-            case R.id.idchkOOSBRUPS:
+            case R.id.idchkOOSBRSE:
                 if (checked)
                     cboMain_gen_cond = "Out of service, but repairable";
-            case R.id.idChkOOSAndNRUPS:
+            case R.id.idChkOOSAndNRSE:
                 if (checked)
                     cboMain_gen_cond = "Out of service and needs to be replaced";
-            case R.id.idChkStilInstPhaUPS:
+            case R.id.idChkStilInstPhaSE:
                 if (checked)
                     cboMain_gen_cond = "Still in the installation phase";
-            case R.id.idChkDontNUPS:
+            case R.id.idChkDontNSE:
                 if (checked)
                     cboMain_gen_cond = "Don't know";
                 break;
@@ -220,17 +226,17 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkYesUPS:
+            case R.id.idChkYSE:
                 if (checked)
                     cboMain_bate_install = "Yes";
                 break;
-            case R.id.idChkNoUPS:
+            case R.id.idChkNSE:
                 if (checked)
                     cboMain_bate_install = "No";
                 break;
-            case R.id.idChkD:
+            case R.id.idchkDNSE:
                 if (checked)
-                    cboMain_bate_install = "No";
+                    cboMain_bate_install = "Don't know";
                 break;
         }
     }
@@ -239,11 +245,11 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkPMYUPS:
+            case R.id.idChkPMYSE:
                 if (checked)
                     cboMain_gen_pm = "Yes";
                 break;
-            case R.id.idChkPMNUPS:
+            case R.id.idChkPMNSE:
                 if (checked)
                     cboMain_gen_pm = "No";
                 break;
@@ -254,17 +260,17 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkPMITPHFUPS:
+            case R.id.idChkPMITPHFSE:
                 if (checked)
-                    cboMain_gen_pm = "Internal Technical Personnel of the Health Facility";
+                    cboMain_carrie = "Internal Technical Personnel of the Health Facility";
                 break;
-            case R.id.idChkPMPDIUPS:
+            case R.id.idChkPMPDISE:
                 if (checked)
-                    cboMain_gen_pm = "Personnel from the Department of Infrastructure";
+                    cboMain_carrie = "Personnel from the Department of Infrastructure";
                 break;
-            case R.id.idChkSubcontractedUPS:
+            case R.id.idChkSubcontractedSE:
                 if (checked)
-                    cboMain_gen_pm = "Subcontracted";
+                    cboMain_carrie = "Subcontracted";
                 break;
         }
     }
@@ -273,11 +279,11 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkPMCMYUPS:
+            case R.id.idChkPMCMYSE:
                 if (checked)
                     cboMain_gen_pmcm = "Yes";
                 break;
-            case R.id.idChkPMCMNUPS:
+            case R.id.idChkPMCMNSE:
                 if (checked)
                     cboMain_gen_pmcm = "No";
                 break;
@@ -288,11 +294,11 @@ public class FormSolarEnergy extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.idChkLoBYUPS:
+            case R.id.idChkLoBYSE:
                 if (checked)
                     cboMain_gen_lb = "Yes";
                 break;
-            case R.id.idChkLoBNUPS:
+            case R.id.idChkLoBNSE:
                 if (checked)
                     cboMain_gen_lb = "No";
                 break;
@@ -305,10 +311,8 @@ public class FormSolarEnergy extends AppCompatActivity {
 
         txtOtherSE = findViewById(R.id.idTxtOtherSE);
         txtCapacitySE = findViewById(R.id.idTxtCapSE);
-
         txtFreqPMSE = findViewById(R.id.idTxtFreqSE);
         txtNameOfMantSE = findViewById(R.id.idTxtNameOfMantSE);
-
         txtComentSE = findViewById(R.id.idTxtComentSE);
     }
 

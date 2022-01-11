@@ -8,16 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.snackbar.Snackbar;
+
 import projecto.jhpiego.equipment_track_tools.R;
 import projecto.jhpiego.equipment_track_tools.databaseConnection.Assessment;
 
 public class FormConcentrator extends AppCompatActivity {
 
     private Button btnBack, btnNext;
-    private TextView txtHFCO,txtBrokenCO,txtFPMCO,txtMCCO,txtCPMCONCO,txtMPCO,txtCommentCO;
-    String [] mensagens = {"Preencha todos os campos","Falha ao registar","Registado com sucesso"};
+    private TextView txtHFCO, txtBrokenCO, txtFPMCO, txtMCCO, txtCPMCONCO, txtMPCO, txtCommentCO;
+    String[] mensagens = {"Preencha todos os campos", "Falha ao registar", "Registado com sucesso"};
     private String cbo_conc_health_fac, cbo_active_pm_program, cbo_carrie_by, cbo_logbook_pm_cm, cbo_logbook_upd;
 
     @Override
@@ -25,7 +28,7 @@ public class FormConcentrator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_concentrator);
 
-      //  getSupportActionBar().hide();
+        //  getSupportActionBar().hide();
         IniciarComponentes();
 
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -38,16 +41,16 @@ public class FormConcentrator extends AppCompatActivity {
                 String active_carrie_by = cbo_carrie_by;
                 String frequency_conce = txtFPMCO.getText().toString();
                 String name_maintenance_company = txtMCCO.getText().toString();
-                String average_cost_per_year =  txtCPMCONCO.getText().toString();
+                String average_cost_per_year = txtCPMCONCO.getText().toString();
                 String budgbet_maitanance_progra = txtMPCO.getText().toString();
                 String logbbook_maintenance_conc = cbo_logbook_pm_cm;
                 String logbbook_update_cenc = cbo_logbook_upd;
                 String comments_conc = txtCommentCO.getText().toString();
 
-                if (TextUtils.isEmpty(number_concentrator) ||TextUtils.isEmpty(concentrator_broken)||TextUtils.isEmpty(frequency_conce)||
-                        TextUtils.isEmpty(average_cost_per_year)||TextUtils.isEmpty(budgbet_maitanance_progra)) {
+                if (TextUtils.isEmpty(number_concentrator) || TextUtils.isEmpty(concentrator_broken) || TextUtils.isEmpty(frequency_conce) ||
+                        TextUtils.isEmpty(average_cost_per_year) || TextUtils.isEmpty(budgbet_maitanance_progra)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.rgb(178,34,34));
+                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
@@ -70,7 +73,6 @@ public class FormConcentrator extends AppCompatActivity {
             }
         });
 
-
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +80,6 @@ public class FormConcentrator extends AppCompatActivity {
                 startActivity(conc);
             }
         });
-
     }
 
     public void onRadioButtonClicked_conc(View view) {
@@ -160,7 +161,7 @@ public class FormConcentrator extends AppCompatActivity {
         }
     }
 
-    public void IniciarComponentes(){
+    public void IniciarComponentes() {
         btnBack = findViewById(R.id.btn_backCO);
         btnNext = findViewById(R.id.btn_next);
 
@@ -175,7 +176,7 @@ public class FormConcentrator extends AppCompatActivity {
         txtCommentCO = findViewById(R.id.idTxtCommentCO);
     }
 
-    public void LimparCampos(){
+    public void LimparCampos() {
         txtBrokenCO.setText("");
         txtCPMCONCO.setText("");
         txtFPMCO.setText("");

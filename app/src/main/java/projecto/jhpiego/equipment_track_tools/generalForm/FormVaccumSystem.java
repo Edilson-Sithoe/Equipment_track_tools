@@ -64,6 +64,7 @@ public class FormVaccumSystem extends AppCompatActivity {
                     Assessment.assessment_model.setFrequency_pm_month_ss(txt_frequency_pm_month_ss.getText().toString());
                     Assessment.assessment_model.setActivities_carried_by_ss(activities_carried_by_ss);
                     Assessment.assessment_model.setName_maintenance_ss(txt_name_maintenance_ss.getText().toString());
+                    Assessment.assessment_model.setAverage_pm_suction_ss(average_pm_suction_ss);
                     Assessment.assessment_model.setBudget_suction_ss(txt_budget_suction_ss.getText().toString());
                     Assessment.assessment_model.setComment_suction(txt_comment_suction.getText().toString());
 

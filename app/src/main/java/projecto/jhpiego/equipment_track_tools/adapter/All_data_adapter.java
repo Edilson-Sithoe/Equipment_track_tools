@@ -32,6 +32,9 @@ public class All_data_adapter extends ArrayAdapter<Assessment_model> {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         row = inflater.inflate(R.layout.all_data, parent, false);
 
+        TextView facility_id = row.findViewById(R.id.facil_id);
+        facility_id.setText(all_data_set_assessment.get(position).getId()+"");
+
         TextView facility_name = row.findViewById(R.id.facil_name);
         facility_name.setText(all_data_set_assessment.get(position).getTxtFullName());
 

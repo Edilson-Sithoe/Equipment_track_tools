@@ -14,7 +14,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@drawable/blue_bg">
 
             <TextView
@@ -25,24 +25,25 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="LIQUID OXYGEN TANK (LOX - VIE)(2/2)"
+                android:text="Tanque de oxigenio liquido (LOX - VIE)(2/2)"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
         </FrameLayout>
+
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Does the health facility have a Liquid Oxygen Tank (LOX)?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Does the health facility have a Liquid Oxygen Tank (LOX)?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -51,15 +52,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Does the health facility have a Liquid Oxygen Tank (LOX)?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -71,10 +71,10 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_lox_two"
                     android:text="Yes"
-                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
                     android:textSize="14sp"
@@ -85,10 +85,10 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked_lox_two"
                     android:text="No"
-                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
                     android:textSize="14sp"
@@ -101,28 +101,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is the average consumption of LOX (m3/year)?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtAVGLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtAVGLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the average consumption of LOX (m3/year)?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the average consumption of LOX (m3/year)?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -130,9 +129,9 @@
                 android:id="@+id/txtAVGLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
                 android:textSize="12sp"
@@ -144,28 +143,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is last month’s consumption (m3/month)?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtMCLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtMCLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is last month’s consumption (m3/month)?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is last month’s consumption (m3/month)?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -173,9 +171,9 @@
                 android:id="@+id/txtMCLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
                 android:textSize="12sp"
@@ -183,16 +181,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILTO"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILTO"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Who is the tank’s owner?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Who is the tank’s owner?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -201,15 +199,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Who is the tank’s owner?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -220,10 +218,10 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked1_lox_two"
                     android:text="MISAU-Hospital"
-                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
                     android:textSize="14sp"
@@ -246,16 +244,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtOtherLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtOtherLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Other"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Other"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -263,25 +261,26 @@
                 android:id="@+id/txtOtherLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
                 android:textSize="12sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILHOS"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILHOS"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="How old is the system?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="How old is the system?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -290,15 +289,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="How old is the system?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -309,11 +308,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_lox_two"
                     android:text="Less than 3 years"
-                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
                     android:textSize="14sp"></RadioButton>
@@ -323,11 +322,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_lox_two"
                     android:text="Between 3-10 years"
-                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
                     android:textSize="14sp"></RadioButton>
@@ -337,11 +336,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_lox_two"
                     android:text="Between 11-20 years"
-                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
                     android:textSize="14sp"></RadioButton>
@@ -351,11 +350,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_lox_two"
                     android:text="More than 20 years "
-                    android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
                     android:textSize="14sp"></RadioButton>
@@ -367,28 +366,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is the capacity of the LOX tank (#m3)?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtCapaTLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtCapaTLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the capacity of the LOX tank (#m3)?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the capacity of the LOX tank (#m3)?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -396,40 +394,39 @@
                 android:id="@+id/txtCapaTLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/idTVtxtCapTonsLOX"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is the capacity of the LOX tank? (# Tons)"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtCapTonsLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtCapTonsLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the capacity of the LOX tank? (# Tons)"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the capacity of the LOX tank? (# Tons)"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -437,24 +434,25 @@
                 android:id="@+id/txtCapTonsLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILWLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILWLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Is the system working?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Is the system working?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -463,90 +461,86 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Is the system working?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/chkYLOX"
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkYLOX"
-                    android:onClick="onRadioButtonClicked3_lox_two"
-                    android:inputType="text"
+                    android:layout_marginStart="0dp"
                     android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked3_lox_two"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
 
                 <RadioButton
+                    android:id="@+id/chkNLOX"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkNLOX"
-                    android:onClick="onRadioButtonClicked3_lox_two"
-                    android:inputType="text"
+                    android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked3_lox_two"
+                    android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
 
                 <RadioButton
+                    android:id="@+id/chkPartlyLOX"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkPartlyLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked3_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text=" Partly"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text=" Partly">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
 
                 <RadioButton
+                    android:id="@+id/chkDontNLOX"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkDontNLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked3_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Don’t know"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Don’t know">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILCondSE"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILCondSE"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the condition of the system?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the condition of the system?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -555,144 +549,137 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="What is the condition of the system?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/chkGIULOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Good and in use">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked4_lox_two"
+                    android:text="Good and in use"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkGBNULOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Good, but not in use">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked4_lox_two"
+                    android:text="Good, but not in use"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkIU_BNRLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="In use, but needs repair">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked4_lox_two"
+                    android:text="In use, but needs repair"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkIUNNTRLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="In use, but needs to be replaced">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked4_lox_two"
+                    android:text="In use, but needs to be replaced"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkOOSBRLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Out of service, but repairable">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked4_lox_two"
+                    android:text="Out of service, but repairable"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkOOSAndNRLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Out of service and needs to be replaced">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked4_lox_two"
+                    android:text="Out of service and needs to be replaced"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkStilInstPhaLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Still in the installation phase">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkDontKnowLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked4_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Still in the installation phase"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkDontKnowLOX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="Don’t know ">
-                </RadioButton>
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked4_lox_two"
+                    android:text="Don’t know "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILCHFCO"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILCHFCO"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Do you have concentrators in the health facility?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Do you have concentrators in the health facility?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -701,15 +688,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Is there an active PM program?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -717,44 +703,44 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/chkYESPMLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkYESPMLOX"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked5_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
+
                 <RadioButton
+                    android:id="@+id/chkNOPMLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkNOPMLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="textLongMessage"
                     android:onClick="onRadioButtonClicked5_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILMF"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILMF"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="PM activities are carried out by:"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="PM activities are carried out by:"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -763,60 +749,58 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_registerUPS"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="PM activities are carried out by:"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
+
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/chkPHFLOX"
-                    android:onClick="onRadioButtonClicked6_lox_two"
-                    android:inputType="text"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Internal Technical Personnel of the health facility">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked6_lox_two"
+                    android:text="Internal Technical Personnel of the health facility"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkPDILOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked6_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Personnel of the Department of Infrastructure">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkSubLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked6_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Personnel of the Department of Infrastructure"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkSubLOX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="Subcontracted">
-                </RadioButton>
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked6_lox_two"
+                    android:text="Subcontracted"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -825,28 +809,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is the frequency of PM (# of months)"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtFPMMLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtFPMMLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the frequency of PM (# of months)"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the frequency of PM (# of months)"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -854,12 +837,12 @@
                 android:id="@+id/txtFPMMLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -867,28 +850,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="In case of subcontracting: what is the name of the maintenance company?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtNMCLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtNMCLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="In case of subcontracting: what is the name of the maintenance company?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="In case of subcontracting: what is the name of the maintenance company?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -896,12 +878,12 @@
                 android:id="@+id/txtNMCLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -909,28 +891,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is the average cost of PM for the LOX tank per year?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtAVGCPMLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtAVGCPMLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the average cost of PM for the LOX tank per year?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the average cost of PM for the LOX tank per year?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -938,12 +919,12 @@
                 android:id="@+id/txtAVGCPMLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -951,28 +932,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is the budget for the LOX maintenance program (# Metical)?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtBudgetLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtBudgetLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the budget for the LOX maintenance program (# Metical)?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the budget for the LOX maintenance program (# Metical)?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -980,25 +960,25 @@
                 android:id="@+id/txtBudgetLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILchkNoPMCMLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILchkNoPMCMLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Does the health facility have a logbook for maintenance (PM and/or CM)?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Does the health facility have a logbook for maintenance (PM and/or CM)?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1007,15 +987,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Does the health facility have a logbook for maintenance (PM and/or CM)?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -1023,45 +1002,44 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/chkYesPMCMLOXT"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkYesPMCMLOX"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked7_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
+
                 <RadioButton
+                    android:id="@+id/chkNoPMCMLOXT"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkNoPMCMLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="textLongMessage"
                     android:onClick="onRadioButtonClicked7_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILchkNoLBLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILchkNoLBLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Is the logbook up to date?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Is the logbook up to date?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1070,16 +1048,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Is the logbook up to date?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -1087,31 +1064,30 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/chkYesLBLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkYesLBLOX"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked8_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
+
                 <RadioButton
+                    android:id="@+id/chkNoLBLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkNoLBLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="textLongMessage"
                     android:onClick="onRadioButtonClicked8_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -1120,29 +1096,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is the name of the Supplier?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textStyle="bold"
             android:textSize="16sp"
-            />
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtNSLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtNSLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="What is the name of the Supplier?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="What is the name of the Supplier?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1150,25 +1125,25 @@
                 android:id="@+id/txtNSLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILHFRC"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILHFRC"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="How often does the health facility receive O2?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="How often does the health facility receive O2?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1177,102 +1152,98 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="How often does the health facility receive LOX?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <RadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/chkDailyLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked9_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Daily">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked9_lox_two"
+                    android:text="Daily"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkWeeklyLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked9_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Weekly">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked9_lox_two"
+                    android:text="Weekly"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkFortnightlyLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked9_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Fortnightly">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked9_lox_two"
+                    android:text="Fortnightly"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
                     android:id="@+id/chkMonthlyLOX"
-                    android:inputType="text"
-                    android:onClick="onRadioButtonClicked9_lox_two"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/color_txt"
-                    android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="Monthly">
-                </RadioButton>
-
-                <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkOnrequestLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked9_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Monthly"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkOnrequestLOX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text="On request">
-                </RadioButton>
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked9_lox_two"
+                    android:text="On request"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILShortLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILShortLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Is the logbook up to date?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Is the logbook up to date?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1281,16 +1252,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Has the Health facility had any shortages of O2 in the last two (2) years because of the LOX tank?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -1298,45 +1268,45 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/chkYEShorLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkYEShorLOX"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked10_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
+
                 <RadioButton
+                    android:id="@+id/chkNoShorLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkNoShorLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="textLongMessage"
                     android:onClick="onRadioButtonClicked10_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
-            </RadioGroup>>
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+            >
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILSPECLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILSPECLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="Is the logbook up to date?"
-            style="@style/Edit_Text"
-            android:padding="0dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="Is the logbook up to date?"
+            android:padding="0dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1345,15 +1315,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_register"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Does the health facility have a specialized internal technical team 24 hours a day, 7 days a week?"
                 android:textAllCaps="false"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -1361,32 +1330,32 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/chkYesSITLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkYesSITLOX"
+                    android:layout_marginStart="0dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
                     android:onClick="onRadioButtonClicked11_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="0dp"
-                    android:text="Yes">
-                </RadioButton>
+                    android:textSize="14sp"></RadioButton>
+
                 <RadioButton
+                    android:id="@+id/chkNoSITLOX"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chkNoSITLOX"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:inputType="textLongMessage"
                     android:onClick="onRadioButtonClicked11_lox_two"
-                    android:fontFamily="@font/poppins_regular"
+                    android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"
-                    android:layout_marginStart="10dp"
-                    android:text="No">
-                </RadioButton>
-            </RadioGroup>>
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+            >
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -1394,29 +1363,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_register"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="What is last month’s consumption (m3/month)?"
             android:textAllCaps="false"
-            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento"
-            android:textStyle="bold"
             android:textSize="16sp"
-            />
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtTechAvLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtTechAvLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="How many technicians are available on site (total #)?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="How many technicians are available on site (total #)?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1424,25 +1392,25 @@
                 android:id="@+id/txtTechAvLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtCommentLOX"
+            style="@style/Edit_Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TILtxtCommentLOX"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="10dp"
-            android:hint="How many technicians are available on site (total #)?"
-            style="@style/Edit_Text"
-            android:padding="15dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
+            android:hint="How many technicians are available on site (total #)?"
+            android:padding="15dp"
             android:textColor="@color/color_txt"
             android:textColorHint="@color/cinzento">
 
@@ -1450,19 +1418,20 @@
                 android:id="@+id/txtCommentLOX"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="text"
-                android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -1475,8 +1444,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/blue_fill__rounded_color"
                 android:text="Voltar"
-                android:textColor="@color/white"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_next"
@@ -1486,8 +1455,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/blue_fill__rounded_color"
                 android:text="Proximo"
-                android:textColor="@color/white"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </LinearLayout>
 
 

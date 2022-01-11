@@ -47,11 +47,11 @@ public class FormOxigenSystem extends AppCompatActivity {
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
-                    Assessment.assessment_model.setTxtAverageConsOx(txtConsumOxig.getText().toString());
+                    Assessment.assessment_model.setTxtAverageConsOx(avarege_consumin);
                     Assessment.assessment_model.setTxtSystem_usePrimarySupply(sys_use_prim_supp);
                     Assessment.assessment_model.setTxtSystem_use_secondary_supply(sys_use_sec_supp);
                     Assessment.assessment_model.setTxtSystem_use_emergency_supply(sys_use_emerg_supp);
-                    Assessment.assessment_model.setTxtComentUPSTwhoo(txtComment.getText().toString());
+                    Assessment.assessment_model.setTxtComments_supply(comments_solar);
 
                     Intent i = new Intent(FormOxigenSystem.this, FormFreePrevFFS.class);
                     startActivity(i);

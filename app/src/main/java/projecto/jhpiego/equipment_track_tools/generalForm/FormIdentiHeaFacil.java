@@ -69,7 +69,7 @@ public class FormIdentiHeaFacil extends AppCompatActivity {
                         TextUtils.isEmpty(total) || TextUtils.isEmpty(maternity) ||
                         TextUtils.isEmpty(cicov) || TextUtils.isEmpty(icu)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.rgb(178,34,34));
+                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
@@ -93,8 +93,6 @@ public class FormIdentiHeaFacil extends AppCompatActivity {
                     Intent iNext = new Intent(FormIdentiHeaFacil.this, FormElectricity.class);
                     startActivity(iNext);
                 }
-
-
             }
         });
     }
@@ -289,8 +287,8 @@ public class FormIdentiHeaFacil extends AppCompatActivity {
         txtOther = findViewById(R.id.idOther);
 
         txtHealthID.setText(Assessment.assessment_model.getNome() != null ? Assessment.assessment_model.getTxtHealthFacID() : "");
-     /*   txtNameHealth.setText(GeralDAdos.data.getEmail()!= null?GeralDAdos.data.getTxtName():"");
-        txtLocation.setText(GeralDAdos.data.getTelephone()!= null?GeralDAdos.data.getTxtName():"");
+        txtNameHealth.setText(Assessment.assessment_model.getEmail() != null ? Assessment.assessment_model.getEmail() : "");
+     /*   txtLocation.setText(GeralDAdos.data.getTelephone()!= null?GeralDAdos.data.getTxtName():"");
         txtDistrict.setText(GeralDAdos.data.getPosition()!= null?GeralDAdos.data.getTxtName():"");
         txtProvince.setText(GeralDAdos.data.getOther()!= null?GeralDAdos.data.getTxtName():"");
         txtRegion.setText(GeralDAdos.data.getOtherTwo()!= null?GeralDAdos.data.getTxtName():"");

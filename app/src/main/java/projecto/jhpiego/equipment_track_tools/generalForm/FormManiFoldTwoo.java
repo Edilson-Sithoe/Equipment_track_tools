@@ -21,7 +21,7 @@ public class FormManiFoldTwoo extends AppCompatActivity {
     private TextView txtname_maintenance_maniFold_twoo, txtaverage_cost_per_year_maniFold_twoo, txtbugdet_maitenance_program_twoo, txtname_cylinder_supply_twoo, txtcomments_manifold_twoo;
     String[] mensagens = {"Preencha todos os campos", "Registado com sucesso", "Ocorreu algum erro inesperado, tenta novamente"};
     private String cbo_facility_ox_twoo, cbo_manifold_used_twoo, cbo_follow_areas_twoo, cbo_old_sys_twoo, cbo_mani_aut_manu_twoo, cbo_shortages_twoo;
-    private String cbo_most_common_twoo, cbo_connection_cylinder_twoo, cbo_logbook_upd_twoo, cboMain_gen_cond_twoo, cbo_carrie_by_twoo, cbo_pm_cm_twoo;
+    private String cbo_most_common_twoo, cbo_connection_cylinder_twoo, cbo_logbook_upd_twoo, cbo_condiction_system_twoo,cboMain_gen_cond_twoo, cbo_carrie_by_twoo, cbo_pm_cm_twoo;
     private String cbo_health_fac_receive_twoo, cbo_po_sys_working_twoo;
 
     @Override
@@ -53,7 +53,7 @@ public class FormManiFoldTwoo extends AppCompatActivity {
                 String type_conection_cylinder_maniFold_twoo = cbo_connection_cylinder_twoo;
                 String manifold_working_twoo = cbo_po_sys_working_twoo;
                 String condition_system_twoo = cboMain_gen_cond_twoo;
-                String active_pm_program_manif_twoo = cbo_logbook_upd_twoo;
+                String active_pm_program_manif_twoo = cbo_condiction_system_twoo;
                 String frequency_pm_mani_twoo = txtfrequency_pm_mani_twoo.getText().toString();
                 String activities_by_twoo = cbo_carrie_by_twoo;
                 String name_maintenance_maniFold_twoo = txtname_maintenance_maniFold_twoo.getText().toString();
@@ -336,11 +336,11 @@ public class FormManiFoldTwoo extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.chkYESPMMF:
                 if (checked)
-                    cbo_logbook_upd_twoo = "Yes";
+                    cbo_condiction_system_twoo = "Yes";
                 break;
             case R.id.chkNOPMMF:
                 if (checked)
-                    cbo_logbook_upd_twoo = "No";
+                    cbo_condiction_system_twoo = "No";
                 break;
         }
     }
@@ -383,6 +383,21 @@ public class FormManiFoldTwoo extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
+            case R.id.chkYesLogB:
+                if (checked)
+                    cbo_logbook_upd_twoo = "Yes";
+                break;
+            case R.id.chkNoLogB:
+                if (checked)
+                    cbo_logbook_upd_twoo = "No";
+                break;
+        }
+    }
+
+    public void onRadioButtonClicked13_mf_twho(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
             case R.id.chkDailyMF:
                 if (checked)
                     cbo_health_fac_receive_twoo = "Daily";
@@ -406,7 +421,7 @@ public class FormManiFoldTwoo extends AppCompatActivity {
         }
     }
 
-    public void onRadioButtonClicked13_mf_twho(View view) {
+    public void onRadioButtonClicked14_mf_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
@@ -421,20 +436,6 @@ public class FormManiFoldTwoo extends AppCompatActivity {
         }
     }
 
-    public void onRadioButtonClicked14_mf_twho(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch (view.getId()) {
-            case R.id.chkYESPMMF:
-                if (checked)
-                    cbo_logbook_upd_twoo = "Yes";
-                break;
-            case R.id.chkNOPMMF:
-                if (checked)
-                    cbo_logbook_upd_twoo = "No";
-                break;
-        }
-    }
 
     public void InitComponents() {
         btnBack = findViewById(R.id.btn_backMF);

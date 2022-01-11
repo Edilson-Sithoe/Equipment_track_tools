@@ -66,7 +66,7 @@ public class FormManiFold extends AppCompatActivity {
                 String logbbook_update_manifold = cbo_logbook_upd;
                 String name_cylinder_supply = txtname_cylinder_supply.getText().toString();
                 String how_does_receive_cylinder = cbo_health_fac_receive;
-                String shortages_last_twoo_year = cno_shortages;
+                String shortages_last_twoo_year = cbo_logbook_upd;
                 String comments_manifold = txtcomments_manifold.getText().toString();
 
 
@@ -82,8 +82,8 @@ public class FormManiFold extends AppCompatActivity {
                     Assessment.assessment_model.setManifold_in_health(manifold_in_health);
                     Assessment.assessment_model.setType_supply_used_manifold(type_supply_used_manifold);
                     Assessment.assessment_model.setAreas_does_supply(areas_does_supply);
-                    Assessment.assessment_model.setAreas_does_supply_other(txtareas_does_supply_other.getText().toString());
-                    Assessment.assessment_model.setAreas_does_supply_other_twoo(txtareas_does_supply_otherTwoo.getText().toString());
+                    Assessment.assessment_model.setAreas_does_supply_other(areas_does_supply_other);
+                    Assessment.assessment_model.setAreas_does_supply_otherTwoo(areas_does_supply_otherTwoo);
                     Assessment.assessment_model.setOld_system_manifold(old_system_manifold);
                     Assessment.assessment_model.setKind_manifold(kind_manifold);
                     Assessment.assessment_model.setCapacity_manifold(txtcapacity_manifold.getText().toString());
@@ -108,9 +108,10 @@ public class FormManiFold extends AppCompatActivity {
                     Assessment.assessment_model.setName_cylinder_supply(txtname_cylinder_supply.getText().toString());
                     Assessment.assessment_model.setHow_does_receive_cylinder(how_does_receive_cylinder);
                     Assessment.assessment_model.setShortages_last_twoo_year(shortages_last_twoo_year);
-                    Assessment.assessment_model.setComments_manifold(txtcomments_manifold.getText().toString());
+                    Assessment.assessment_model.setComments_manifold(comments_manifold);
 
                     Intent i = new Intent(FormManiFold.this, FormManiFoldTwoo.class);
+                   // Intent i = new Intent(FormManiFold.this, FormMedGasOutlets.class);
                     startActivity(i);
                 }
             }
@@ -381,7 +382,22 @@ public class FormManiFold extends AppCompatActivity {
         }
     }
 
-    public void onRadioButtonClicked12_mf(View view) {
+        public void onRadioButtonClicked12_mf(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.chkYESKBMF:
+                if (checked)
+                    cno_shortages = "Yes";
+                break;
+            case R.id.chkNOLBMF:
+                if (checked)
+                    cno_shortages = "No";
+                break;
+        }
+    }
+
+    public void onRadioButtonClicked13_mf(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
@@ -408,30 +424,16 @@ public class FormManiFold extends AppCompatActivity {
         }
     }
 
-    public void onRadioButtonClicked13_mf(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch (view.getId()) {
-            case R.id.chkYESSUC:
-                if (checked)
-                    cno_shortages = "Yes";
-                break;
-            case R.id.chkNOSC:
-                if (checked)
-                    cno_shortages = "No";
-                break;
-        }
-    }
 
     public void onRadioButtonClicked14_mf(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
-            case R.id.chkYESPMMF:
+            case R.id.chkYESSUC:
                 if (checked)
                     cbo_logbook_upd = "Yes";
                 break;
-            case R.id.chkNOPMMF:
+            case R.id.chkNOSC:
                 if (checked)
                     cbo_logbook_upd = "No";
                 break;
@@ -453,61 +455,14 @@ public class FormManiFold extends AppCompatActivity {
         txthow_many_cylinder_conect_total = findViewById(R.id.txtTotalMF);
         txtaverage_per_month = findViewById(R.id.txtAGVMonthMF);
 
-               /* chkEMF = findViewById(R.id.chkEMF);
-                chkFMF = findViewById(R.id.chkFMF);
-                chkGMF = findViewById(R.id.chkGMF);
-                chkJMF = findViewById(R.id.chkJMF);
-                chkDontNoMF = findViewById(R.id.chkDontNoMF);*/
         txtmost_common_model_cylinder_other = findViewById(R.id.txtOtherMF);
-
-               /* chkPINMF = findViewById(R.id.chkPINMF);
-                chkPINMF = findViewById(R.id.chkPINMF);
-                chkBullnoseMF = findViewById(R.id.chkBullnoseMF);
-                chkHandwheelMF = findViewById(R.id.chkHandwheelMF);
-
-                chkYMF = findViewById(R.id.chkYMF);
-                chkNMF = findViewById(R.id.chkNMF);
-                chkPartlyMF = findViewById(R.id.chkPartlyMF);
-                chkDontNMF = findViewById(R.id.chkDontNMF);
-
-                chkGIUMF = findViewById(R.id.chkGIUMF);
-                chkGBNUMF = findViewById(R.id.chkGBNUMF);
-                chkIU_BNRMF = findViewById(R.id.chkIU_BNRMF);
-                chkIUNNTRMF = findViewById(R.id.chkIUNNTRMF);
-                chkOOSBRMF = findViewById(R.id.chkOOSBRMF);
-                chkOOSAndNRMF = findViewById(R.id.chkOOSAndNRMF);
-                chkStilInstPhaMF = findViewById(R.id.chkStilInstPhaMF);
-                chkDontNMF = findViewById(R.id.chkDontNMF);
-
-                chkYESPMMF = findViewById(R.id.chkYESPMMF);
-                chkNOPMMF = findViewById(R.id.chkNOPMMF);*/
-
         txtfrequency_pm_mani = findViewById(R.id.txtFPMMF);
-
-               /* chkPHFMF = findViewById(R.id.chkPHFMF);
-                chkPDIMF = findViewById(R.id.chkPDIMF);
-                chkSubCMF = findViewById(R.id.chkSubCMF);*/
 
         txtname_maintenance_maniFold = findViewById(R.id.txtNMCMF);
         txtaverage_cost_per_year_maniFold = findViewById(R.id.txtAVGCostMF);
         txtbugdet_maitenance_program = findViewById(R.id.txtBMPMF);
 
-              /*  chkYesPMCMMF = findViewById(R.id.chkYesPMCMMF);
-                chkNOSPMCMMF = findViewById(R.id.chkNOSPMCMMF);
-
-                chkYESKBMF = findViewById(R.id.chkYESKBMF);
-                chkNOLBMF = findViewById(R.id.chkNOLBMF);*/
-
         txtname_cylinder_supply = findViewById(R.id.txtCSMF);
-
-               /* chkDailyMF = findViewById(R.id.chkDailyMF);
-                chkWeeklyMF = findViewById(R.id.chkWeeklyMF);
-                chkFortnightlyMF = findViewById(R.id.chkFortnightlyMF);
-                chkMonthlyMF = findViewById(R.id.chkMonthlyMF);
-                chkOnrequestMF = findViewById(R.id.chkOnrequestMF);
-
-                chkYESSUC = findViewById(R.id.chkYESSUC);
-                chkNOSC = findViewById(R.id.chkNOSC);*/
         txtcomments_manifold = findViewById(R.id.txtCommentsMF);
     }
 

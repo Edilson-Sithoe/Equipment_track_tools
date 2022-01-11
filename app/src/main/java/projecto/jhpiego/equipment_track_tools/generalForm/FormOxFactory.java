@@ -46,10 +46,10 @@ public class FormOxFactory extends AppCompatActivity {
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
-                    Assessment.assessment_model.setTecni_traine_related_manifolf(train_matter_related_fact);
-                    Assessment.assessment_model.setFrequency_trainig_manifold(frequency_trainig_fact);
-                    Assessment.assessment_model.setHow_many_techn_trained_man_out(techi_trained_handling);
-                    Assessment.assessment_model.setComments_train_man_out(comments_factory);
+                    Assessment.assessment_model.setTrain_matter_related_fact(train_matter_related_fact);
+                    Assessment.assessment_model.setFrequency_trainig_fact(frequency_trainig_fact);
+                    Assessment.assessment_model.setTechi_trained_handling(techi_trained_handling);
+                    Assessment.assessment_model.setComments_factory(comments_factory);
 
                     Intent i = new Intent(FormOxFactory.this, FormMedGasOutlets.class);
                     startActivity(i);

@@ -37,12 +37,11 @@ public class Equipment_inventory_custom_adapter extends ArrayAdapter<Equipment_i
 
   @Override
   public View getView(int position, View row, ViewGroup parent) {
-   //   row = getLayoutInflater().inflate(R.layout.inventory, null);
       LayoutInflater inflater = LayoutInflater.from(getContext());
       row = inflater.inflate(R.layout.inventory, parent, false);
 
-   /*   TextView dept_id = row.findViewById(R.id.invent_id);
-      dept_id.setText(dataSet.get(position).getId());*/
+      TextView dept_id = row.findViewById(R.id.invent_id);
+      dept_id.setText(dataSet.get(position).getId()+"");
 
       TextView department = row.findViewById(R.id.txt_dept);
       department.setText(dataSet.get(position).getDepartment());

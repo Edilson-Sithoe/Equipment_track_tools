@@ -86,7 +86,6 @@ public class Assessment_model {
     private String chkLogBookTwoo;
     private String chkLogBoobUpdTwoo;
     private String txtComentTwoo;
-    /* terminei aqui la no all_dta_view*/
     /*  ****************************************/
 
     private String chkGeneThree;
@@ -125,6 +124,7 @@ public class Assessment_model {
     private String chkLogBookFour;
     private String chkLogBoobUpdFour;
     private String txtComentFour;
+    /* terminei aqui la no all_dta_view*/
     /*   ****************************************/
 
     private String chkVoltaStabilizer;
@@ -368,7 +368,7 @@ public class Assessment_model {
     private String name_maintenance_company_ox_tank_twoo;
     private String average_cost_ox_tank_twoo;
     private String budget_lox_tank_twoo;
-    private String logbbook_maintenance_twoo_mani;
+    private String logbook_maintenance_tank_two;
     private String logbook_update_ox_tank_twoo;
     private String name_supply_ox_tank_twoo;
     private String health_receive_lox_twoo;
@@ -3211,12 +3211,12 @@ public class Assessment_model {
         this.budget_lox_tank_twoo = budget_lox_tank_twoo;
     }
 
-    public String getLogbbook_maintenance_twoo_mani() {
-        return logbbook_maintenance_twoo_mani;
+    public String getLogbook_maintenance_tank_two() {
+        return logbook_maintenance_tank_two;
     }
 
-    public void setLogbbook_maintenance_twoo_mani(String logbbook_maintenance_twoo_mani) {
-        this.logbbook_maintenance_twoo_mani = logbbook_maintenance_twoo_mani;
+    public void setLogbook_maintenance_tank_two(String logbook_maintenance_tank_two) {
+        this.logbook_maintenance_tank_two = logbook_maintenance_tank_two;
     }
 
     public String getLogbook_update_ox_tank_twoo() {

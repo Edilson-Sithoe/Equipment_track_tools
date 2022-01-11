@@ -14,7 +14,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:background="@drawable/blue_bg">
 
             <TextView
@@ -62,7 +62,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -78,7 +78,8 @@
                     android:text="Yes"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"></RadioButton>
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck"></RadioButton>
 
                 <RadioButton
                     android:id="@+id/idChkNoMF"
@@ -91,7 +92,8 @@
                     android:text="No"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"></RadioButton>
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck"></RadioButton>
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,7 +126,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -140,7 +142,8 @@
                     android:text="Primary"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"></RadioButton>
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck"></RadioButton>
 
                 <RadioButton
                     android:id="@+id/chkSecondMF"
@@ -153,7 +156,8 @@
                     android:text="Secondary"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"></RadioButton>
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck"></RadioButton>
 
                 <RadioButton
                     android:id="@+id/chkEmergMF"
@@ -166,7 +170,8 @@
                     android:text="Emergency"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
-                    android:textSize="14sp"></RadioButton>
+                    android:textSize="14sp"
+                    tools:ignore="TouchTargetSizeCheck"></RadioButton>
 
             </RadioGroup>
         </com.google.android.material.textfield.TextInputLayout>
@@ -212,6 +217,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_mf"
                     android:text="Nursery ward"
                     android:textColor="@color/color_txt"
@@ -225,6 +231,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_mf"
                     android:text="Casualty ward"
                     android:textColor="@color/color_txt"
@@ -238,6 +245,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_mf"
                     android:text="Operating Theatre"
                     android:textColor="@color/color_txt"
@@ -265,6 +273,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked2_mf"
                     android:text="Intensive Care (ICU)"
                     android:textColor="@color/color_txt"
@@ -296,7 +305,8 @@
                 android:inputType="text"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -322,7 +332,8 @@
                 android:inputType="text"
                 android:textColor="@color/color_txt"
                 android:textColorHint="@color/cinzento"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -354,7 +365,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -366,6 +377,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked3_mf"
                     android:text="Less than 3 years"
                     android:textColor="@color/color_txt"
@@ -379,6 +391,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked3_mf"
                     android:text="Between 3-10 years"
                     android:textColor="@color/color_txt"
@@ -392,6 +405,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:minHeight="48dp"
                     android:onClick="onRadioButtonClicked3_mf"
                     android:text="Between 11-20 years"
                     android:textColor="@color/color_txt"
@@ -737,6 +751,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
+                    android:onClick="onRadioButtonClicked5_mf"
                     android:text="E (1m3/680L)"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"
@@ -1284,6 +1299,7 @@
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="text"
+                    android:onClick="onRadioButtonClicked10_mf"
                     android:text="Internal Technical Personnel of the health facility"
                     android:textColor="@color/color_txt"
                     android:textColorHint="@color/cinzento"

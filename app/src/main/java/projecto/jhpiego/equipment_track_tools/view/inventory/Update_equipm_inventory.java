@@ -12,6 +12,7 @@ import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -32,6 +33,9 @@ public class Update_equipm_inventory extends AppCompatActivity {
     private EditText txtEquipCondition, txtYearInstall, txtDataMaint, txtComment;
     private String cboMain_contract_edit;
 
+    private RadioButton rbSim, rbNao;
+
+
     int id;
     String dept, typeEquip, invent_number, make, model, serialNumber;
     String equipCondition, yearInstall, dataMaint, main_contract, comment;
@@ -42,7 +46,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_equipm_inventory);
         InitComponents_update();
-
+        setRadioButton();
         getAndSetIntentData();
 
         ActionBar ab = getSupportActionBar();
@@ -50,12 +54,19 @@ public class Update_equipm_inventory extends AppCompatActivity {
             ab.setTitle(dept);
         }
 
+
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String main_contra = cboMain_contract_edit;
                 settingData();
+                if (rbSim.isChecked())
+                    Variaveis.equipment_inventory.setMain_contract("Sim");
+                else
+                    Variaveis.equipment_inventory.setMain_contract("Nao");
+
                 Database_connection database_connection = new Database_connection(Update_equipm_inventory.this);
-                if (database_connection.updateData(id, dept, typeEquip, invent_number, make, model, serialNumber, equipCondition, yearInstall, main_contract, dataMaint, comment)) {
+                if (database_connection.updateData(id, dept, typeEquip, invent_number, make, model, serialNumber, equipCondition, yearInstall, main_contra, dataMaint, comment)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
                     snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
                     snackbar.setTextColor(Color.WHITE);
@@ -103,6 +114,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
         });
     }
 
+
     private void settingData() {
         id = Variaveis.equipment_inventory.getId();
         dept = txtDept.getText().toString().trim();
@@ -134,7 +146,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
             txtSerialNumber.setText(Variaveis.equipment_inventory.getSerial_number());
             txtEquipCondition.setText(Variaveis.equipment_inventory.getEquipment_condition());
             txtYearInstall.setText(Variaveis.equipment_inventory.getYear_install());
-         //   main_contract
+            //  main_contract
             txtDataMaint.setText(Variaveis.equipment_inventory.getData_last_main());
             txtComment.setText(Variaveis.equipment_inventory.getComments());
         }
@@ -142,13 +154,13 @@ public class Update_equipm_inventory extends AppCompatActivity {
 
     void confirmDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Remover " + dept + " ?");
-        builder.setMessage("Pretende apagar " + dept + " ?");
+        builder.setTitle("Remover " + Variaveis.equipment_inventory.getDepartment() + " ?");
+        builder.setMessage("Pretende apagar " + Variaveis.equipment_inventory.getDepartment() + " ?");
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Database_connection database_connection = new Database_connection(Update_equipm_inventory.this);
-                database_connection.deleteOneRow(id);
+                database_connection.deleteOneRow(Variaveis.equipment_inventory.getId());
                 finish();
             }
         });
@@ -162,8 +174,22 @@ public class Update_equipm_inventory extends AppCompatActivity {
         builder.create().show();
     }
 
-    public void onRadioButtonClicked_edit(View view) {
+    public void setRadioButton() {
+        rbSim = findViewById(R.id.radio_yes_edit);
+        rbNao = findViewById(R.id.radio_no_edit);
 
+        if (TextUtils.isEmpty(Variaveis.equipment_inventory.getMain_contract())) {
+            Toast.makeText(this, "Sem dado", Toast.LENGTH_SHORT).show();
+        } else {
+            if (Variaveis.equipment_inventory.getMain_contract().equalsIgnoreCase("Sim")) {
+                rbSim.setChecked(true);
+            } else {
+                rbNao.setChecked(true);
+            }
+        }
+    }
+
+    public void onRadioButtonClicked_edit(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
@@ -193,5 +219,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
         txtYearInstall = findViewById(R.id.txtYearInstall_edit);
         txtDataMaint = findViewById(R.id.txtDataMaintenance_edit);
         txtComment = findViewById(R.id.txtComment_edit);
+
+
     }
 }

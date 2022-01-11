@@ -19,13 +19,13 @@ import projecto.jhpiego.equipment_track_tools.databaseConnection.Assessment;
 public class FormOxFactoryPSA extends AppCompatActivity {
 
     private Button btnBack, btnNExt;
-    private String cbo_oxygen_ox2_plant,cbo_old_system_ox2,cbo_system_working_ox2,cbo_condition_ox2, cbo_specific_transformer_ox2;
-    private String cbo_specific_generator_ox2,cbo_specific_ups_ox2,cbo_specific_stablilizer_ox2,cbo_manifolf_fill_cylinder;
+    private String cbo_oxygen_ox2_plant, cbo_old_system_ox2, cbo_system_working_ox2, cbo_condition_ox2, cbo_specific_transformer_ox2;
+    private String cbo_specific_generator_ox2, cbo_specific_ups_ox2, cbo_specific_stablilizer_ox2, cbo_manifolf_fill_cylinder;
     private String cbo_most_common_ox2, cbo_system_working_ox2_ox, cbo_supply_cylinder_ox2, cbo_active_pm_program_ox2;
     private String cbo_activities_carried_by_ox2, cbo_specilized_tecn_internal_ox2, cbo_any_shortage_two_last_ox2;
 
-    private TextView txt_capacity_factory_ox2,txt_diemeter_ox2,txt_tota_production,txt_cap_fill_system_ox_cylinder,txt_cap_ox_tank_fill_system;
-    private TextView txt_which_supply_cylinder_ox2, txt_frequency_pm_ox2, txt_name_maintenance_ox2, txt_average_cost_year_ox2, txt_budget_ox2;
+    private TextView txt_capacity_factory_ox2, txt_diemeter_ox2, txt_tota_production, txt_cap_fill_system_ox_cylinder, txt_cap_ox_tank_fill_system;
+    private TextView txt_which_supply_cylinder_ox2, txt_name_supply_ox_tank, txt_frequency_pm_ox2, txt_name_maintenance_ox2, txt_average_cost_year_ox2, txt_budget_ox2;
     private TextView txt_how_many_tecn_available_ox2, txt_comments_ox2;
 
     String[] mensagens = {"Preencha todos os campos", "Registado com sucesso", "Ocorreu algum erro inesperado, tenta novamente"};
@@ -35,86 +35,87 @@ public class FormOxFactoryPSA extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_ox_factory_psa);
 
-    //    getSupportActionBar().hide();
+        //    getSupportActionBar().hide();
         InitComponents();
 
-            btnNExt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String oxygen_ox2_plant = cbo_oxygen_ox2_plant;
-                    String old_system_ox2 = cbo_old_system_ox2;
-                    String capacity_factory_ox2 = txt_capacity_factory_ox2.getText().toString();
-                    String diemeter_ox2 = txt_diemeter_ox2.getText().toString();
-                    String tota_production =  txt_tota_production.getText().toString();
-                    String system_working_ox2 = cbo_system_working_ox2;
-                    String condition_ox2 = cbo_condition_ox2;
-                    String specific_transformer_ox2 = cbo_specific_transformer_ox2;
-                    String specific_generator_ox2 = cbo_specific_generator_ox2;
-                    String specific_ups_ox2 = cbo_specific_ups_ox2;
-                    String specific_stablilizer_ox2 = cbo_specific_stablilizer_ox2;
-                    String manifolf_fill_cylinder = cbo_manifolf_fill_cylinder;
-                    String cap_fill_system_ox_cylinder = txt_cap_fill_system_ox_cylinder.getText().toString();
-                    String cap_ox_tank_fill_system = txt_cap_ox_tank_fill_system.getText().toString();
-                    String most_common_ox2 = cbo_most_common_ox2;
-                    String system_working_ox2_ox = cbo_system_working_ox2_ox;
-                    String supply_cylinder_ox2 = cbo_supply_cylinder_ox2;
-                    String which_supply_cylinder_ox2 = txt_which_supply_cylinder_ox2.getText().toString();
-                  //  String health_supply_cyclinder = txt_name_supply_ox_tank.getText().toString();
-                    String active_pm_program_ox2 = cbo_active_pm_program_ox2;
-                    String frequency_pm_ox2 = txt_frequency_pm_ox2.getText().toString();
-                    String activities_carried_by_ox2 = cbo_activities_carried_by_ox2;
-                    String name_maintenance_ox2 = txt_name_maintenance_ox2.getText().toString();
-                    String average_cost_year_ox2 = txt_average_cost_year_ox2.getText().toString();
-                    String budget_ox2 = txt_budget_ox2.getText().toString();
-                    String specilized_tecn_internal_ox2 = cbo_specilized_tecn_internal_ox2;
-                    String how_many_tecn_available_ox2 = txt_how_many_tecn_available_ox2.getText().toString();
-                    String any_shortage_two_last_ox2 = cbo_any_shortage_two_last_ox2;
-                    String comments_ox2 = txt_comments_ox2.getText().toString();
+        btnNExt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String oxygen_ox2_plant = cbo_oxygen_ox2_plant;
+                String old_system_ox2 = cbo_old_system_ox2;
+                String capacity_factory_ox2 = txt_capacity_factory_ox2.getText().toString();
+                String diemeter_ox2 = txt_diemeter_ox2.getText().toString();
+                String tota_production = txt_tota_production.getText().toString();
+                String system_working_ox2 = cbo_system_working_ox2;
+                String condition_ox2 = cbo_condition_ox2;
+                String specific_transformer_ox2 = cbo_specific_transformer_ox2;
+                String specific_generator_ox2 = cbo_specific_generator_ox2;
+                String specific_ups_ox2 = cbo_specific_ups_ox2;
+                String specific_stablilizer_ox2 = cbo_specific_stablilizer_ox2;
+                String manifolf_fill_cylinder = cbo_manifolf_fill_cylinder;
+                String cap_fill_system_ox_cylinder = txt_cap_fill_system_ox_cylinder.getText().toString();
+                String cap_ox_tank_fill_system = txt_cap_ox_tank_fill_system.getText().toString();
+                String most_common_ox2 = cbo_most_common_ox2;
+                String system_working_ox2_ox = cbo_system_working_ox2_ox;
+                String supply_cylinder_ox2 = cbo_supply_cylinder_ox2;
+                String which_supply_cylinder_ox2 = txt_which_supply_cylinder_ox2.getText().toString();
+                String health_supply_cyclinder = txt_name_supply_ox_tank.getText().toString();
+                String active_pm_program_ox2 = cbo_active_pm_program_ox2;
+                String frequency_pm_ox2 = txt_frequency_pm_ox2.getText().toString();
+                String activities_carried_by_ox2 = cbo_activities_carried_by_ox2;
+                String name_maintenance_ox2 = txt_name_maintenance_ox2.getText().toString();
+                String average_cost_year_ox2 = txt_average_cost_year_ox2.getText().toString();
+                String budget_ox2 = txt_budget_ox2.getText().toString();
+                String specilized_tecn_internal_ox2 = cbo_specilized_tecn_internal_ox2;
+                String how_many_tecn_available_ox2 = txt_how_many_tecn_available_ox2.getText().toString();
+                String any_shortage_two_last_ox2 = cbo_any_shortage_two_last_ox2;
+                String comments_ox2 = txt_comments_ox2.getText().toString();
 
-                    if (TextUtils.isEmpty(capacity_factory_ox2) ||TextUtils.isEmpty(diemeter_ox2)||TextUtils.isEmpty(tota_production)
-                            ||TextUtils.isEmpty(cap_fill_system_ox_cylinder)|| TextUtils.isEmpty(cap_ox_tank_fill_system)||TextUtils.isEmpty(which_supply_cylinder_ox2)||
-                            TextUtils.isEmpty(frequency_pm_ox2) ||TextUtils.isEmpty(name_maintenance_ox2) ||
-                            TextUtils.isEmpty(average_cost_year_ox2) ||TextUtils.isEmpty(budget_ox2) || TextUtils.isEmpty(how_many_tecn_available_ox2)) {
-                        Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
-                        snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
-                        snackbar.setTextColor(Color.WHITE);
-                        snackbar.show();
-                    } else {
-                        Assessment.assessment_model.setOxygen_ox2_plant(oxygen_ox2_plant);
-                        Assessment.assessment_model.setOld_system_ox2(old_system_ox2);
-                        Assessment.assessment_model.setCapacity_factory_ox2(txt_capacity_factory_ox2.getText().toString());
-                        Assessment.assessment_model.setDiemeter_ox2(txt_diemeter_ox2.getText().toString());
-                        Assessment.assessment_model.setTota_production(txt_tota_production.getText().toString());
-                        Assessment.assessment_model.setSystem_working_ox2(cbo_system_working_ox2);
-                        Assessment.assessment_model.setCondition_ox2(cbo_condition_ox2);
-                        Assessment.assessment_model.setSpecific_transformer_ox2(cbo_specific_transformer_ox2);
-                        Assessment.assessment_model.setSpecific_generator_ox2(cbo_specific_generator_ox2);
-                        Assessment.assessment_model.setSpecific_ups_ox2(cbo_specific_ups_ox2);
-                        Assessment.assessment_model.setSpecific_stablilizer_ox2(cbo_specific_stablilizer_ox2);
-                        Assessment.assessment_model.setManifolf_fill_cylinder(cbo_manifolf_fill_cylinder);
-                        Assessment.assessment_model.setCap_fill_system_ox_cylinder(txt_cap_fill_system_ox_cylinder.getText().toString());
-                        Assessment.assessment_model.setCap_ox_tank_fill_system(txt_cap_ox_tank_fill_system.getText().toString());
-                        Assessment.assessment_model.setMost_common_ox2(cbo_most_common_ox2);
-                        Assessment.assessment_model.setSystem_working_ox2(cbo_most_common_ox2);
-                        Assessment.assessment_model.setSupply_cylinder_ox2(cbo_system_working_ox2_ox);
-                        Assessment.assessment_model.setWhich_supply_cylinder_ox2(cbo_supply_cylinder_ox2);
-                        Assessment.assessment_model.setHealth_supply_cyclinder(txt_which_supply_cylinder_ox2.getText().toString());
-                        Assessment.assessment_model.setActive_pm_program_ox2(cbo_active_pm_program_ox2);
-                        Assessment.assessment_model.setFrequency_pm_ox2(txt_frequency_pm_ox2.getText().toString());
-                        Assessment.assessment_model.setActivities_carried_by_ox2(cbo_activities_carried_by_ox2);
-                        Assessment.assessment_model.setName_maintenance_ox2(txt_name_maintenance_ox2.getText().toString());
-                        Assessment.assessment_model.setAverage_cost_year_ox2(txt_average_cost_year_ox2.getText().toString());
-                        Assessment.assessment_model.setBudget_ox2(txt_budget_ox2.getText().toString());
-                        Assessment.assessment_model.setSpecilized_tecn_internal_ox2(cbo_specilized_tecn_internal_ox2);
-                        Assessment.assessment_model.setHow_many_tecn_available_ox2(txt_how_many_tecn_available_ox2.getText().toString());
-                        Assessment.assessment_model.setAny_shortage_two_last_ox2(any_shortage_two_last_ox2);
-                        Assessment.assessment_model.setComments_ox2(txt_comments_ox2.getText().toString());
+                if (TextUtils.isEmpty(capacity_factory_ox2) || TextUtils.isEmpty(diemeter_ox2) || TextUtils.isEmpty(tota_production)
+                        || TextUtils.isEmpty(cap_fill_system_ox_cylinder) || TextUtils.isEmpty(cap_ox_tank_fill_system) || TextUtils.isEmpty(which_supply_cylinder_ox2) ||
+                        TextUtils.isEmpty(frequency_pm_ox2) || TextUtils.isEmpty(name_maintenance_ox2) ||
+                        TextUtils.isEmpty(average_cost_year_ox2) || TextUtils.isEmpty(budget_ox2) || TextUtils.isEmpty(how_many_tecn_available_ox2)) {
+                    Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
+                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
+                    snackbar.setTextColor(Color.WHITE);
+                    snackbar.show();
+                } else {
+                    Assessment.assessment_model.setOxygen_ox2_plant(oxygen_ox2_plant);
+                    Assessment.assessment_model.setOld_system_ox2(old_system_ox2);
+                    Assessment.assessment_model.setCapacity_factory_ox2(capacity_factory_ox2);
+                    Assessment.assessment_model.setDiemeter_ox2(diemeter_ox2);
+                    Assessment.assessment_model.setTota_production(tota_production);
+                    Assessment.assessment_model.setSystem_working_ox2(system_working_ox2);
+                    Assessment.assessment_model.setCondition_ox2(condition_ox2);
+                    Assessment.assessment_model.setSpecific_transformer_ox2(specific_transformer_ox2);
+                    Assessment.assessment_model.setSpecific_generator_ox2(specific_generator_ox2);
+                    Assessment.assessment_model.setSpecific_ups_ox2(specific_ups_ox2);
+                    Assessment.assessment_model.setSpecific_stablilizer_ox2(specific_stablilizer_ox2);
+                    Assessment.assessment_model.setManifolf_fill_cylinder(manifolf_fill_cylinder);
+                    Assessment.assessment_model.setCap_fill_system_ox_cylinder(cap_fill_system_ox_cylinder);
+                    Assessment.assessment_model.setCap_ox_tank_fill_system(cap_ox_tank_fill_system);
+                    Assessment.assessment_model.setMost_common_ox2(most_common_ox2);
+                    Assessment.assessment_model.setSystem_working_ox2_ox(system_working_ox2_ox);
+                    Assessment.assessment_model.setSupply_cylinder_ox2(supply_cylinder_ox2);
+                    Assessment.assessment_model.setWhich_supply_cylinder_ox2(which_supply_cylinder_ox2);
+                    Assessment.assessment_model.setHealth_supply_cyclinder(health_supply_cyclinder);
+                    Assessment.assessment_model.setActive_pm_program_ox2(active_pm_program_ox2);
+                    Assessment.assessment_model.setFrequency_pm_ox2(frequency_pm_ox2);
+                    Assessment.assessment_model.setActivities_carried_by_ox2(activities_carried_by_ox2);
+                    Assessment.assessment_model.setName_maintenance_ox2(name_maintenance_ox2);
+                    Assessment.assessment_model.setAverage_cost_year_ox2(average_cost_year_ox2);
+                    Assessment.assessment_model.setBudget_ox2(budget_ox2);
+                    Assessment.assessment_model.setSpecilized_tecn_internal_ox2(specilized_tecn_internal_ox2);
+                    Assessment.assessment_model.setHow_many_tecn_available_ox2(how_many_tecn_available_ox2);
+                    Assessment.assessment_model.setAny_shortage_two_last_ox2(any_shortage_two_last_ox2);
+                    Assessment.assessment_model.setComments_ox2(comments_ox2);
 
-                        Intent i = new Intent(FormOxFactoryPSA.this, FormVaccumSystem.class);
-                        startActivity(i);
-                    }
+                    Intent i = new Intent(FormOxFactoryPSA.this, FormVaccumSystem.class);
+                    //   Intent i = new Intent(FormOxFactoryPSA.this, FormMedGasOutlets.class);
+                    startActivity(i);
                 }
-            });
+            }
+        });
 
 
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -146,7 +147,7 @@ public class FormOxFactoryPSA extends AppCompatActivity {
     public void onRadioButtonClicked1_ox_fac_psa(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.chkLessOX:
                 if (checked)
                     cbo_old_system_ox2 = "Less than 3 years";
@@ -192,7 +193,7 @@ public class FormOxFactoryPSA extends AppCompatActivity {
     public void onRadioButtonClicked3_ox_fac_psa(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.chkGIUOX:
                 if (checked)
                     cbo_condition_ox2 = "Good and in use";
@@ -448,13 +449,14 @@ public class FormOxFactoryPSA extends AppCompatActivity {
         }
     }
 
-    public void InitComponents(){
+    public void InitComponents() {
         btnNExt = findViewById(R.id.btn_next);
         btnBack = findViewById(R.id.btn_backFSPA);
 
         txt_capacity_factory_ox2 = findViewById(R.id.txtCapaFactOX);
         txt_diemeter_ox2 = findViewById(R.id.txtDiametreOX);
         txt_tota_production = findViewById(R.id.txtTotalProdOX);
+        txt_name_supply_ox_tank = findViewById(R.id.txtTotalProdOX);
         txt_cap_fill_system_ox_cylinder = findViewById(R.id.txtCapFSOX);
         txt_cap_ox_tank_fill_system = findViewById(R.id.txtCAPOXTankOX);
         txt_which_supply_cylinder_ox2 = findViewById(R.id.txtOne);
@@ -466,7 +468,7 @@ public class FormOxFactoryPSA extends AppCompatActivity {
         txt_comments_ox2 = findViewById(R.id.txtCommentOX);
     }
 
-    public void LimparCampos(){
+    public void LimparCampos() {
         txt_capacity_factory_ox2.setText("");
         txt_diemeter_ox2.setText("");
         txt_tota_production.setText("");
