@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalUpdateForm.Update_identi_health_facil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:id="@+id/idTVEvery6months_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Update Health Facil ID"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILHeaFacID_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Health facility ID:"
+            android:padding="10dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idHealtFacID_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/cinzento"
+                android:textColorHint="@color/color_txt"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILNameHealt_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Name od the health"
+            android:padding="10dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idNameHealt_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/cinzento"
+                android:textColorHint="@color/color_txt"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILLocation_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Location"
+            android:padding="10dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idLocation_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/cinzento"
+                android:textColorHint="@color/color_txt"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILDistrict_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="District"
+            android:padding="10dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idDistrict_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/cinzento"
+                android:textColorHint="@color/color_txt"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILProvince_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Province"
+            android:padding="10dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idProvince_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/cinzento"
+                android:textColorHint="@color/color_txt"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILRegion_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Region"
+            android:padding="10dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idRegion_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/cinzento"
+                android:textColorHint="@color/color_txt"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILGPS_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="GPS coordinates"
+            android:padding="10dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idGPS_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/cinzento"
+                android:textColorHint="@color/color_txt"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILLevelOfHFac_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/cinzento"
+            android:textColorHint="@color/color_txt">
+
+            <TextView
+                android:id="@+id/idTVLeHeaFac_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Level of the Health facility"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_fl_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fihf_edit"
+                    android:text="First level"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento" />
+
+                <RadioButton
+                    android:id="@+id/radio_sl_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fihf_edit"
+                    android:text="Second level"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento" />
+
+                <RadioButton
+                    android:id="@+id/radio_tl_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fihf_edit"
+                    android:text="Third level"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento" />
+
+                <RadioButton
+                    android:id="@+id/radio_fol_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fihf_edit"
+                    android:text="Fourth level"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento" />
+            </RadioGroup>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILTypOfFac_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVTypOfHFac_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Type of Health Facility (HF):"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="20sp" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkRuralHealthCenter_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Rural Health Center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkUrbanoHealthCenter_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Urbano Health Center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkHealthPost_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Health Post (HF)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkCentralHospital_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Central Hospital (HF)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkSpecializedHospital_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Specialized Hospital "
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkMilitaryHospital_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Military Hospital (HF)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkDistrictHospital_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="District Hospital (HF)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkGeneralHospital_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="General Hospital (HF)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkRuralHospital_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Rural Hospital (HF)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkProvincialHospital_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_two_fihf_edit"
+                    android:text="Provincial Hospital (HF)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILJOHFac_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVLJOHeaFac_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Just outpatient health facility?"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="20sp" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_yes_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_fihf_edit"
+                    android:text="Yes"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_no_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_fihf_edit"
+                    android:text="No"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVNumBed_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Number of beds of hospitalized patients (#)"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILTotal_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Total"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idTotal_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILMaternity_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Maternity"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idMaternity_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILCICOV_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="CICOV"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idCICOV_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILICU_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="ICU"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idICU_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILDAIFac_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVTDAIHFac_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Departments available in the health facility"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="18sp" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkOutpatientConsultationsr_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Outpatient Consultations"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkCasualtyWard_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Casualty Ward"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkMaternityWard_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Maternity Ward"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkNurseryWard_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Nursery Ward"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkPaediatricWard_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Paediatric Ward"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkGeneralWard_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="General Ward"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkSurgicalward_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Surgical ward"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkOperatingTheatre_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Operating Theatre"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkIntensiveCare_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Intensive Care (ICU)"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkRadiology_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Radiology"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkOphthalmology_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Ophthalmology"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkCICOV_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="CICOV"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkLaundry_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Laundry"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkKitchen_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Kitchen"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkWasteTreatment_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Waste treatment"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkMorgue_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Morgue"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkPharmacy_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fihf_edit"
+                    android:text="Pharmacy"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILOyher_edit"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Other"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idOther_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_back_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Voltar"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_nextE_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
