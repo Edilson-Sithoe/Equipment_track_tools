@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import projecto.jhpiego.equipment_track_tools.R;
 import projecto.jhpiego.equipment_track_tools.databaseConnection.Assessment;
-import projecto.jhpiego.equipment_track_tools.generalForm.FormStabilizer;
-import projecto.jhpiego.equipment_track_tools.generalForm.FormUPSOne;
-import projecto.jhpiego.equipment_track_tools.generalForm.FormUPSTwoo;
 import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
 import android.content.Intent;
@@ -172,7 +169,8 @@ public class Update_form_ups extends AppCompatActivity {
                     Assessment.assessment_model.setChklogbBookUPS(logbook_ups);
                     Assessment.assessment_model.setTxtComentUPS(comments_ups);
 
-                    Intent i = new Intent(Update_form_ups.this, Update_form_ups_twoo.class);
+                      Intent i = new Intent(Update_form_ups.this, Update_form_ups_twoo.class);
+                //    Intent i = new Intent(Update_form_ups.this, Update_solar_energy.class);
                     startActivity(i);
                 }
             }

@@ -2,7 +2,8 @@ package projecto.jhpiego.equipment_track_tools.model;
 
 public class Equipment_inventory {
     private int id;
-    private String department;
+    private int department_id;
+    private int equipment_id;
     private String typeEquipment;
     private String inventory_number;
     private String make;
@@ -14,19 +15,19 @@ public class Equipment_inventory {
     private String data_last_main;
     private String comments;
 
-    public Equipment_inventory(String department, String typeEquipment, String inventory_number, String make, String model, String serial_number, String equipment_condition, String year_install, String main_contract, String data_last_main, String comments) {
-        this.department = department;
-        this.typeEquipment = typeEquipment;
-        this.inventory_number = inventory_number;
-        this.make = make;
-        this.model = model;
-        this.serial_number = serial_number;
-        this.equipment_condition = equipment_condition;
-        this.year_install = year_install;
-        this.main_contract = main_contract;
-        this.data_last_main = data_last_main;
-        this.comments = comments;
-    }
+//    public Equipment_inventory(String department, String typeEquipment, String inventory_number, String make, String model, String serial_number, String equipment_condition, String year_install, String main_contract, String data_last_main, String comments) {
+//        this.department = department;
+//        this.typeEquipment = typeEquipment;
+//        this.inventory_number = inventory_number;
+//        this.make = make;
+//        this.model = model;
+//        this.serial_number = serial_number;
+//        this.equipment_condition = equipment_condition;
+//        this.year_install = year_install;
+//        this.main_contract = main_contract;
+//        this.data_last_main = data_last_main;
+//        this.comments = comments;
+//    }
 
     public Equipment_inventory() {
 
@@ -40,12 +41,20 @@ public class Equipment_inventory {
         this.id = id;
     }
 
-    public String getDepartment() {
-        return department;
+    public int getDepartment_id() {
+        return department_id;
     }
 
-    public void setDepartmenty(String department) {
-        this.department = department;
+    public void setDepartment_id(int department_id) {
+        this.department_id = department_id;
+    }
+
+    public int getEquipment_id() {
+        return equipment_id;
+    }
+
+    public void setEquipment_id(int equipment_id) {
+        this.equipment_id = equipment_id;
     }
 
     public String getTypeEquipment() {
@@ -130,8 +139,10 @@ public class Equipment_inventory {
 
     @Override
     public String toString() {
-        return "EquipmInventory{" +
-                "dependency='" + department + '\'' +
+        return "Equipment_inventory{" +
+                "id=" + id +
+                ", department_id=" + department_id +
+                ", equipment_id=" + equipment_id +
                 ", typeEquipment='" + typeEquipment + '\'' +
                 ", inventory_number='" + inventory_number + '\'' +
                 ", make='" + make + '\'' +

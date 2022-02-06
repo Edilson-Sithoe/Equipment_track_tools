@@ -19,12 +19,12 @@ import projecto.jhpiego.equipment_track_tools.databaseConnection.Assessment;
 public class FormManiFold extends AppCompatActivity {
 
     private Button btnBack, btnNext;
-    private TextView txtareas_does_supply_other,txtareas_does_supply_otherTwoo,txtcapacity_manifold,txtdiameter_system,txthow_many_cylinder_conect_rs,txthow_many_cylinder_conect_ls;
-    private TextView txthow_many_cylinder_conect_total, txtaverage_per_month, txtmost_common_model_cylinder_other,txtfrequency_pm_mani;
-    private TextView txtname_maintenance_maniFold,txtaverage_cost_per_year_maniFold,txtbugdet_maitenance_program,txtname_cylinder_supply,txtcomments_manifold;
+    private TextView txtareas_does_supply_other, txtareas_does_supply_otherTwoo, txtcapacity_manifold, txtdiameter_system, txthow_many_cylinder_conect_rs, txthow_many_cylinder_conect_ls;
+    private TextView txthow_many_cylinder_conect_total, txtaverage_per_month, txtmost_common_model_cylinder_other, txtfrequency_pm_mani;
+    private TextView txtname_maintenance_maniFold, txtaverage_cost_per_year_maniFold, txtbugdet_maitenance_program, txtname_cylinder_supply, txtcomments_manifold;
     String[] mensagens = {"Preencha todos os campos", "Registado com sucesso", "Ocorreu algum erro inesperado, tenta novamente"};
-    private String cbo_facility_ox,cbo_manifold_used,cbo_follow_areas,cbo_old_sys,cbo_mani_aut_manu,  cno_shortages;
-    private String cbo_most_common,cbo_connection_cylinder,cbo_logbook_upd,cboMain_gen_cond,cbo_carrie_by,  cbo_pm_cm;
+    private String cbo_facility_ox, cbo_manifold_used, cbo_follow_areas, cbo_old_sys, cbo_mani_aut_manu, cno_shortages;
+    private String cbo_most_common, cbo_connection_cylinder, cbo_logbook_upd, cboMain_gen_cond, cbo_carrie_by, cbo_pm_cm;
     private String cbo_health_fac_receive, cbo_po_sys_working;
 
     @Override
@@ -32,7 +32,7 @@ public class FormManiFold extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_mani_fold);
 
-      //  getSupportActionBar().hide();
+        //  getSupportActionBar().hide();
         InitComponents();
 
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class FormManiFold extends AppCompatActivity {
                 String areas_does_supply_otherTwoo = txtareas_does_supply_otherTwoo.getText().toString();
                 String old_system_manifold = cbo_old_sys;
                 String kind_manifold = cbo_mani_aut_manu;
-                String capacity_manifold =  txtcapacity_manifold.getText().toString();
+                String capacity_manifold = txtcapacity_manifold.getText().toString();
                 String diameter_system = txtdiameter_system.getText().toString();
                 String how_many_cylinder_conect_rs = txthow_many_cylinder_conect_rs.getText().toString();
                 String how_many_cylinder_conect_ls = txthow_many_cylinder_conect_ls.getText().toString();
@@ -70,12 +70,12 @@ public class FormManiFold extends AppCompatActivity {
                 String comments_manifold = txtcomments_manifold.getText().toString();
 
 
-                if (TextUtils.isEmpty(capacity_manifold) ||TextUtils.isEmpty(diameter_system)||TextUtils.isEmpty(how_many_cylinder_conect_rs)||
-                        TextUtils.isEmpty(how_many_cylinder_conect_ls)||TextUtils.isEmpty(how_many_cylinder_conect_total)||TextUtils.isEmpty(average_per_month)||
-                TextUtils.isEmpty(frequency_pm_mani)||TextUtils.isEmpty(name_maintenance_maniFold)||TextUtils.isEmpty(average_cost_per_year_maniFold) ||TextUtils.isEmpty(bugdet_maitenance_program) ||
-                TextUtils.isEmpty(name_cylinder_supply)) {
+                if (TextUtils.isEmpty(capacity_manifold) || TextUtils.isEmpty(diameter_system) || TextUtils.isEmpty(how_many_cylinder_conect_rs) ||
+                        TextUtils.isEmpty(how_many_cylinder_conect_ls) || TextUtils.isEmpty(how_many_cylinder_conect_total) || TextUtils.isEmpty(average_per_month) ||
+                        TextUtils.isEmpty(frequency_pm_mani) || TextUtils.isEmpty(name_maintenance_maniFold) || TextUtils.isEmpty(average_cost_per_year_maniFold) || TextUtils.isEmpty(bugdet_maitenance_program) ||
+                        TextUtils.isEmpty(name_cylinder_supply)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.rgb(178,34,34));
+                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
@@ -111,7 +111,7 @@ public class FormManiFold extends AppCompatActivity {
                     Assessment.assessment_model.setComments_manifold(comments_manifold);
 
                     Intent i = new Intent(FormManiFold.this, FormManiFoldTwoo.class);
-                   // Intent i = new Intent(FormManiFold.this, FormMedGasOutlets.class);
+                    // Intent i = new Intent(FormManiFold.this, FormMedGasOutlets.class);
                     startActivity(i);
                 }
             }
@@ -190,7 +190,7 @@ public class FormManiFold extends AppCompatActivity {
     public void onRadioButtonClicked3_mf(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.chkLess:
                 if (checked)
                     cbo_old_sys = "Less than 3 years";
@@ -239,7 +239,7 @@ public class FormManiFold extends AppCompatActivity {
                 break;
             case R.id.chkGMF:
                 if (checked)
-                    cbo_most_common = "G (3.5m3/3400L)\"";
+                    cbo_most_common = "G (3.5m3/3400L)";
                 break;
             case R.id.chkJMF:
                 if (checked)
@@ -301,7 +301,7 @@ public class FormManiFold extends AppCompatActivity {
     public void onRadioButtonClicked8_mf(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.chkGIUMF:
                 if (checked)
                     cboMain_gen_cond = "Good and in use";
@@ -382,7 +382,7 @@ public class FormManiFold extends AppCompatActivity {
         }
     }
 
-        public void onRadioButtonClicked12_mf(View view) {
+    public void onRadioButtonClicked12_mf(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
@@ -440,7 +440,7 @@ public class FormManiFold extends AppCompatActivity {
         }
     }
 
-    public void InitComponents(){
+    public void InitComponents() {
         btnBack = findViewById(R.id.btn_backMF);
         btnNext = findViewById(R.id.btn_next);
 
@@ -466,7 +466,7 @@ public class FormManiFold extends AppCompatActivity {
         txtcomments_manifold = findViewById(R.id.txtCommentsMF);
     }
 
-    public void LimparCampos(){
+    public void LimparCampos() {
         txtareas_does_supply_other.setText("");
         txtareas_does_supply_otherTwoo.setText("");
         txtcapacity_manifold.setText("");

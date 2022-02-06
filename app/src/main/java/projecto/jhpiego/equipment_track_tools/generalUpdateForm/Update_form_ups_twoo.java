@@ -1,14 +1,10 @@
 package projecto.jhpiego.equipment_track_tools.generalUpdateForm;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import projecto.jhpiego.equipment_track_tools.R;
 import projecto.jhpiego.equipment_track_tools.databaseConnection.Assessment;
 import projecto.jhpiego.equipment_track_tools.generalForm.FormSolarEnergy;
-import projecto.jhpiego.equipment_track_tools.generalForm.FormUPSOne;
-import projecto.jhpiego.equipment_track_tools.generalForm.FormUPSTwoo;
 import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,7 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
-
 import com.google.android.material.snackbar.Snackbar;
 
 public class Update_form_ups_twoo extends AppCompatActivity {
@@ -30,14 +25,13 @@ public class Update_form_ups_twoo extends AppCompatActivity {
     private RadioButton rbLess, rbBetwee, rbBetween, rbMore;
     private RadioButton rbYesGenWork, rbNoGenWork, rbParlGenWork, rbDontGenWork;
     private RadioButton idChkGIU_upd, idChkGBNU_upd, idChkIU_BNR_upd, idChkIUNNTR_upd, idchkOOSBR_upd, idChkOOSAndNR_upd, idChkStilInstPha_upd, idChkDontN_upd;
-    private RadioButton idChkPMY_upd, idChkPMN_upd;
     private RadioButton idChkPMITPHF_upd, idChkPMPDI_upd, idChkSubcontracted_upd;
     private RadioButton idChkPMCMY_upd, idChkPMCMN_upd;
     private RadioButton idChkLoBY_upd, idChkLoBN_upd;
-    private RadioButton idChkPMYUPS, radioButton;
+    private RadioButton idChkPMYUPS, idChkPMNUPS;
     String[] mensagens = {"Preencha todos os campos", "Registado com sucesso", "Ocorreu algum erro inesperado, tenta novamente"};
-    private String cboMain_gen_hf, cboMain_gen_atsW, cboMain_gen_pmcm, cboMain_gen_lb, cboMain_gene_pm;
-    private String cboMain_supp, cboMain_gen_fuel;
+    private String cboMain_gen_hf, cboMain_gen_pmcm, cboMain_gen_lb, cboMain_gene_pm;
+    private String cboMain_supp;
     private String cboMain_old, cboMain_gen_pm;
     private String cboMain_gen_work, cboMain_gen_cond, cboMain_gen_ats;
 
@@ -64,7 +58,7 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             public void onClick(View v) {
                 String sup_upss_twoo = cboMain_gen_hf;
                 String prov_ups_twoo = cboMain_supp;
-                String txtOther_ups_twoo = txtOtherUPSTwoo.getText().toString();
+            //    String txtOther_ups_twoo = txtOtherUPSTwoo.getText().toString();
                 String oldSys_ups_twoo = cboMain_old;
                 String working_ups_twoo = cboMain_gen_work;
                 String condEquip_ups_twoo = cboMain_gen_cond;
@@ -126,9 +120,9 @@ public class Update_form_ups_twoo extends AppCompatActivity {
                 else if (idChkDontN_upd.isChecked())
                     Variaveis.assessment_model.setChkCondEquipmUPSTwhoo("Don't know");
 
-                if (idChkPMY_upd.isChecked())
+                if (idChkPMYUPS.isChecked())
                     Variaveis.assessment_model.setChkPMPUPSTwhoo("Yes");
-                else if (idChkPMN_upd.isChecked())
+                else if (idChkPMNUPS.isChecked())
                     Variaveis.assessment_model.setChkPMPUPSTwhoo("No");
 
                 if (idChkPMITPHF_upd.isChecked())
@@ -156,7 +150,7 @@ public class Update_form_ups_twoo extends AppCompatActivity {
                 } else {
                     Assessment.assessment_model.setChkSupUPSSTwhoo(sup_upss_twoo);
                     Assessment.assessment_model.setChkProvUPTwhooS(prov_ups_twoo);
-                    Assessment.assessment_model.setTxtOtherUPSTwhoo(txtOther_ups_twoo);
+                 //   Assessment.assessment_model.setTxtOtherUPSTwhoo(txtOther_ups_twoo);
                     Assessment.assessment_model.setChkOldSystemUPSTwhoo(oldSys_ups_twoo);
                     Assessment.assessment_model.setChkWorkingUPSTwhoo(working_ups_twoo);
                     Assessment.assessment_model.setChkCondEquipmUPSTwhoo(condEquip_ups_twoo);
@@ -169,29 +163,29 @@ public class Update_form_ups_twoo extends AppCompatActivity {
                     Assessment.assessment_model.setChklogbBookUPSTwhoo(logbook_ups_twoo);
                     Assessment.assessment_model.setTxtComentUPSTwhoo(comments_ups_twoo);
 
-                    Intent i = new Intent(Update_form_ups_twoo.this, FormSolarEnergy.class);
+                    Intent i = new Intent(Update_form_ups_twoo.this, Update_solar_energy.class);
                     startActivity(i);
                 }
             }
         });
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Update_form_ups_twoo.this, Update_form_ups.class);
-                startActivity(i);
-            }
-        });
+//        btnBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Update_form_ups_twoo.this, Update_form_ups.class);
+//                startActivity(i);
+//            }
+//        });
     }
 
     private void getAndSetIntentData() {
         if (getIntent().hasExtra("txtNameOfMantUPSTwoo")) {
             Toast.makeText(this, "Sem dados para mostrar", Toast.LENGTH_SHORT).show();
         } else {
-            txtOtherUPSTwoo.setText(Variaveis.assessment_model.getTxtOtherUPSTwhoo());
+//            txtOtherUPSTwoo.setText(Variaveis.assessment_model.getTxtOtherUPSTwhoo());
 //            txtCapacityUPSTwoo.setText(Variaveis.assessment_model.getTxtCapacityUPSv());
-            //          txtFreqPMUPSTwoo.setText(Variaveis.assessment_model.getTxtFreqPMUPSTwhoo());
-            //        txtNameOfMantUPSTwoo.setText(Variaveis.assessment_model.getTxtNameOfMantUPSv());
+//            txtFreqPMUPSTwoo.setText(Variaveis.assessment_model.getTxtFreqPMUPSTwhoo());
+//            txtNameOfMantUPSTwoo.setText(Variaveis.assessment_model.getTxtNameOfMantUPSv());
 //            txtComentUPSTwoo.setText(Variaveis.assessment_model.getTxtComentUPSTwhoo());
         }
     }
@@ -210,7 +204,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -246,7 +239,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_two_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -290,7 +282,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_three_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -334,7 +325,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_four_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -390,7 +380,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_five_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -428,7 +417,7 @@ public class Update_form_ups_twoo extends AppCompatActivity {
 
     public void setRBMain_gen_fuel() {
         idChkPMYUPS = findViewById(R.id.idChkPMYUPS);
-        idChkPMYUPS = findViewById(R.id.idChkPMNUPS);
+        idChkPMNUPS = findViewById(R.id.idChkPMNUPS);
 
         if (TextUtils.isEmpty(Variaveis.assessment_model.getChkPMPUPSTwhoo())) {
             Toast.makeText(this, "Sem dado", Toast.LENGTH_SHORT).show();
@@ -436,11 +425,10 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             if (Variaveis.assessment_model.getChkPMPUPSTwhoo().equalsIgnoreCase("Yes")) {
                 idChkPMYUPS.setChecked(true);
             } else if (Variaveis.assessment_model.getChkPMPUPSTwhoo().equalsIgnoreCase("No")) {
-                idChkPMYUPS.setChecked(true);
+                idChkPMNUPS.setChecked(true);
             }
         }
     }
-
     public void onRadioButtonClicked_six_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -473,7 +461,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_seven_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -507,7 +494,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_eight_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -537,7 +523,6 @@ public class Update_form_ups_twoo extends AppCompatActivity {
             }
         }
     }
-
     public void onRadioButtonClicked_nine_ups_twho(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -557,8 +542,7 @@ public class Update_form_ups_twoo extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_back);
         btnNExt = findViewById(R.id.btn_next);
 
-
-        txtOtherUPSTwoo = findViewById(R.id.idTxtOtherUPSTwoo);
+        txtOtherUPSTwoo = findViewById(R.id.idTxtOtherUPS);
         txtCapacityUPSTwoo = findViewById(R.id.idTxtCapUPSTwoo);
         txtFreqPMUPSTwoo = findViewById(R.id.idTxtFreqUPSTwoo);
         txtNameOfMantUPSTwoo = findViewById(R.id.idTxtNameOfMantUPSTwoo);

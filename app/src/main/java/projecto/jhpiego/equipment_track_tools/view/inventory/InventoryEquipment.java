@@ -72,7 +72,7 @@ public class InventoryEquipment extends AppCompatActivity {
                 Intent i = new Intent(InventoryEquipment.this, Update_equipm_inventory.class);
                 startActivity(i);
 
-                Snackbar.make(view, dataModel.getId() + "\n" + dataModel.getDepartment() + " API: " + dataModel.getTypeEquipment(), Snackbar.LENGTH_LONG)
+                Snackbar.make(view, dataModel.getId() + "\n" + dataModel.getDepartment_id() + " API: " + dataModel.getTypeEquipment(), Snackbar.LENGTH_LONG)
                         .setAction("No action", null).show();
 
             }
@@ -96,8 +96,8 @@ public class InventoryEquipment extends AppCompatActivity {
             while (cursor.moveToNext()) {
                 Equipment_inventory equipment_inventory = new Equipment_inventory();
                 equipment_inventory.setId(cursor.getInt(0));
-                equipment_inventory.setDepartmenty(cursor.getString(1));
-                equipment_inventory.setTypeEquipment(cursor.getString(2));
+                equipment_inventory.setDepartment_id(cursor.getInt(1));
+                equipment_inventory.setEquipment_id(cursor.getInt(2));
                 equipment_inventory.setInventory_number(cursor.getString(3));
                 equipment_inventory.setMake(cursor.getString(4));
                 equipment_inventory.setModel(cursor.getString(5));

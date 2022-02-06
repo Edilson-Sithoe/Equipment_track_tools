@@ -124,8 +124,7 @@ public class Assessment_model {
     private String chkLogBookFour;
     private String chkLogBoobUpdFour;
     private String txtComentFour;
-    /* terminei aqui la no all_dta_view*/
-    /*   ****************************************/
+    /* ****************************************/
 
     private String chkVoltaStabilizer;
     private String chkHoldSystem;
@@ -173,20 +172,20 @@ public class Assessment_model {
     private String txtComentUPSTwhoo;
     /* ************************************************************/
 
-    private String txtSolarP;
-    private String txtAreaProv;
+    private String cboSolarP;
+    private String cboAreaProv;
     private String txtAreaProvOther;
-    private String txtOldSysSolar;
-    private String txtSolarPSysWorking;
-    private String txtConditionEquipmSolar;
+    private String cboOldSysSolar;
+    private String cboSolarPSysWorking;
+    private String cboConditionEquipmSolar;
     private String txtCapacitySolarPower;
-    private String txtbatterieInstalled;
-    private String txtActivePM_solar;
-    private String txtCarriesSolarBy;
+    private String cbobatterieInstalled;
+    private String cboActivePM_solar;
+    private String cboCarriesSolarBy;
     private String txtFrequencyPM;
     private String txtNameMainSolar;
-    private String txtLogbbook_pmSolar;
-    private String txtLogbbook_updateSolar;
+    private String cboLogbbook_pmSolar;
+    private String cboLogbbook_updateSolar;
     private String txtCommentsSolar;
     /* *****************************************************************/
 
@@ -1739,20 +1738,20 @@ public class Assessment_model {
         this.txtComentUPSTwhoo = txtComentUPSTwhoo;
     }
 
-    public String getTxtSolarP() {
-        return txtSolarP;
+    public String getCboSolarP() {
+        return cboSolarP;
     }
 
-    public void setTxtSolarP(String txtSolarP) {
-        this.txtSolarP = txtSolarP;
+    public void setCboSolarP(String cboSolarP) {
+        this.cboSolarP = cboSolarP;
     }
 
-    public String getTxtAreaProv() {
-        return txtAreaProv;
+    public String getCboAreaProv() {
+        return cboAreaProv;
     }
 
-    public void setTxtAreaProv(String txtAreaProv) {
-        this.txtAreaProv = txtAreaProv;
+    public void setCboAreaProv(String cboAreaProv) {
+        this.cboAreaProv = cboAreaProv;
     }
 
     public String getTxtAreaProvOther() {
@@ -1763,28 +1762,28 @@ public class Assessment_model {
         this.txtAreaProvOther = txtAreaProvOther;
     }
 
-    public String getTxtOldSysSolar() {
-        return txtOldSysSolar;
+    public String getCboOldSysSolar() {
+        return cboOldSysSolar;
     }
 
-    public void setTxtOldSysSolar(String txtOldSysSolar) {
-        this.txtOldSysSolar = txtOldSysSolar;
+    public void setCboOldSysSolar(String cboOldSysSolar) {
+        this.cboOldSysSolar = cboOldSysSolar;
     }
 
-    public String getTxtSolarPSysWorking() {
-        return txtSolarPSysWorking;
+    public String getCboSolarPSysWorking() {
+        return cboSolarPSysWorking;
     }
 
-    public void setTxtSolarPSysWorking(String txtSolarPSysWorking) {
-        this.txtSolarPSysWorking = txtSolarPSysWorking;
+    public void setCboSolarPSysWorking(String cboSolarPSysWorking) {
+        this.cboSolarPSysWorking = cboSolarPSysWorking;
     }
 
-    public String getTxtConditionEquipmSolar() {
-        return txtConditionEquipmSolar;
+    public String getCboConditionEquipmSolar() {
+        return cboConditionEquipmSolar;
     }
 
-    public void setTxtConditionEquipmSolar(String txtConditionEquipmSolar) {
-        this.txtConditionEquipmSolar = txtConditionEquipmSolar;
+    public void setCboConditionEquipmSolar(String cboConditionEquipmSolar) {
+        this.cboConditionEquipmSolar = cboConditionEquipmSolar;
     }
 
     public String getTxtCapacitySolarPower() {
@@ -1795,28 +1794,28 @@ public class Assessment_model {
         this.txtCapacitySolarPower = txtCapacitySolarPower;
     }
 
-    public String getTxtbatterieInstalled() {
-        return txtbatterieInstalled;
+    public String getCbobatterieInstalled() {
+        return cbobatterieInstalled;
     }
 
-    public void setTxtbatterieInstalled(String txtbatterieInstalled) {
-        this.txtbatterieInstalled = txtbatterieInstalled;
+    public void setCbobatterieInstalled(String cbobatterieInstalled) {
+        this.cbobatterieInstalled = cbobatterieInstalled;
     }
 
-    public String getTxtActivePM_solar() {
-        return txtActivePM_solar;
+    public String getCboActivePM_solar() {
+        return cboActivePM_solar;
     }
 
-    public void setTxtActivePM_solar(String txtActivePM_solar) {
-        this.txtActivePM_solar = txtActivePM_solar;
+    public void setCboActivePM_solar(String cboActivePM_solar) {
+        this.cboActivePM_solar = cboActivePM_solar;
     }
 
-    public String getTxtCarriesSolarBy() {
-        return txtCarriesSolarBy;
+    public String getCboCarriesSolarBy() {
+        return cboCarriesSolarBy;
     }
 
-    public void setTxtCarriesSolarBy(String txtCarriesSolarBy) {
-        this.txtCarriesSolarBy = txtCarriesSolarBy;
+    public void setCboCarriesSolarBy(String cboCarriesSolarBy) {
+        this.cboCarriesSolarBy = cboCarriesSolarBy;
     }
 
     public String getTxtFrequencyPM() {
@@ -1835,20 +1834,20 @@ public class Assessment_model {
         this.txtNameMainSolar = txtNameMainSolar;
     }
 
-    public String getTxtLogbbook_pmSolar() {
-        return txtLogbbook_pmSolar;
+    public String getCboLogbbook_pmSolar() {
+        return cboLogbbook_pmSolar;
     }
 
-    public void setTxtLogbbook_pmSolar(String txtLogbbook_pmSolar) {
-        this.txtLogbbook_pmSolar = txtLogbbook_pmSolar;
+    public void setCboLogbbook_pmSolar(String cboLogbbook_pmSolar) {
+        this.cboLogbbook_pmSolar = cboLogbbook_pmSolar;
     }
 
-    public String getTxtLogbbook_updateSolar() {
-        return txtLogbbook_updateSolar;
+    public String getCboLogbbook_updateSolar() {
+        return cboLogbbook_updateSolar;
     }
 
-    public void setTxtLogbbook_updateSolar(String txtLogbbook_updateSolar) {
-        this.txtLogbbook_updateSolar = txtLogbbook_updateSolar;
+    public void setCboLogbbook_updateSolar(String cboLogbbook_updateSolar) {
+        this.cboLogbbook_updateSolar = cboLogbbook_updateSolar;
     }
 
     public String getTxtCommentsSolar() {

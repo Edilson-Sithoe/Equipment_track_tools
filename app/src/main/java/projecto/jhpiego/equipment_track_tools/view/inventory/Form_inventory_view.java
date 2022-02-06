@@ -29,7 +29,6 @@ import java.util.ArrayList;
 
 public class Form_inventory_view extends AppCompatActivity {
 
-
     ListView listView;
     FloatingActionButton add_button;
 
@@ -45,7 +44,7 @@ public class Form_inventory_view extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inventory_equipment);
+        setContentView(R.layout.activity_form_inventory_view);
         Init_components();
 
         add_button.setOnClickListener(new View.OnClickListener() {
@@ -73,11 +72,6 @@ public class Form_inventory_view extends AppCompatActivity {
                 Intent i = new Intent(Form_inventory_view.this, Update_equipm_inventory.class);
                 startActivity(i);
 
-              /*  Snackbar.make(view, dataModel.getId() + dataModel.getDepartment() + dataModel.getTypeEquipment() + dataModel.getInventory_number()
-                        + dataModel.getMake() + dataModel.getModel() + dataModel.getSerial_number() + dataModel.getYear_install()
-                        + dataModel.getData_last_main() + dataModel.getEquipment_condition(), Snackbar.LENGTH_LONG)
-                        .setAction("No action", null).show();*/
-
             }
         });
     }
@@ -99,8 +93,8 @@ public class Form_inventory_view extends AppCompatActivity {
             while (cursor.moveToNext()) {
                 Equipment_inventory equipment_inventory = new Equipment_inventory();
                 equipment_inventory.setId(cursor.getInt(0));
-                equipment_inventory.setDepartmenty(cursor.getString(1));
-                equipment_inventory.setTypeEquipment(cursor.getString(2));
+                equipment_inventory.setDepartment_id(cursor.getInt(1));
+                equipment_inventory.setEquipment_id(cursor.getInt(2));
                 equipment_inventory.setInventory_number(cursor.getString(3));
                 equipment_inventory.setMake(cursor.getString(4));
                 equipment_inventory.setModel(cursor.getString(5));
@@ -158,8 +152,8 @@ public class Form_inventory_view extends AppCompatActivity {
     }
 
     private void Init_components() {
-        listView = (ListView) findViewById(R.id.list_view);
-        add_button = findViewById(R.id.add_button);
+        listView = findViewById(R.id.list_view);
+        add_button = findViewById(R.id.add_buttonn);
         imageView = findViewById(R.id.id_image);
         textView = findViewById(R.id.id_no_data);
     }

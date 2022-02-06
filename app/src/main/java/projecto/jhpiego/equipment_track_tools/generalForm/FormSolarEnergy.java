@@ -60,20 +60,20 @@ public class FormSolarEnergy extends AppCompatActivity {
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
-                    Assessment.assessment_model.setTxtSolarP(solar_power);
-                    Assessment.assessment_model.setTxtAreaProv(area_provider);
+                    Assessment.assessment_model.setCboSolarP(solar_power);
+                    Assessment.assessment_model.setCboAreaProv(area_provider);
                     Assessment.assessment_model.setTxtAreaProvOther(area_provider_other);
-                    Assessment.assessment_model.setTxtOldSysSolar(old_sys_solar);
-                    Assessment.assessment_model.setTxtSolarPSysWorking(solar_psy_working);
-                    Assessment.assessment_model.setTxtConditionEquipmSolar(condition_equipm);
+                    Assessment.assessment_model.setCboOldSysSolar(old_sys_solar);
+                    Assessment.assessment_model.setCboSolarPSysWorking(solar_psy_working);
+                    Assessment.assessment_model.setCboConditionEquipmSolar(condition_equipm);
                     Assessment.assessment_model.setTxtCapacitySolarPower(capacity_solar_power);
-                    Assessment.assessment_model.setTxtbatterieInstalled(batteries_installed);
-                    Assessment.assessment_model.setTxtActivePM_solar(active_pm_solar);
-                    Assessment.assessment_model.setTxtCarriesSolarBy(carries_solar);
+                    Assessment.assessment_model.setCbobatterieInstalled(batteries_installed);
+                    Assessment.assessment_model.setCboActivePM_solar(active_pm_solar);
+                    Assessment.assessment_model.setCboCarriesSolarBy(carries_solar);
                     Assessment.assessment_model.setTxtFrequencyPM(frequency_pm);
                     Assessment.assessment_model.setTxtNameMainSolar(name_main_solar);
-                    Assessment.assessment_model.setTxtLogbbook_pmSolar(logbook_pm_solar);
-                    Assessment.assessment_model.setTxtLogbbook_updateSolar(logbook_upd_solar);
+                    Assessment.assessment_model.setCboLogbbook_pmSolar(logbook_pm_solar);
+                    Assessment.assessment_model.setCboLogbbook_updateSolar(logbook_upd_solar);
                     Assessment.assessment_model.setTxtCommentsSolar(comments_solar);
 
                     Intent i = new Intent(FormSolarEnergy.this, FormOxigenSystem.class);

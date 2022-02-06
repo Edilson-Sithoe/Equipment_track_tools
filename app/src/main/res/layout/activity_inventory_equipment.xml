@@ -6,28 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.inventory.InventoryEquipment">
 
-    <!--  <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle_view_invent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="4dp"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ListView
-        android:id="@+id/recycle_view_invent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="4dp"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />-->
-
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"

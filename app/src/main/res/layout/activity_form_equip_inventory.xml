@@ -41,7 +41,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Departmento(0)"
+            android:text="Departamento"
             android:textAllCaps="false"
             android:textColor="@color/color_txt"
             android:textSize="16sp"
@@ -56,22 +56,26 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
-            android:hint="Departmento(0)"
+            android:hint="Departamento"
             android:padding="15dp"
             android:textColorHint="@color/cinzento"
             app:hintTextColor="@color/black">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtDept"
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:id="@+id/txtDept"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="39dp"-->
+            <!--                android:fontFamily="@font/poppins_regular"-->
+            <!--                android:importantForAutofill="no"-->
+            <!--                android:inputType="textCapSentences"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textColorHint="@color/cinzento"-->
+            <!--                android:textSize="12sp"-->
+            <!--                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />-->
+            <Spinner
+                android:id="@+id/id_spinner_dept"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textColorHint="@color/cinzento"
-                android:textSize="12sp"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -104,17 +108,21 @@
             android:textColorHint="@color/cinzento"
             app:hintTextColor="@color/black">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtTypeEquip"
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:id="@+id/txtTypeEquip"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:fontFamily="@font/poppins_regular"-->
+            <!--                android:importantForAutofill="no"-->
+            <!--                android:inputType="textCapSentences"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textColorHint="@color/cinzento"-->
+            <!--                android:textSize="12sp"-->
+            <!--                tools:ignore="TouchTargetSizeCheck" />-->
+            <Spinner
+                android:id="@+id/id_spinner_equipm"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:textColorHint="@color/cinzento"
-                android:textSize="12sp"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -153,6 +161,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
                 android:inputType="number"
+                android:maxLength="12"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
                 android:textSize="12sp"
@@ -191,14 +200,14 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtMake"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
+                android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
-                android:inputType="text"
+                android:inputType="textCapSentences"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
-                android:fontFamily="@font/poppins_regular"
                 android:textSize="12sp"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -233,14 +242,15 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtModel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
-                android:inputType="text"
+                android:inputType="textCapSentences"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
                 android:textSize="12sp"
-                tools:ignore="TouchTargetSizeCheck" />
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -255,8 +265,7 @@
             android:text="Número de série"
             android:textAllCaps="false"
             android:textColor="@color/color_txt"
-            android:textSize="16sp"
-        />
+            android:textSize="16sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/TILtxtSerialNumber"
@@ -294,7 +303,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Condição de equipamento(2)"
+            android:text="Condição de equipamento"
             android:textAllCaps="false"
             android:textColor="@color/color_txt"
             android:textSize="16sp"
@@ -309,7 +318,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/poppins_regular"
-            android:hint="Condição de equipamento(2)"
+            android:hint="Condição de equipamento"
             android:padding="15dp"
             android:textColorHint="@color/color_txt"
             app:hintTextColor="@color/black">
@@ -320,7 +329,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
-                android:inputType="text"
+                android:inputType="textCapSentences"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
                 android:textSize="12sp"
@@ -485,7 +494,6 @@
             android:id="@+id/idTVtxtComment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_register"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
@@ -516,7 +524,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
                 android:importantForAutofill="no"
-                android:inputType="text"
+                android:inputType="textCapSentences"
                 android:textColor="@color/black"
                 android:textColorHint="@color/cinzento"
                 android:textSize="12sp" />
@@ -534,6 +542,7 @@
 
             <Button
                 android:id="@+id/btn_backInvent"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -546,6 +555,7 @@
 
             <Button
                 android:id="@+id/btn_saveInvent"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -556,8 +566,6 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
         </LinearLayout>
-
-
     </LinearLayout>
 
 </ScrollView>

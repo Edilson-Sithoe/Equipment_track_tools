@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import projecto.jhpiego.equipment_track_tools.R;
 import projecto.jhpiego.equipment_track_tools.adapter.All_data_adapter;
 import projecto.jhpiego.equipment_track_tools.databaseConnection.Database_connection;
-import projecto.jhpiego.equipment_track_tools.generalUpdateForm.Update_interview_id;
+import projecto.jhpiego.equipment_track_tools.generalUpdateForm.Update_liquid_ox_too;
 import projecto.jhpiego.equipment_track_tools.model.Assessment_model;
 import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
@@ -70,11 +70,9 @@ public class Form_all_data_view extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Assessment_model data_model_assess = assessment_modelArrayList.get(position);
                 Variaveis.assessment_model = assessment_modelArrayList.get(position);
-                Intent i = new Intent(Form_all_data_view.this, Update_interview_id.class);
+                Intent i = new Intent(Form_all_data_view.this, Update_liquid_ox_too.class);
                 startActivity(i);
 
-              /*  Snackbar.make(view, data_model_assess.getTxtHealthFacID() + data_model_assess.getTxtName(), Snackbar.LENGTH_SHORT)
-                        .setAction("No action", null).show();*/
             }
         });
     }
@@ -258,19 +256,19 @@ public class Form_all_data_view extends AppCompatActivity {
                 assessment_model.setChklogbBookUPSTwhoo(cursor.getString(150));
                 assessment_model.setTxtComentUPSTwhoo(cursor.getString(151));
 
-                assessment_model.setTxtSolarP(cursor.getString(152));
-                assessment_model.setTxtAreaProv(cursor.getString(153));
-                assessment_model.setTxtOldSysSolar(cursor.getString(154));
-                assessment_model.setTxtSolarPSysWorking(cursor.getString(155));
-                assessment_model.setTxtConditionEquipmSolar(cursor.getString(156));
+                assessment_model.setCboSolarP(cursor.getString(152));
+                assessment_model.setCboAreaProv(cursor.getString(153));
+                assessment_model.setCboOldSysSolar(cursor.getString(154));
+                assessment_model.setCboSolarPSysWorking(cursor.getString(155));
+                assessment_model.setCboConditionEquipmSolar(cursor.getString(156));
                 assessment_model.setTxtCapacitySolarPower(cursor.getString(157));
-                assessment_model.setTxtbatterieInstalled(cursor.getString(158));
-                assessment_model.setTxtActivePM_solar(cursor.getString(159));
-                assessment_model.setTxtCarriesSolarBy(cursor.getString(160));
+                assessment_model.setCbobatterieInstalled(cursor.getString(158));
+                assessment_model.setCboActivePM_solar(cursor.getString(159));
+                assessment_model.setCboCarriesSolarBy(cursor.getString(160));
                 assessment_model.setTxtFrequencyPM(cursor.getString(161));
                 assessment_model.setTxtNameMainSolar(cursor.getString(162));
-                assessment_model.setTxtLogbbook_pmSolar(cursor.getString(163));
-                assessment_model.setTxtLogbbook_updateSolar(cursor.getString(164));
+                assessment_model.setCboLogbbook_pmSolar(cursor.getString(163));
+                assessment_model.setCboLogbbook_updateSolar(cursor.getString(164));
                 assessment_model.setTxtCommentsSolar(cursor.getString(165));
 
                 assessment_model.setTxtAverageConsOx(cursor.getString(166));

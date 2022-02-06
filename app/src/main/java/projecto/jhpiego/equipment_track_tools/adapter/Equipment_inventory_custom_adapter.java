@@ -22,9 +22,6 @@ public class Equipment_inventory_custom_adapter extends ArrayAdapter<Equipment_i
     private ArrayList<Equipment_inventory> dataSet;
     Context mContext;
 
-    private static class ViewHolder {
-
-    }
 
     public Equipment_inventory_custom_adapter(ArrayList<Equipment_inventory> data, Context context) {
         super(context, R.layout.inventory, data);
@@ -35,20 +32,20 @@ public class Equipment_inventory_custom_adapter extends ArrayAdapter<Equipment_i
 
     private int lastPosition = -1;
 
-  @Override
-  public View getView(int position, View row, ViewGroup parent) {
-      LayoutInflater inflater = LayoutInflater.from(getContext());
-      row = inflater.inflate(R.layout.inventory, parent, false);
+    @Override
+    public View getView(int position, View row, ViewGroup parent) {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        row = inflater.inflate(R.layout.inventory, parent, false);
 
-      TextView dept_id = row.findViewById(R.id.invent_id);
-      dept_id.setText(dataSet.get(position).getId()+"");
+        TextView dept_id = row.findViewById(R.id.invent_id);
+        dept_id.setText(dataSet.get(position).getId() + "");
 
-      TextView department = row.findViewById(R.id.txt_dept);
-      department.setText(dataSet.get(position).getDepartment());
+        TextView make = row.findViewById(R.id.txt_dept);
+        make.setText(dataSet.get(position).getMake());
 
    /*   TextView type = row.findViewById(R.id.txt_type);
       type.setText(dataSet.get(position).getTypeEquipment());*/
-      return row;
-  }
+        return row;
+    }
 }
 

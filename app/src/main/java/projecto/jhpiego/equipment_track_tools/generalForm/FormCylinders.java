@@ -164,6 +164,10 @@ public class FormCylinders extends AppCompatActivity {
                 if (checked)
                     cbo_health_fac_receive = "Monthly";
                 break;
+            case R.id.idChkOnrequestC:
+                if (checked)
+                    cbo_health_fac_receive = "On request";
+                break;
         }
     }
 

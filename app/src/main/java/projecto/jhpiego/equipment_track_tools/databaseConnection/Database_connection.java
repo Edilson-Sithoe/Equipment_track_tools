@@ -9,20 +9,26 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import projecto.jhpiego.equipment_track_tools.model.Assessment_model;
+import projecto.jhpiego.equipment_track_tools.model.Department;
+import projecto.jhpiego.equipment_track_tools.model.Equipment;
 import projecto.jhpiego.equipment_track_tools.model.Equipment_inventory;
+import projecto.jhpiego.equipment_track_tools.view.inventory.InventoryEquipment;
 
 
 public class Database_connection extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "equipment_track_tool.db";
     public static final int DATABASE_VERSION = 1;
-    private static final String TABLE_USERS = "users";
     int id = 0;
 
     private Context context;
-    private static final String TABLE_INVENTORY = "inventory";
+    private static final String TABLE_USERS = "usuario";
+    private static final String TABLE_DEPARTMENT = "departamento";
+    private static final String TABLE_EQUIPMENT = "equipamento";
+    private static final String TABLE_INVENTORY = "inventario";
     private static final String TABLE_ASSESSMENT = "tabela_geral";
 
     public Database_connection(Context context) {
@@ -33,15 +39,27 @@ public class Database_connection extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String users = "CREATE TABLE " + TABLE_USERS + "(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "name TEXT," +
-                "username TEXT, " +
-                "password TEXT)";
+                "nome TEXT NOT NULL," +
+                "apelido TEXT NOT NULL," +
+                "email TEXT NOT NULL," +
+                "login TEXT NOT NULL," +
+                "password TEXT NOT NULL)";
+
+        String department = "CREATE TABLE " + TABLE_DEPARTMENT + "(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "nome TEXT NOT NULL," +
+                "obs TEXT)";
+
+        String equipment = "CREATE TABLE " + TABLE_EQUIPMENT + "(" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "nome TEXT NOT NULL," +
+                "obs TEXT)";
 
         String inventory = "CREATE TABLE " + TABLE_INVENTORY + " (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "department TEXT," +
-                "type_equipment TEXT," +
-                "inventory_number NUMBER," +
+                "department_id INTEGER references departament (id)," +
+                "type_equipment_id INTEGER references equipment (id)," +
+                "inventory_number INTEGER," +
                 "make TEXT," +
                 "model TEXT," +
                 "serial_number TEXT," +
@@ -559,6 +577,8 @@ public class Database_connection extends SQLiteOpenHelper {
                 "comments_med_gas_outlets TEXT)";
 
         db.execSQL(users);
+        db.execSQL(department);
+        db.execSQL(equipment);
         db.execSQL(inventory);
         db.execSQL(tabela_geral);
     }
@@ -571,12 +591,14 @@ public class Database_connection extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public Boolean users(String name, String username, String password) {
+    public Boolean users(String nome, String apelido, String email, String login, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
-        cv.put("name", name);
-        cv.put("username", username);
+        cv.put("nome", nome);
+        cv.put("apelido", apelido);
+        cv.put("email", email);
+        cv.put("login", login);
         cv.put("password", password);
 
         long resultInsert = db.insert(TABLE_USERS, null, cv);
@@ -586,18 +608,18 @@ public class Database_connection extends SQLiteOpenHelper {
             return true;
     }
 
-    public Boolean checkUsername(String username) {
+    public Boolean checkUsername(String login) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE username = ?", new String[]{username});
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE login = ?", new String[]{login});
         if (cursor.getCount() > 0) {
             return true;
         } else
             return false;
     }
 
-    public Boolean checkUsernamePass(String username, String password) {
+    public Boolean checkUsernamePass(String login, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE username = ? and password = ?", new String[]{username, password});
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE login = ? and password = ?", new String[]{login, password});
         if (cursor.getCount() > 0) {
             return true;
         } else
@@ -606,29 +628,70 @@ public class Database_connection extends SQLiteOpenHelper {
 
     /* ******************************************************************************************************************/
 
-    public Boolean inventory(String department, String type_equipment, String inventory_number,
-                             String make, String model, String serial_number, String equip_condition,
-                             String year_install, String main_contract, String data_last_main, String comment) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues cv = new ContentValues();
+//    public Boolean inventory(String department, String type_equipment, String inventory_number,
+//                             String make, String model, String serial_number, String equip_condition,
+//                             String year_install, String main_contract, String data_last_main, String comment) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues cv = new ContentValues();
+//
+//        cv.put("department", department);
+//        cv.put("type_equipment", type_equipment);
+//        cv.put("inventory_number", inventory_number);
+//        cv.put("make", make);
+//        cv.put("model", model);
+//        cv.put("serial_number", serial_number);
+//        cv.put("equip_condition", equip_condition);
+//        cv.put("year_install", year_install);
+//        cv.put("main_contract", main_contract);
+//        cv.put("data_last_main", data_last_main);
+//        cv.put("comment", comment);
+//
+//        long result = db.insert(TABLE_INVENTORY, null, cv);
+//        if (result == -1) {
+//            return false;
+//        } else
+//            return true;
+//    }
 
-        cv.put("department", department);
-        cv.put("type_equipment", type_equipment);
-        cv.put("inventory_number", inventory_number);
-        cv.put("make", make);
-        cv.put("model", model);
-        cv.put("serial_number", serial_number);
-        cv.put("equip_condition", equip_condition);
-        cv.put("year_install", year_install);
-        cv.put("main_contract", main_contract);
-        cv.put("data_last_main", data_last_main);
-        cv.put("comment", comment);
+    public Boolean inventory(Equipment_inventory ei) {
+        try {
+            SQLiteDatabase db = this.getWritableDatabase();
+            ContentValues cv = new ContentValues();
 
-        long result = db.insert(TABLE_INVENTORY, null, cv);
-        if (result == -1) {
+            cv.put("department_id", ei.getDepartment_id());
+            cv.put("type_equipment_id", ei.getEquipment_id());
+            cv.put("inventory_number", ei.getInventory_number());
+            cv.put("make", ei.getMake());
+            cv.put("model", ei.getModel());
+            cv.put("serial_number", ei.getSerial_number());
+            cv.put("equip_condition", ei.getEquipment_condition());
+            cv.put("year_install", ei.getYear_install());
+            cv.put("main_contract", ei.getMain_contract());
+            cv.put("data_last_main", ei.getData_last_main());
+            cv.put("comment", ei.getComments());
+
+            return db.insert(TABLE_INVENTORY, null, cv) > 0;
+        } catch (Exception e) {
             return false;
-        } else
-            return true;
+        }
+
+//        cv.put("department", department);
+//        cv.put("type_equipment", type_equipment);
+//        cv.put("inventory_number", inventory_number);
+//        cv.put("make", make);
+//        cv.put("model", model);
+//        cv.put("serial_number", serial_number);
+//        cv.put("equip_condition", equip_condition);
+//        cv.put("year_install", year_install);
+//        cv.put("main_contract", main_contract);
+//        cv.put("data_last_main", data_last_main);
+//        cv.put("comment", comment);
+//
+//        long result = db.insert(TABLE_INVENTORY, null, cv);
+//        if (result == -1) {
+//            return false;
+//        } else
+//            return true;
     }
 
   /*  public Boolean update_inventory(String department, String type_equipment, String inventory_number,
@@ -695,23 +758,14 @@ public class Database_connection extends SQLiteOpenHelper {
         }
     }
 
-    //    public void deleteOneRow(int row_id) {
-//        SQLiteDatabase db = this.getWritableDatabase();
-//        long result = db.delete(TABLE_INVENTORY, "id=?", new String[]{String.valueOf(row_id)});
-//        if (result == -1) {
-//            Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
-//        } else {
-//            Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
-//        }
-//    }
     public boolean deleteOneRow(int row_id) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_INVENTORY, "id=?", new String[]{String.valueOf(row_id)});
         if (result == -1) {
-          //  Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
+            //  Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
             return false;
         } else {
-           // Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
+            // Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
             return true;
         }
     }
@@ -719,6 +773,133 @@ public class Database_connection extends SQLiteOpenHelper {
     public void deleteAllData() {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_INVENTORY);
+    }
+
+    /* *******************************************************************************************************************************/
+    public Boolean department(String nome, String obs) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("nome", nome);
+        cv.put("obs", obs);
+
+        long result = db.insert(TABLE_DEPARTMENT, null, cv);
+        if (result == -1) {
+            return false;
+        } else
+            return true;
+    }
+
+    public List<Department> findAllDept() {
+        List<Department> depts = null;
+        try {
+            SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_DEPARTMENT, null);
+            if (cursor.moveToFirst()) {
+                depts = new ArrayList<Department>();
+                do {
+                    Department department = new Department();
+                    department.setId(cursor.getInt(0));
+                    department.setNome_department(cursor.getString(1));
+                    depts.add(department);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            depts = null;
+        }
+        return depts;
+    }
+
+    public boolean updateDataDepart(int row_id, String nome, String obs) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("nome", nome);
+        cv.put("obs", obs);
+
+        long result = db.update(TABLE_DEPARTMENT, cv, "id=?", new String[]{String.valueOf(row_id)});
+        if (result == -1) {
+            //   Toast.makeText(context, "Falha ao atualizar os dados", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            // Toast.makeText(context, "Atualizado com sucesso", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+    }
+
+    public boolean deleteOneRow_dept(int row_id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_DEPARTMENT, "id=?", new String[]{String.valueOf(row_id)});
+        if (result == -1) {
+            //  Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            // Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+    }
+
+
+    /* *******************************************************************************************************************************/
+    public Boolean equipment(String nome, String obs) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("nome", nome);
+        cv.put("obs", obs);
+
+        long result = db.insert(TABLE_EQUIPMENT, null, cv);
+        if (result == -1) {
+            return false;
+        } else
+            return true;
+    }
+
+    public List<Equipment> findAllEquip() {
+        List<Equipment> equips = null;
+        try {
+            SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_EQUIPMENT, null);
+            if (cursor.moveToFirst()) {
+                equips = new ArrayList<Equipment>();
+                do {
+                    Equipment equipment = new Equipment();
+                    equipment.setId(cursor.getInt(0));
+                    equipment.setNome_equipment(cursor.getString(1));
+                    equips.add(equipment);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            equips = null;
+        }
+        return equips;
+    }
+
+    public boolean updateDataEquipm(int row_id, String nome, String obs) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("nome", nome);
+        cv.put("obs", obs);
+
+        long result = db.update(TABLE_EQUIPMENT, cv, "id=?", new String[]{String.valueOf(row_id)});
+        if (result == -1) {
+            // Toast.makeText(context, "Falha ao atualizar os dados", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            // Toast.makeText(context, "Atualizado com sucesso", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+    }
+
+    public boolean deleteOneRow_equip(int row_id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_EQUIPMENT, "id=?", new String[]{String.valueOf(row_id)});
+        if (result == -1) {
+            // Toast.makeText(context, "Ocorreu um erro, tenta novamente", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            // Toast.makeText(context, "O ficheiro foi eliminado", Toast.LENGTH_SHORT).show();
+            return true;
+        }
     }
 
     /* ******************************************************************************************************************************/
@@ -895,20 +1076,20 @@ public class Database_connection extends SQLiteOpenHelper {
         cv.put(Assessment.DadosTabela.COLUMN_NAME_LOGBOOK_UPD_UPST, Assessment.assessment_model.getChklogbBookUPSTwhoo());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_COMM_UPST, Assessment.assessment_model.getTxtComentUPSTwhoo());
 
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_SPOW, Assessment.assessment_model.getTxtSolarP());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_AR_PROV_SOL, Assessment.assessment_model.getTxtAreaProv());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_SPOW, Assessment.assessment_model.getCboSolarP());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_AR_PROV_SOL, Assessment.assessment_model.getCboAreaProv());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_AR_PROV_SOLO, Assessment.assessment_model.getTxtAreaProvOther());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_OLD_SYS_SOL, Assessment.assessment_model.getTxtOldSysSolar());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_SOL_POW_WORK, Assessment.assessment_model.getTxtSolarPSysWorking());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_CES, Assessment.assessment_model.getTxtConditionEquipmSolar());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_OLD_SYS_SOL, Assessment.assessment_model.getCboOldSysSolar());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_SOL_POW_WORK, Assessment.assessment_model.getCboSolarPSysWorking());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_CES, Assessment.assessment_model.getCboConditionEquipmSolar());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_CSP, Assessment.assessment_model.getTxtCapacitySolarPower());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_BI, Assessment.assessment_model.getTxtbatterieInstalled());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_APMS, Assessment.assessment_model.getTxtActivePM_solar());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_CSB, Assessment.assessment_model.getTxtCarriesSolarBy());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_BI, Assessment.assessment_model.getCbobatterieInstalled());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_APMS, Assessment.assessment_model.getCboActivePM_solar());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_CSB, Assessment.assessment_model.getCboCarriesSolarBy());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_FPMS, Assessment.assessment_model.getTxtFrequencyPM());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_NMS, Assessment.assessment_model.getTxtNameMainSolar());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_LBPM, Assessment.assessment_model.getTxtLogbbook_pmSolar());
-        cv.put(Assessment.DadosTabela.COLUMN_NAME_LBUS, Assessment.assessment_model.getTxtLogbbook_updateSolar());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_LBPM, Assessment.assessment_model.getCboLogbbook_pmSolar());
+        cv.put(Assessment.DadosTabela.COLUMN_NAME_LBUS, Assessment.assessment_model.getCboLogbbook_updateSolar());
         cv.put(Assessment.DadosTabela.COLUMN_NAME_CS, Assessment.assessment_model.getTxtCommentsSolar());
 
         cv.put(Assessment.DadosTabela.COLUMN_NAME_ACO, Assessment.assessment_model.getTxtAverageConsOx());

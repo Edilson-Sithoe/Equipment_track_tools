@@ -10,6 +10,7 @@ import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -55,37 +56,40 @@ public class Update_equipm_inventory extends AppCompatActivity {
         }
 
 
-        btn_update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String main_contra = cboMain_contract_edit;
-                settingData();
-                if (rbSim.isChecked())
-                    Variaveis.equipment_inventory.setMain_contract("Sim");
-                else
-                    Variaveis.equipment_inventory.setMain_contract("Nao");
+//        btn_update.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String main_contra = cboMain_contract_edit;
+//                settingData();
+//                if (rbSim.isChecked())
+//                    Variaveis.equipment_inventory.setMain_contract("Sim");
+//                else
+//                    Variaveis.equipment_inventory.setMain_contract("Nao");
+//
+//                Database_connection database_connection = new Database_connection(Update_equipm_inventory.this);
+//                if (database_connection.updateData(id, dept, typeEquip, invent_number, make, model, serialNumber, equipCondition, yearInstall, main_contra, dataMaint, comment)) {
+//                    Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
+//                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
+//                    snackbar.setTextColor(Color.WHITE);
+//                    snackbar.show();
+//                } else {
+//                    Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
+//                    snackbar.setBackgroundTint(Color.rgb(216, 191, 216));
+//                    snackbar.setTextColor(Color.WHITE);
+//                    snackbar.show();
+//
+//                    Intent i = new Intent(Update_equipm_inventory.this,Form_inventory_view.class);
+//                    startActivity(i);
+//                }
+//            }
+//        });
 
-                Database_connection database_connection = new Database_connection(Update_equipm_inventory.this);
-                if (database_connection.updateData(id, dept, typeEquip, invent_number, make, model, serialNumber, equipCondition, yearInstall, main_contra, dataMaint, comment)) {
-                    Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
-                    snackbar.setTextColor(Color.WHITE);
-                    snackbar.show();
-                } else {
-                    Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.rgb(216, 191, 216));
-                    snackbar.setTextColor(Color.WHITE);
-                    snackbar.show();
-                }
-            }
-        });
-
-        btn_delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                confirmDialog();
-            }
-        });
+//        btn_delete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                confirmDialog();
+//            }
+//        });
 
         Calendar calendar = Calendar.getInstance();
         DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
@@ -138,7 +142,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
             Toast.makeText(this, "Sem dados para mostrar", Toast.LENGTH_SHORT).show();
         } else {
 
-            txtDept.setText(Variaveis.equipment_inventory.getDepartment());
+         //   txtDept.setText(Variaveis.equipment_inventory.getDepartment_id());
             txtTypeEquip.setText(Variaveis.equipment_inventory.getTypeEquipment());
             txtInvent_number.setText(Variaveis.equipment_inventory.getInventory_number());
             txtMake.setText(Variaveis.equipment_inventory.getMake());
@@ -146,7 +150,6 @@ public class Update_equipm_inventory extends AppCompatActivity {
             txtSerialNumber.setText(Variaveis.equipment_inventory.getSerial_number());
             txtEquipCondition.setText(Variaveis.equipment_inventory.getEquipment_condition());
             txtYearInstall.setText(Variaveis.equipment_inventory.getYear_install());
-            //  main_contract
             txtDataMaint.setText(Variaveis.equipment_inventory.getData_last_main());
             txtComment.setText(Variaveis.equipment_inventory.getComments());
         }
@@ -154,8 +157,8 @@ public class Update_equipm_inventory extends AppCompatActivity {
 
     void confirmDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Remover " + Variaveis.equipment_inventory.getDepartment() + " ?");
-        builder.setMessage("Pretende apagar " + Variaveis.equipment_inventory.getDepartment() + " ?");
+        builder.setTitle("Remover " + Variaveis.equipment_inventory.getDepartment_id() + " ?");
+        builder.setMessage("Pretende apagar " + Variaveis.equipment_inventory.getDepartment_id() + " ?");
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -183,7 +186,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
         } else {
             if (Variaveis.equipment_inventory.getMain_contract().equalsIgnoreCase("Sim")) {
                 rbSim.setChecked(true);
-            } else {
+            } else if (Variaveis.equipment_inventory.getMain_contract().equalsIgnoreCase("Nao")){
                 rbNao.setChecked(true);
             }
         }
@@ -199,7 +202,7 @@ public class Update_equipm_inventory extends AppCompatActivity {
                 break;
             case R.id.radio_no_edit:
                 if (checked)
-                    cboMain_contract_edit = "Não";
+                    cboMain_contract_edit = "Nao";
                 break;
         }
     }

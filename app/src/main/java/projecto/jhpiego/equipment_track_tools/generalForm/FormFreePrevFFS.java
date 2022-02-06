@@ -2,13 +2,17 @@ package projecto.jhpiego.equipment_track_tools.generalForm;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import projecto.jhpiego.equipment_track_tools.R;
 import projecto.jhpiego.equipment_track_tools.databaseConnection.Assessment;
+import projecto.jhpiego.equipment_track_tools.variaveis.Variaveis;
 
 public class FormFreePrevFFS extends AppCompatActivity {
 
@@ -84,6 +88,7 @@ public class FormFreePrevFFS extends AppCompatActivity {
 
 
     }
+
 
     public void onRadioButtonClicked_fpf(View view) {
         boolean checked = ((RadioButton) view).isChecked();

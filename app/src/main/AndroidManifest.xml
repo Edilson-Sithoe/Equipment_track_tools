@@ -11,6 +11,60 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Equipment_track_tools">
         <activity
+            android:name=".equipment.Form_equipment_view"
+            android:exported="false" />
+        <activity
+            android:name=".department.Form_department_view"
+            android:exported="false" />
+        <activity
+            android:name=".department.Update_department"
+            android:exported="false" />
+        <activity
+            android:name=".mais.Menu_main"
+            android:exported="false" />
+        <activity
+            android:name=".equipment.Form_equipment"
+            android:exported="false" />
+        <activity
+            android:name=".department.Form_department"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_form_med_air_system"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_vaccum_system"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_factory_psa"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_liquid_ox_too"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_liquid_ox"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_manifold_emergency"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_manifold_too"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_manifold"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_concentrator"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_cylinders"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_free_prev_ffs"
+            android:exported="false" />
+        <activity
+            android:name=".generalUpdateForm.Update_oxigen_system"
+            android:exported="false" />
+        <activity
             android:name=".generalUpdateForm.Update_solar_energy"
             android:exported="false" />
         <activity

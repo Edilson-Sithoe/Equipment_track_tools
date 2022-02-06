@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,13 +19,14 @@ import projecto.jhpiego.equipment_track_tools.databaseConnection.Database_connec
 import projecto.jhpiego.equipment_track_tools.login.FormLogin;
 
 public class FormCadastro extends AppCompatActivity {
-    private TextView nameEdt,usernameEdt, passwordEdt, confirmPassEdt;
+    private TextView nameEdt, apelidoEdit, emailEdit, usernameEdt, passwordEdt, confirmPassEdt;
+    private Spinner spinner;
     private Button btn_register;
     private ProgressBar progressBar;
     private TextView login;
 
     Database_connection DB;
-    String[] mensagens = {"Prencha todos os campos","As senhas não correspondem","Usuário já existe", "Registado com sucesso", "Falha ao registar"};
+    String[] mensagens = {"Prencha todos os campos", "As senhas não correspondem", "Usuário já existe", "Registado com sucesso", "Falha ao registar"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,42 +42,45 @@ public class FormCadastro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = nameEdt.getText().toString();
+                String apelido = apelidoEdit.getText().toString();
+                String email = emailEdit.getText().toString();
                 String user = usernameEdt.getText().toString();
                 String password = passwordEdt.getText().toString();
                 String confirm = confirmPassEdt.getText().toString();
+                //   int funcao = (int) spinner.getSelectedItem();
 
-                if (TextUtils.isEmpty(name) || TextUtils.isEmpty(user) ||TextUtils.isEmpty(password) || TextUtils.isEmpty(confirm)) {
+                if (TextUtils.isEmpty(name) || TextUtils.isEmpty(apelido) || TextUtils.isEmpty(email) || TextUtils.isEmpty(user) || TextUtils.isEmpty(password) || TextUtils.isEmpty(confirm)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.rgb(178,34,34));
+                    snackbar.setBackgroundTint(Color.rgb(178, 34, 34));
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
-                }else {
+                } else {
                     if (password.equals(confirm)) {
                         Boolean checkUSer = DB.checkUsername(user);
                         if (checkUSer == false) {
-                            Boolean insertData = DB.users(name, user, password);
+                            Boolean insertData = DB.users(name, apelido, email, user, password);
                             if (insertData == true) {
                                 Snackbar snackbar = Snackbar.make(v, mensagens[3], Snackbar.LENGTH_SHORT);
-                                snackbar.setBackgroundTint(Color.rgb(112,128,144));
+                                snackbar.setBackgroundTint(Color.rgb(112, 128, 144));
                                 snackbar.setTextColor(Color.WHITE);
                                 snackbar.show();
                                 Intent intent = new Intent(getApplicationContext(), FormLogin.class);
                                 startActivity(intent);
                             } else {
                                 Snackbar snackbar = Snackbar.make(v, mensagens[4], Snackbar.LENGTH_SHORT);
-                                snackbar.setBackgroundTint(Color.rgb(210,105,30));
+                                snackbar.setBackgroundTint(Color.rgb(210, 105, 30));
                                 snackbar.setTextColor(Color.WHITE);
                                 snackbar.show();
                             }
                         } else {
-                           Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
-                            snackbar.setBackgroundTint(Color.rgb(210,105,30));
+                            Snackbar snackbar = Snackbar.make(v, mensagens[2], Snackbar.LENGTH_SHORT);
+                            snackbar.setBackgroundTint(Color.rgb(210, 105, 30));
                             snackbar.setTextColor(Color.WHITE);
                             snackbar.show();
                         }
                     } else {
                         Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
-                        snackbar.setBackgroundTint(Color.rgb(210,105,30));
+                        snackbar.setBackgroundTint(Color.rgb(210, 105, 30));
                         snackbar.setTextColor(Color.WHITE);
                         snackbar.show();
                     }
@@ -93,10 +98,14 @@ public class FormCadastro extends AppCompatActivity {
         });
     }
 
-    public void IniciarCompontes(){
+    public void IniciarCompontes() {
         nameEdt = findViewById(R.id.idEditName);
+
+        apelidoEdit = findViewById(R.id.idEditApelido);
+        emailEdit = findViewById(R.id.idEditEmail);
         usernameEdt = findViewById(R.id.idEditUserName);
         passwordEdt = findViewById(R.id.idEditPassword);
+        //   spinner = findViewById(R.id.spinner);
         confirmPassEdt = findViewById(R.id.idEditConfPassword);
         btn_register = findViewById(R.id.btn_register);
         progressBar = findViewById(R.id.progressbar);

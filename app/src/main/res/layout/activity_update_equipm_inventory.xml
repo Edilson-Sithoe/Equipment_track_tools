@@ -420,7 +420,7 @@
                         android:layout_marginStart="10dp"
                         android:textColor="@color/color_txt"
                         android:onClick="onRadioButtonClicked_edit"
-                        android:text="Não"
+                        android:text="Nao"
                         android:fontFamily="@font/poppins_regular"/>
                 </RadioGroup>
 

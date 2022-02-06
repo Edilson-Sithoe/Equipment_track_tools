@@ -47,8 +47,8 @@ public class FormLogin extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = userName.getText().toString();
-                String pass = password.getText().toString();
+                String user = userName.getText().toString().trim();
+                String pass = password.getText().toString().trim();
 
                 if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)) {
                     Snackbar snackbar = Snackbar.make(v, mensagens[0], Snackbar.LENGTH_SHORT);
